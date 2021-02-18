@@ -1,0 +1,39 @@
+create table Teachers(
+    id integer primary key,
+    teacher_name varchar(30),
+    teacher_surname varchar(50),
+    teacher_email nvarchar(60)
+);
+
+create table LessonHours(
+    id integer primary key,
+    start_time time,
+    end_time time
+);
+
+create table Classrooms(
+    id integer primary key,
+    class_name varchar(50),
+    teacher_id integer,
+    lessonHours_id integer,
+    foreign key (teacher_id)
+    references Teachers(id),
+    foreign key (lessonHours_id)
+    references LessonHours(id)
+); 
+
+create table Students(
+    id integer primary key,
+    student_name varchar(30),
+    student_surname varchar(50),
+    student_email nvarchar(60),
+    classRooms_id integer,
+    foreign key (classRooms_id)
+    references Classrooms(id)
+);
+
+
+
+ 
+
+

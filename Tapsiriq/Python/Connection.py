@@ -1,0 +1,1 @@
+fileWrite=open('data.txt','a')
