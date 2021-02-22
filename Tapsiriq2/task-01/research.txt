@@ -1,0 +1,236 @@
+I. Interpreter: 
+Hər hansi bir Programlama Dilində yazılmış təlimatları komputer üçün Maşının anlayacagi ikilik say sisteminə 
+çevirməkdi.Interpreter yerinə yetirməli oldugu proqlamasdirma dili kodunu qebul ederken onu maşın dilinə çevirmədən
+aralıq koda çevirir. Hər bir kod sətri ardıcıllıqla yoxlanılır, tərcümə olunur və əyər kodun bir sətrində səhv ortaya çıxarsa, 
+digər sətrə keçmədən prosesi dayandırır.
+
+
+II.Interpreter və compiler dillər arasindaki fərqlər:
+
+INTERPRETER - 1)Əmrləri sətir sətir tərcümə edir
+2)Kodu Təhlil etmək üçün daha az vaxt gedir.Ümumi icra prosesi isə daha yavaşdır.
+3)Heç bir obyekt kodu yaratmır və yaddaşı daha səmərəli istifadə edir.
+4)Pyhton,JavaScript,Ruby
+
+COMPILER - 1)Proqramı bütünlüklə tərcümə edir.
+2)Kodu Təhlil etmək üçün daha çox vaxt gedir.Ümumi icra prosesi isə daha sürətlidir.
+3)Obyekt kodu yaradır deyə daha çox yaddaş sərf edir.
+4)C,C++,Java
+
+III.Python Data Types:
+1) Mətn növü: string
+2) Rəqəmsal növlər: integers,float,complex
+3) Sıra növləri: list,tuple,range
+4) Lüğət növü: dict
+5) Set növləri: set,frozenset
+6) Məntiq növü: bool
+7) Ikili növlər: bytes,bytearray,memoryview
+
+- String- Simvollarin birləşməsi bir string yaradır yəni string bir simvol massividir.Stringlər pythonda tək dırnaq, 
+cüt dırnaq, və ya üç dırnaq içində yazıla bilər.
+ 'Araz', "Haci", """
+                Cavid
+                """ 
+
+-integers - Bu dəyər int sinfi ilə təmsil olunur. Tərkibində müsbət və ya mənfi tam ədədlər (kəsr və onluq olmadan).
+ Python'da bir tam ədədin nə qədər ola biləcəyi üçün bir məhdudiyyət yoxdur.
+10,20,40,50,-100,-5,-20
+
+-float - Bu dəyər float sinfi ilə təmsil olunur. Üzən nöqtə təsviri olan həqiqi bir rəqəmdir. Ondalık nöqtə ilə təyin
+olunur. İstəyə görə, e və ya E işarəsi, ardından müsbət və ya mənfi tam ədədi elmi qeydləri göstərmək üçün əlavə edilə bilər.
+4.5,2.8,0.4,
+
+-complex -  Mürəkkəb nömrə kompleks siniflə təmsil olunur. Bu kimi müəyyən edilir (real hissəsi) + (xəyali hissəsi) j .
+ Məsələn - 2 + 3j
+
+-list - Birdən çox maddəni bir dəyişəndə ​​saxlamaq üçün istifadə olunur.Məlumat koleksiyonlarını saxlamaq üçün 
+istifadə edilən Python'dakı 4 daxili məlumat növündən biridir.
+Xüsusiyətləri: Sıralanır, Dəyişdirilə bilir,Təkrarlanır
+liste=['Alma','Banan','Portagal']
+liste=list(('Alma','Banan','Portagal'))
+
+-tuple - Birdən çox məlumatı bir dəyişəndə saxlamaq üçün istifadə olunur.
+Xüsusiyətləri: Sıralanır, Dəyişdirilə bilməz, Təkrarlanır
+liste=('Alma','Banan','Portagal')
+liste=('Armud','Banan','Portagal') belə olarsa error verəcəy çünki tuple Dəyişdirilə bilməz
+
+-range - Aralıq növü dəyişməz rəqəmlər ardıcıllığını əks etdirir və ümumiyyətlə döngü üçün istifadə olunur.
+list(range(10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+list(range(1, 11))
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+-dictionary - dictionary də lisy kimi dəyişdirilə biləndir.Ancaq fərqli olaraq dictionarydə key: value məntiqi işləyir.
+Key istənilən tipdə ola bilər int string bool və s.
+Lüğətlər *Dəyişdirilə bilər ancaq Təkrarlana bilməz
+Cars= {
+    'marka':'BMW'
+    'model':'M5'
+    'year':'2019'
+}
+
+-set - Birdən çox məlumatı bir dəyişəndə saxlamaq üçün istifadə olunur.
+Xüsusiyətləri:Sıralanmır, Dəyişdirilməzdir ,Təkrarlanan dəyərə icazə vermir
+liste=['Alma','Banan','Portagal']
+liste=('Armud','Banan','Portagal') belə olarsa error verəcəy çünki set Dəyişdirilməzdir
+liste=('Armud','Banan','Portagal','Armud','Banan') belə olarsa error verəcəy çünki set Təkrarlanan dəyərə icazə vermir
+
+-frozenset - 
+
+-bool - Python boolean növü, True və ya False açar sözləri ilə təyin olunan Python tərəfindən verilən daxili məlumat 
+növlərindən biridir. Ümumiyyətlə, ifadələrin doğru və ya yanlış oldugunu təyin etkmək üçün istifadə olunur.
+Bir if ifadəsində bir şərt işlədirsinizsə,Pyhton True və ya False geri qaytarır
+Nümunə: a=6 b=8 print(a == b) bu ifadəni icra edəndə Pyhton False qaytarır çünki a b-yə bərabər deyil
+
+-bytes - Pythonda ikili məlumatları idarə etmək üçün istifadə olunur.Bir sözlə, bayt növü kodlanmış və yaddaşda / diskdə
+saxlanmağa hazır olan bir bayt ardıcıllığıdır. Baytları fərqli şəkildə idarə edən bir çox kodlaşdırma növü var
+(utf-8, utf-16, windows-1255). Bayt obyekti bir str tipinə dekod edilə bilər.
+Nümunə:
+>>>'€20'.encode('utf-8')
+Nəticə-b'\xe2\x82\xac20'
+>>> b'\xe2\x82\xac20'.decode('utf-8')
+'€20'
+
+-bytearray - Pythonda ikili məlumatları idarə etmək üçün istifadə olunur.
+
+-memoryview - memoryview obyektləri, Python kodunun kopya etmədən bufer protokolunu dəstəkləyən bir obyektin daxili
+ məlumatlarına daxil olmasına imkan verir.
+ Nümunə:
+ >>> v = memoryview(b'abcefg')
+>>> v[1]
+98
+
+IV Object Oriented Programming:
+-Object Oriented Programming nədir? - özündə məlumatları strukturlu bir şəkildə saxlayan <<obyekt>> anlayışına əsaslanan bir proqlamlaşdırma üslubudur.
+    Bu quruluşun vacib üstünlükləri bunlardır: Yazacağımız sinifləri bir-birindən müstəqil şəkildə inkişaf etdirə bilərik. 
+ Bu şəkildə proqram bölüşdürmə, bölmə, məntiq fəthi çərçivəsində asanlıqla parçalana bilərik və hər hissəni ayrı-ayrılıqda
+ idarə edə bilərik.
+    OOP texnologiyası şeyləri ayırmağı və bu kimi davranmağımızı təmin edən bir texnologiyadır. Bir proqram dilində buna sinif,
+ yəni Class ilə işləmək deyilir. OOP-da yazılmış kodumuzda yeni bir obyekt yaratarkən, bunu tamamilə bir sinifdən əldə etməliyik,
+ buna görə işlər daha səliqəli və nizamlı işləyir.
+    Məsələn, çox modullu bir proses etdiyimiz zaman, müəyyən bir modulu yeniləmək lazım olduqda, lazımsız kod parçalarını
+ yalnız o modul sinfində yerləşdirərək araşdırmaqdan azad oluruq. Eynilə, maraqlanmadığımız kod hissələri ilə məşğul olaraq
+ sağlam modulları təsir etməyəcəyik.
+    OOP-un xüsusiyyətlərindən biri dəfələrlə istifadə edəcəyimiz kod bloklarını yazmaq və ehtiyac duyduğumuz zaman təkrar zəng etməkdir. 
+ Beləliklə, kod və zamandan qənaət əldə edilir. Əlbəttə ki, bu xüsusiyyət və ya bu yanaşma yalnız OOP xüsusiyyəti deyil. 
+ Yenə də OOP ilə ən çox istifadə etdiyimiz şeylərdən biri də tətbiqlərimizdə yazılan sinifləri digər layihələrə idxal etmək və orada istifadə etməkdir.
+ 
+ V Hansı hallarda metod istifadə edilməlidir?
+ - Metodlar  bir obyekt üzərində müəyyən əməliyyatlar həyata keçirən obyektlərə xas olan funksiyalardır.
+ Xüsusiyətləri:
+ 1- Kod təkrarçılığının qarşısın almaq.
+ 2- Metodlar sinifdə müəyyən edilir.
+ 3- Metrlər sinifdə müəyyən edilmiş nümunələr (obyektlər) adlanır.
+ 4- Metodlar parametrlər götürə bilər.
+ 5- Metodlar yalnız istifadəçi tərəfindən yaradılır.
+
+ VI local və global variable nədir izah edin:
+ -Global - Python'da, funksiyanın xaricində və ya qlobal miqyasda elan edilmiş bir dəyişən qlobal dəyişən olaraq bilinir. 
+  Bu o deməkdir ki, qlobal dəyişənə funksiyanın daxilində və ya xaricində daxil olmaq mümkündür.
+Nümunə:
+x = "global"
+
+def foo():
+    print("x inside:", x)
+
+foo()
+print("x outside:", x)
+
+-Local - Funksiyanın gövdəsi daxilində və ya lokal dairədə elan edilmiş dəyişən lokal dəyişən kimi tanınır.
+Nümunə:
+def foo():
+    y = "local"
+
+foo()
+print(y)
+
+VII Python type conversion haqqında izahat verin:
+-Conversion - Bir məlumat növünün Dəyərinin başqa bir məlumat tipinə çevrilməsi prosesinə tip konversiyası deyilir.
+Nümunə:
+yas_str=input('Yasinizi daxil edin :')
+icra etmədən əvvəl yas_str:  <class 'str'>
+
+print(int(yas_str))
+icra edəndən sonra yas_str: <class 'int'>
+
+VIII İNİT nədir?
+-__init__ - python siniflərində bərpa edilmiş bir üsuldur. Obyekt yönümlü terminologiyada konstruktor kimi adlandırılır. 
+Bu metod bir sinifdən bir obyekt yaradıldıqda adlanır və sinifə sinifin atributlarını işə salmağa imkan verir.
+
+IX self nədir?
+-self - Sinifin nümunəsini təmsil edir. “Self” açar sözündən istifadə edərək python-da sinifin atributlarına və metodlarına daxil ola bilərik. 
+Atributları verilmiş arqumentlərlə bağlayır.
+
+X args,*kwargs nədir? nə zaman istifadə olunur?
+
+ 
+-args -  Sınırsız sayda parametreli funksiya oluşturmak için parametremizin əvvəlinə ulduz (*) koyabiliriz.
+-args nədir - Əslində rəqənlər ilə arasında heç bir fərq yoxdur.Əsas vacib olan nöqtə,parametrdən əvvəl istifadə 
+ etdiyimiz (*) ulduz simvoludur.Python istifadəçiləri üçün * args ənənəvi bir parametrdir.
+ Bu ənənəvi parametr, Python kodumuzun istifadəçilər tərəfindən daha asan başa düşülməsi və oxunuşunun artırılması üçün vacibdir. 
+
+ -kwargs - İkiqat ulduz (**) parametrlərinin tək ulduz (*) parametrlərindən ən vacib fərqi, zəng edərkən key: value əlaqəsi ilə funksiyanı çağırmağımızdır.
+ -kwargs nədir - Burdada vacib olan parametrdən əvvəl istifadə etdiyimiz (**) cüt ulduzdur.Parametrin adı insana görə dəyişə bilər.
+  Python kodumuzun istifadəçilər tərəfindən daha asan başa düşülməsini və oxunmasını asanlaşdırmaq üçün şəxsi parametr adı əvəzinə ** kwargs istifadə etmək vacibdir.
+
+  XI Python Module nedir?
+- Modul, Python təriflərini və ifadələrini ehtiva edən bir sənəddir. Modul funksiyaları, sinifləri və dəyişənləri təyin edə bilər. 
+  Bir modul, işlənə bilən kodu da əhatə edə bilər. Əlaqəli kodu bir modula qruplaşdırmaq kodu anlamaq və istifadəsini asanlaşdırır. 
+  Həm də kodu məntiqi şəkildə təşkil edir.
+  
+  Sadəcə olaraq, modul Python kodundan ibarət olan bir dosyadır.
+
+ XII Python package nədir?
+- Python paketi ümumi bir məqsədi olan modullar toplusudur.Bir-biri ilə əlaqəli modullar əsasən eyni paketə qoyulur. 
+  Bir proqramda xarici paketdən bir modul tələb olunduqda, həmin paket idxal edilə və modulları istifadəyə verilə bilər.
+  Bir qovluqda bir __init__.py faylı (ümumiyyətlə boş saxlanılır) olmalıdır.
+  __init__.pypaketi birdən çox Python skriptini ehtiva etdiyi bir qovluqdan ayıran əlavə bir sənəd olan Python modullarının bir qovluğudur. 
+
+XIII pass nədir? Nə zaman istifadə olunur?
+- Python-da pass açar sözü heç nəyi icra etməmək üçün istifadə olunur yəni bir kodu icra etmək istəmədikdə, boş istifadə üçün keçiddən istifadə edilə bilər.
+  Yəni hər hansi bir kodu boş keçmək istəsək keçid ifadəsindən istifadə etmək lazımdı 
+
+XIV List metodlarından 5 ədəd metodun izahatını yazın:
+append()-methodu listə yeni data əlavə etmek üçün istifadə olunur
+Nümunə:
+liste=['Alma','Banan','Portagal']
+liste.append('Heyva')
+print(liste) bu kodu icra edende Heyvani listeye elave edecey
+['Alma','Banan','Portagal','Heyva']
+
+clear()-methodu bütün elementləri listeden çıxarır
+Nümunə:
+liste=['Alma','Banan','Portagal']
+liste.clear()
+print(liste) bu kodu icra edende listenin icindeki elementleri cixaracag
+liste=[]
+
+remove()-verilmiş bir obyekti listedən çıxaran Python proqramlaşdırma dilində daxili bir funksiyadır. Heç bir dəyəri qaytarmır.
+Nümunə:
+liste=['Alma','Banan','Portagal']
+liste.remove('Banan')
+print(liste) bu kodu icra edende listenin icindeki Banani liteden silecey
+['Alma','Portagal']
+
+pop()-Python'dakı siyahıdan və ya verilən indeks dəyərindən son dəyəri çıxaran və qaytaran daxili bir funksiyadır.
+
+count()-methodu göstərilən elementin siyahıda neçə dəfə göründüyünü göstərir
+Nümunə:
+liste=['Alma','Banan','Portagal','Alma']
+liste.count('Alma')
+print(liste) bu kodu icra edende neticede 2 verecey 
+2
+
+XV List və dict hansı hallarda istifadə olunur?:
+
+XVI Dict metodlarından 5 ədəd metodun izahatını yazın:
+1)dict.keys()-Bu metod dictionary’də olan elementlərin key hissəsinin listini qaytarır.
+
+2)dict.update()-verilmiş dictionary’ni digər dictionary elementləri ilə və yaxud təkrarlanan key:value cütlərindən yeniləyir
+Bu metod parametr olaraq bir dicti və ya açar / dəyər cütlərinin təkrarlanan bir obyektini (ümumiyyətlə toples) götürür.
+
+3)dict.values()-Bu metod dictionary’də olan elementlərin value(dəyər) hissəsinin listini qaytarır.
+
+4)dict.items()-Bu metod isə dictionary’də olan elementlərin tuple olaraq listini qaytarır.
+
+5)dict.clear()-Bütün maddələri dictdən çıxarır
