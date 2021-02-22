@@ -1529,6 +1529,7 @@ body{
     font-family: 'Mr Dafoe', cursive;
 }
 .form-output{
+    visibility: hidden;  
     width: 260px;
     height: 86px;
     margin: 2em .5em 1em;
@@ -1538,6 +1539,7 @@ body{
     color: white;
 }
 .contact-output{
+    display: none;
     width: 260px;
     height: 61px;
     margin: 2em .5em 1em;
@@ -1553,6 +1555,9 @@ body{
 }
 .open{
     display: block;
+}
+.form-output-open{
+    visibility: visible;
 }
 .blog-main{
     position: relative;
@@ -1760,5 +1765,88 @@ body{
 }
 .footer-socials a:hover i{
     color: #68e0cf;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 101; /* Sit on top */
+    /*padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    height: 10020px;
+    width: 100%; /* Full width */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    margin: auto; 
+    padding: 20px;
+    width: 100%;
+    margin-top: 7262px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+    right: 0;
+    margin-right: 430px;
+    z-index: 101;
+    cursor: pointer;
+  }
+  
+#slider{
+    position: relative;
+    height: 700px;
+    width: 680px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#slider .slayt img{
+    width: 680px;
+    height: 680px;
+}
+#slider .slayt .popup-counter{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    right: 0;
+}
+#kontrol{
+    position: relative;
+    bottom: 50%;
+}
+#kontrol a{
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-size: 40px;
+}
+#kontrol a .fa-caret-left{
+    position: absolute;
+    bottom: 350px;
+    left: 0;
+    font-size: 60px;
+    color: gray;
+}
+#kontrol a .fa-caret-right{
+    position: absolute;
+    bottom: 350px;
+    right: 0;
+    font-size: 60px;
+    color: gray;
+}
+#kontrol a i{
+    transition: all .3s ease;
+}
+#kontrol a i:hover{
+    color: #fff;
+}
+.modal-open{
+    display: block;
 }
 
