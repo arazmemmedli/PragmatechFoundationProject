@@ -225,12 +225,57 @@ XV List və dict hansı hallarda istifadə olunur?:
 
 XVI Dict metodlarından 5 ədəd metodun izahatını yazın:
 1)dict.keys()-Bu metod dictionary’də olan elementlərin key hissəsinin listini qaytarır.
+Nümunə:
+student={
+  'name':'Araz',
+  'surname':'Memmedli',
+  'age':19
+}
+print(student.keys()) bu kodu icra edende solda yazilanları göstərəcəy yəni keyləri
+dict_keys(['age','name','surname'])
 
 2)dict.update()-verilmiş dictionary’ni digər dictionary elementləri ilə və yaxud təkrarlanan key:value cütlərindən yeniləyir
 Bu metod parametr olaraq bir dicti və ya açar / dəyər cütlərinin təkrarlanan bir obyektini (ümumiyyətlə toples) götürür.
+Nümunə:
+student={
+  'name':'Araz',
+  'surname':'Memmedli',
+  'age':19
+}
+student.update({'color': 'Black'}) bu kodu icra etdikde dicti update edecey ve bu yazdigimida dictin icine elave edecey
+print(student)
+
+{'color': 'Black', 'surname': 'Memmedli', 'name': 'Araz', 'Age': 19}
 
 3)dict.values()-Bu metod dictionary’də olan elementlərin value(dəyər) hissəsinin listini qaytarır.
+Nümunə:
+student={
+  'name':'Araz',
+  'surname':'Memmedli',
+  'age':19
+}
+print(student.values()) bu kodu icra edende yalniz dəyərləri göstərəcəy yəni valueleri
+
+dict_values(['Memmedli', 19, 'Araz'])
 
 4)dict.items()-Bu metod isə dictionary’də olan elementlərin tuple olaraq listini qaytarır.
+Nümunə:
+student={
+  'name':'Araz',
+  'surname':'Memmedli',
+  'age':19
+}
+print(student.items()) bu kodu icra etdikde dictin icindeki elementləri tuple olaraq listini verəcəy
+
+dict_items([('name', 'Araz'), ('surname', 'Memmedli'), ('Age', 19)])
 
 5)dict.clear()-Bütün maddələri dictdən çıxarır
+Nümunə:
+student={
+  'name':'Araz',
+  'surname':'Memmedli',
+  'age':19
+}
+print(student.clear()) bu kodu icra etdikdə bütün maddələri dictdən çıxaracay və Terminala None verəcəy
+
+None
