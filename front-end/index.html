@@ -12,6 +12,54 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="hd-modal">
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="Close()">&times;</span>
+      <div id="slider">
+          <div class="slayt">
+              <img src="img/work6-680x680.jpg" alt="">
+              <div class="popup-counter">1 of 4</div>
+          </div>
+          <div class="slayt">
+              <img src="img/work8-680x680.jpg" alt="">
+              <div class="popup-counter">2 of 4</div>
+          </div>
+          <div class="slayt">
+              <img src="img/work1-680x680.jpg" alt="">
+              <div class="popup-counter">3 of 4</div>
+          </div>
+          <div class="slayt">
+              <img src="img/work2-680x680.jpg" alt="">
+              <div class="popup-counter">4 of 4</div>
+          </div>
+      </div>
+      <div id="kontrol">
+          <a href="javascript:onceki ()">
+              <i class="fas fa-caret-left"></i>
+          </a>
+          <a href="javascript:sonraki ()">
+              <i class="fas fa-caret-right"></i>
+          </a>
+      </div>
+    </div>
+  
+  </div>
+    </div>
+    <div class="book">
+        <div class="book-modal">
+            <div class="book-content">
+                <div class="book-close"></div>
+                <div class="video">
+                    <span class="book-close" onclick="videoClose()"><i class="fas fa-times"></i></span>
+                    <iframe class="book-video" width="956" height="538" src="https://www.youtube.com/embed/S4L8T2kFFck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="page">
         <div class="header">
             <div class="header-logo">
@@ -915,9 +963,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="portfolio-item">
+                                    <div class="portfolio-item" onclick="Popup()">
                                         <div class="portfolio-images">
-                                            <a href="#" onclick="Popup(event)">
+                                            <a href="#">
                                                 <img src="img/work1-680x680.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">
@@ -935,7 +983,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="portfolio-item">
+                                    <div class="portfolio-item" onclick="videoModal()">
                                         <div class="portfolio-images">
                                             <a href="#">
                                                 <img src="img/work2-680x680.jpg">
@@ -1177,41 +1225,6 @@
             </section>
         </div>
     </div>
-    <!-- The Modal -->
-<div id="myModal" class="modal" onclick="Close(this)">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div id="slider">
-          <div class="slayt">
-              <img src="img/work6-680x680.jpg" alt="">
-              <div class="popup-counter">1 of 4</div>
-          </div>
-          <div class="slayt">
-              <img src="img/work8-680x680.jpg" alt="">
-              <div class="popup-counter">2 of 4</div>
-          </div>
-          <div class="slayt">
-              <img src="img/work1-680x680.jpg" alt="">
-              <div class="popup-counter">3 of 4</div>
-          </div>
-          <div class="slayt">
-              <img src="img/work2-680x680.jpg" alt="">
-              <div class="popup-counter">4 of 4</div>
-          </div>
-      </div>
-      <div id="kontrol">
-          <a href="javascript:onceki ()">
-              <i class="fas fa-caret-left"></i>
-          </a>
-          <a href="javascript:sonraki ()">
-              <i class="fas fa-caret-right"></i>
-          </a>
-      </div>
-    </div>
-  
-  </div>
     <script src="js/app.js"></script>
 </body>
 </html>
