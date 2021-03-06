@@ -12,54 +12,152 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="hd-modal">
-        <!-- The Modal -->
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close" onclick="Close()">&times;</span>
-      <div id="slider">
-          <div class="slayt">
-              <img src="img/work6-680x680.jpg" alt="">
-              <div class="popup-counter">1 of 4</div>
-          </div>
-          <div class="slayt">
-              <img src="img/work8-680x680.jpg" alt="">
-              <div class="popup-counter">2 of 4</div>
-          </div>
-          <div class="slayt">
-              <img src="img/work1-680x680.jpg" alt="">
-              <div class="popup-counter">3 of 4</div>
-          </div>
-          <div class="slayt">
-              <img src="img/work2-680x680.jpg" alt="">
-              <div class="popup-counter">4 of 4</div>
-          </div>
-      </div>
-      <div id="kontrol">
-          <a href="javascript:onceki ()">
-              <i class="fas fa-caret-left"></i>
-          </a>
-          <a href="javascript:sonraki ()">
-              <i class="fas fa-caret-right"></i>
-          </a>
-      </div>
-    </div>
-  
-  </div>
-    </div>
-    <div class="book">
-        <div class="book-modal">
-            <div class="book-content">
-                <div class="book-close"></div>
-                <div class="video">
-                    <span class="book-close" onclick="videoClose()"><i class="fas fa-times"></i></span>
-                    <iframe class="book-video" width="956" height="538" src="https://www.youtube.com/embed/S4L8T2kFFck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="works_modal" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <div id="slider">
+                    <div class="slayt">
+                        <img src="img/work6-680x680.jpg" alt="">
+                        <div class="popup-counter">1 of 4</div>
+                    </div>
+                    <div class="slayt">
+                        <img src="img/work8-680x680.jpg" alt="">
+                        <div class="popup-counter">2 of 4</div>
+                    </div>
+                    <div class="slayt">
+                        <img src="img/work1-680x680.jpg" alt="">
+                        <div class="popup-counter">3 of 4</div>
+                    </div>
+                    <div class="slayt">
+                        <img src="img/work2-680x680.jpg" alt="">
+                        <div class="popup-counter">4 of 4</div>
+                    </div>
                 </div>
+              </div>
+              <div id="kontrol">
+                  <a href="javascript:onceki ()">
+                      <i class="fas fa-caret-left"></i>
+                  </a>
+                  <a href="javascript:sonraki ()">
+                      <i class="fas fa-caret-right"></i>
+                  </a>
+              </div>
             </div>
         </div>
     </div>
+     <div id="works_modal1" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <div class="video">
+                    <span class="book-close" onclick="Close('.book','book','modal-close')"><i class="fas fa-times"></i></span>
+                    <iframe class="book-video" src="https://www.youtube.com/embed/S4L8T2kFFck" width="956" height="538" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal2" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <div class="popup-images">
+                    <span class="photo-close" onclick="Close('.photo-modal','photo-modal','modal-close')"><i class="fas fa-times"></i></span>
+                    <img src="img/work7.jpg" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal3" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <div class="honest-images">
+                    <span class="honest-close" onclick="Close('.honest-modal','honest-modal','modal-close')"><i class="fas fa-times"></i></span>
+                    <img src="img/work4-680x680.jpg" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal4" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="short-modal-close" onclick="Close('.short-dog-modal','short-dog-modal','modal-close')">&times;</span>
+                <div class="slideshow-container">
+          
+                  <div class="mySlides fade">
+                    <img src="img/work4-680x680.jpg" style="width:100%">
+                    <div class="popup-counter">1 of 4</div>
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src="img/work6-680x680.jpg" style="width:100%">
+                    <div class="popup-counter">2 of 4</div>
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src="img/work8-680x680.jpg" style="width:100%">
+                    <div class="popup-counter">3 of 4</div>
+                  </div>
+          
+                  <div class="mySlides fade">
+                      <img src="img/work1-680x680.jpg" style="width:100%">
+                      <div class="popup-counter">4 of 4</div>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-caret-left"></i></a>
+                  <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                  
+                  </div>
+             </div>
+        </div>
+     </div>
+     <div id="works_modal5" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <div class="popup-images">
+                    <span class="photo-close" onclick="Close('.photo-modal','photo-modal','modal-close')"><i class="fas fa-times"></i></span>
+                    <img src="img/work3-680x680.jpg" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal6" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <div class="content-modal-close" onclick="Close()"></div>
+                <div class="content-images">
+                    <img src="img/work8-680x680.jpg" alt="">
+                </div>
+                <div class="content-desc">
+                    <div class="content-category">
+                        <span>Content</span>
+                    </div>
+                    <h4>Yellow and Blue Striped</h4>
+                    <div class="content-post">
+                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
+                        <ul>
+                            <li>Now there is more fashion. There is no so-called trends.</li>
+                            <li>Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style.</li>
+                            <li>Think about the content that you want to invest in a created object, and only then will form.</li>
+                            <li>The thing is your spirit. A spirit unlike forms hard copy.</li>
+                        </ul>
+                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="img/work5-680x680.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="img/work7.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="content-btn">
+                        View Project
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+             </div>
+         </div>
+     </div>
     <div class="page">
         <div class="header">
             <div class="header-logo">
@@ -963,9 +1061,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="portfolio-item" onclick="Popup()">
+                                    <div class="portfolio-item">
                                         <div class="portfolio-images">
-                                            <a href="#">
+                                            <a href="#" id="open_modal" data-modal="works_modal">
                                                 <img src="img/work1-680x680.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">
@@ -983,9 +1081,9 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="portfolio-item" onclick="videoModal()">
+                                    <div class="portfolio-item">
                                         <div class="portfolio-images">
-                                            <a href="#">
+                                            <a href="#" id="open_modal" data-modal="works_modal1">
                                                 <img src="img/work2-680x680.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">
@@ -1007,7 +1105,7 @@
                                 <div class="col-6">
                                     <div class="portfolio-item">
                                         <div class="portfolio-images">
-                                            <a href="#">
+                                            <a href="#" id="open_modal" data-modal="works_modal2">
                                                 <img src="img/work7.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">
@@ -1027,7 +1125,7 @@
                                 <div class="col-6">
                                     <div class="portfolio-item">
                                         <div class="portfolio-images">
-                                            <a href="#">
+                                            <a href="#" id="open_modal" data-modal="works_modal3">
                                                 <img src="img/work4-680x680.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">
@@ -1049,7 +1147,7 @@
                                 <div class="col-6">
                                     <div class="portfolio-item">
                                         <div class="portfolio-images">
-                                            <a href="#">
+                                            <a href="#" id="open_modal" data-modal="works_modal4">
                                                 <img src="img/work5-680x680.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">
@@ -1069,7 +1167,7 @@
                                 <div class="col-6">
                                     <div class="portfolio-item">
                                         <div class="portfolio-images">
-                                            <a href="#">
+                                            <a href="#" id="open_modal" data-modal="works_modal5">
                                                 <img src="img/work6-680x680.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">
@@ -1111,7 +1209,7 @@
                                 <div class="col-6">
                                     <div class="portfolio-item">
                                         <div class="portfolio-images">
-                                            <a href="#">
+                                            <a href="#" id="open_modal" data-modal="works_modal6">
                                                 <img src="img/work8-680x680.jpg">
                                                 <span class="portfolio-info">
                                                     <span class="centrize">

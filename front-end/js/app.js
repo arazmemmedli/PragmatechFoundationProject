@@ -99,25 +99,53 @@ function slaytGoster(slaytNumarasi){
     slayt[slaytNo].style.display= "block"
 }
 
-function Popup(){
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
     event.preventDefault()
-    hdModal=document.querySelector('.hd-modal')
-    hdModal.className=('hd-modal book-open')
+  showSlides(slideIndex += n);
 }
 
-function Close(){
-    hdModal=document.querySelector('.hd-modal')
-    hdModal.className='hd-modal modal-close'
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function videoModal(){
-    event.preventDefault()
-    document.querySelector('.hd-modal').nextElementSibling.className='book-open book'
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 
-function videoClose(){
-    let bookModal=document.querySelector('.book')
-    bookModal.className='modal-close'
-}
+// function Popup(class_1,class_2,class_3){
+//     event.preventDefault()
+//     let hdModal=document.querySelector(class_1)
+//     hdModal.className=class_2+' '+class_3
+//     modalIframe=document.querySelector('.book-video').setAttribute("src", "https://www.youtube.com/embed/S4L8T2kFFck");
+// }
 
+// function Close(class_1,class_2,class_3){
+//     hdModal=document.querySelector(class_1)
+//     hdModal.className=class_2+' '+class_3
+//     modalIframe=document.querySelector('.book-video').setAttribute("src", "")
+    
+// }
 
+let modalsref=document.querySelectorAll("#open_modal");
+
+modalsref.forEach(function(ref){
+    ref.onclick = function(){
+        let modal = ref.getAttribute("data-modal");
+        document.getElementById(modal).setAttribute("style","opacity: 1; display: block;");
+    }
+});
