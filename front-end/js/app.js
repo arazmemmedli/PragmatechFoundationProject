@@ -120,32 +120,28 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+
 }
 
-// function Popup(class_1,class_2,class_3){
-//     event.preventDefault()
-//     let hdModal=document.querySelector(class_1)
-//     hdModal.className=class_2+' '+class_3
-//     modalIframe=document.querySelector('.book-video').setAttribute("src", "https://www.youtube.com/embed/S4L8T2kFFck");
-// }
-
-// function Close(class_1,class_2,class_3){
-//     hdModal=document.querySelector(class_1)
-//     hdModal.className=class_2+' '+class_3
-//     modalIframe=document.querySelector('.book-video').setAttribute("src", "")
-    
-// }
-
 let modalsref=document.querySelectorAll("#open_modal");
-
 modalsref.forEach(function(ref){
     ref.onclick = function(){
+        event.preventDefault()
         let modal = ref.getAttribute("data-modal");
         document.getElementById(modal).setAttribute("style","opacity: 1; display: block;");
+        let hdmodal = document.querySelector("iframe").setAttribute("src","https://www.youtube.com/embed/S4L8T2kFFck")
     }
 });
+
+ //Baglanma icon teyin edilsin
+ let closeref = document.querySelectorAll("#modal_close");
+ closeref.forEach(function(ref){
+     ref.onclick = function(){
+         // Works_modal classli parent tap ve style teyin et 
+         let modal  = (ref.closest(".works_modal").setAttribute("style","opacity: 0; visibility: hidden;"));
+         let hdmodal = document.querySelector("iframe").setAttribute("src","")
+     }
+ });
+
+

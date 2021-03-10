@@ -1593,11 +1593,11 @@ body{
 }
 #myblog{
     position: relative;
-    width: 1300px;
     margin: 0 auto;
     top: 150px;
     height: 260vh;
-    margin-left: calc(12% + 30px);
+    margin-left: calc(12% + 7.2%);
+    margin-right: calc(12% + -5%);
 }
 .h-myblog{
     margin: 0;
@@ -1762,47 +1762,6 @@ body{
 .footer-socials a:hover i{
     color: #68e0cf;
 }
-.hd-modal{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-.pos{
-    z-index: 101;
-}
-.modal {
-    /*display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 101; /* Sit on top */
-    /*padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    height: 100%; 
-    width: 100%; /* Full width */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}  
-  /* Modal Content */
-.modal-content {
-    margin: auto; 
-    padding: 20px;
-    width: 100%;
-}
-  
-  /* The Close Button */
-.close {
-    color: white;
-    position: absolute;
-    font-size: 28px;
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-    right: 0;
-    margin-right: 430px;
-    z-index: 101;
-    cursor: pointer;
-}  
 #slider{
     position: relative;
     height: 720px;
@@ -1858,29 +1817,6 @@ body{
 .modal-close{
     display: none;
 }
-.book{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-.book-modal {
-    position: absolute; /* Stay in place */
-    z-index: 101; /* Sit on top */
-    /*padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    height: 100%; 
-    width: 100%; /* Full width */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}  
-  /* Modal Content */
-.book-content {
-    margin: auto; 
-    padding: 20px;
-    width: 100%;
-}
 .video{
     position: relative;
     top: 0;
@@ -1888,44 +1824,7 @@ body{
     left: 50%;
     transform: translate(-50%, 20%);
 }
-.book-close{
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    cursor: pointer;
-}
-.photo-modal{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-.photo-popup{
-    position: absolute; /* Stay in place */
-    z-index: 101; /* Sit on top */
-    /*padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    height: 100%; 
-    width: 100%; /* Full width */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}
-.photo-content{
-    margin: auto; 
-    padding: 20px;
-    width: 100%;
-}
-.photo-close{
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    color: white;
-    cursor: pointer;
-}
+
 .popup-images{
     position: relative;
     width: 46%;
@@ -1937,36 +1836,6 @@ body{
     margin-top: 20px;
     object-fit: cover;
 }
-.honest-modal{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-.honest-popup{
-    position: absolute; /* Stay in place */
-    z-index: 101; /* Sit on top */
-    /*padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    height: 100%; 
-    width: 100%; /* Full width */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}
-.honest-content{
-    margin: auto; 
-    padding: 20px;
-    width: 100%;
-}
-.honest-close{
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    color: white;
-    cursor: pointer;
-}
 .honest-images{
     position: relative;
     width: 46%;
@@ -1977,44 +1846,6 @@ body{
 .honest-images img{
     margin-top: 20px;
     object-fit: cover;
-}
-.short-dog-modal{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-.short-modal {
-    /*display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 101; /* Sit on top */
-    /*padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    height: 100%; 
-    width: 100%; /* Full width */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}  
-  /* Modal Content */
-.short-modal-content {
-    margin: auto; 
-    padding: 20px;
-    width: 100%;
-}
-  
-  /* The Close Button */
-.short-modal-close {
-    color: white;
-    position: absolute;
-    font-size: 28px;
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-    right: 0;
-    margin-right: 430px;
-    z-index: 101;
-    cursor: pointer;
 }
 .mySlides {display: none}
 .mySlides img {vertical-align: middle;}
@@ -2110,29 +1941,6 @@ body{
 .slideshow-container a i:hover{
     color: white;
 }
-.hd-content-modal{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-.content-modal{
-    /*display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 101; /* Sit on top */
-    /*padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    height: 100%; 
-    width: 100%; /* Full width */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
-}
-.popup-content{
-    margin: auto; 
-    padding: 20px;
-    width: 100%;
-}
 .content-images img{
     position: relative;
     top: 0;
@@ -2225,10 +2033,8 @@ body{
     display: none;
 }
 .modal_body{
-    /*display: none; /* Hidden by default */
     position: absolute; /* Stay in place */
     z-index: 101; /* Sit on top */
-    /*padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     height: 100%; 
@@ -2241,7 +2047,127 @@ body{
     padding: 20px;
     width: 100%;
 }
-.book-open{
+.modal_close{
+    display: inline-block;
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    cursor: pointer;
+}
+.my-content .content-box-text{
+    line-height: 1.8;
+}
+.my-content .content-box p {
+    color: white;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.myblog-start .single-container{
+    margin-top: 5%;
+    margin-left: 4%;
+}
+.my-content .content-box p a{
+    color: #68e0cf;
+}
+.my-content .content-box .block-quality{
+    border-left: 2px solid #68e0cf;
+    padding: 0 20px;
+}
+.content-box .block-quality p{
+    font-size: 16px;
+    font-weight: 600;
+}
+.content-box .block-quality cite{
+    color: white;
+    font-style: normal;
+    font-size: 14px;
+}
+.my-content .content-box-text .designer-word{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.my-content .content-box-text ul {
+    color: white;
+    list-style: none;
+    padding: 15px;
+}
+.my-content .content-box-text ul li::before{
+    content: "\2022";
+    color: #68e0cf;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+.my-content .content-box-text h3{
+    color: white;
+    font-size: 26px;
+    line-height: 1.4;
+}
+.gallery-item .gallery-img a{
+    text-decoration: underline;
+}
+.gallery-img a img{
+    max-width: 100%;
+    object-fit: cover;
+}
+.content-box-text .container{
+    padding: 0px;
+    margin-left: 15px;
+}
+.content-box-text .container .col-6{
+    padding-left: 1px;
+}
+.post-links{
+    color: white;
+    font-size: 14px;
+}
+.post-links a{
+    color: #68e0cf;
+}
+.post-admin{
+    color: white;
+}
+.post-admin .by-admin a{
+    color: white;
+}
+.post-admin .by-admin:hover a{
+    color: #68e0cf;
+}
+.tag-links{
     display: block;
-    z-index: 101;
+    margin: 15px 0;
+    line-height: 22px;
+    color: white;
+    font-size: 14px;
+}
+.tag-links a{
+    margin: 0 10px 8px 0;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 7px;
+    height: 22px;
+    line-height: 19px;
+    font-weight: 500;
+    font-size: 14px!important;
+    color: #68e0cf;
+    text-decoration: none;
+    border: 1px solid #68e0cf;
+}
+.social-share span{
+    color: white;
+    font-size: 14px;
+}
+.social-share a{
+    text-decoration: none;
+    color: gray;
+    margin: 0 5px;
+}
+.social-share a i{
+    transition: all .3s ease;
+}
+.social-share a:hover i{
+    color: white;
 }
