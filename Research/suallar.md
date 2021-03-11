@@ -40,3 +40,32 @@ Database migration nədir necə istifadə olunur?
 Məsələn:
 
   Web saytin database-nin 1hissəsinin table-in qurub 2ci table-in yaradanda 1ci table-ni silib ikisin bir yerdə işə salmaq lazimdi bunun qarşısın almaq üçün migration köməyimizə çatır.Migration hecbirin silmədən ikisin bir yerdə işə salmağımıza köməy olur
+
+
+Flask Forms nədir? Necə istifadə olunur?
+- Hyper Text Transfer Protocol olan HTTP, serverlerin ve istifadecilerin bir-biri ile nece unsiyyet qurdugunu      
+  tesvir eden protocoldur.
+  Meselen: Istenilen  brauzere girib her hansi  bir melumati axtardigimizda servere sorgu gonderirik ve server bize bu serverde cavab gonderir.Bu zaman yerine yetirmeli qaydalar HTTP adlanir.
+
+  HTTP methodlari:
+  GET,POST,PUT,HEAD,PUT
+
+  GET:
+  - GET methodu serverden melumat almaq ucun istifade olunur.
+    Meselen:Saytdaki her hansi bir sehifeye daxil olanda bir unvan isteyirik ve bu teleb brauzerde GET metodu ile edilir
+  POST:
+  - POST methodu servere melumatlar gondermek ucun istifade olunur.POST methodu ile servere limitsiz melumatlar 
+    gondere bileriy.POST metodu ilə göndərilən məlumatlar HTTP sorğusunun istək hissəsində saxlanıldığı üçün məlumatlar daha guvenli şəkildə ötürülür.
+  
+  DELETE:
+  - Bir istifadecini id ile silmek ucun istifade olunur.
+  
+  PUT:
+  - PUT bir qaynaq yaratmaq və ya dəyişdirmək üçün istifadə olunur, yəni mövcud deyilsə - yarat, əgər varsa, 
+    dəyişdirin.
+  - Bir istifadecini update yeni  yeniləmək üçün bu metodu yaradın.
+   
+Flask layihəsinin folder ve fayl strukturunu necə optimallaşdıra bilərik?
+
+Flask Blueprint nədir? Necə istifadə olunur?
+-
