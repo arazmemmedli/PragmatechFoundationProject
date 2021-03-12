@@ -72,6 +72,6 @@ Flask Blueprint nədir? Necə istifadə olunur?
 
 - Flask Blueprint, əlaqəli xüsusiyyətləri birlikdə saxlamağımızı təmin edir və daha yaxşı inkişaf təcrübələrində kömək edir. Flask Blueprints-in üstünlükləri aşağıdakılardır:
 
-  Böyük miqyaslı tətbiqlərin asan təşkili.
-  Eyni Blueprint-i dəfələrlə qeyd etməklə kodun təkrar istifadəsini artırır.
-  Bir sıra əməliyyatlar qeydə alınır və plan tərtib edildikdən sonra yenidən oxudula bilər.  
+  1)Böyük miqyaslı tətbiqlərin asan təşkili.
+  2)Eyni Blueprint-i dəfələrlə qeyd etməklə kodun təkrar istifadəsini artırır.
+  3)Bir sıra əməliyyatlar qeydə alınır və plan tərtib edildikdən sonra yenidən oxudula bilər.  
