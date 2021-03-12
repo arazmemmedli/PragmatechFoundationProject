@@ -1836,17 +1836,6 @@ body{
     margin-top: 20px;
     object-fit: cover;
 }
-.honest-images{
-    position: relative;
-    width: 46%;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-}
-.honest-images img{
-    margin-top: 20px;
-    object-fit: cover;
-}
 .mySlides {display: none}
 .mySlides img {vertical-align: middle;}
 

@@ -68,4 +68,10 @@ Flask Forms nədir? Necə istifadə olunur?
 Flask layihəsinin folder ve fayl strukturunu necə optimallaşdıra bilərik?
 
 Flask Blueprint nədir? Necə istifadə olunur?
--
+- Flaskda yazdığınız kodlar böyüdükcə hər şeyi tək bir faylda yazmağınız daha da çətinləşə bilər.Bu zaman kodunuzun hecmi və ya mürəkkəbliyi artdıqda, kodunuzu daha aydın başa düşülən şəkildə saxlamaq üçün fərqli bir şəkildə qurmaq istəyə bilərsiz. Bunun üçündə Flask Blueprint istifadə etməlisiniz.
+
+- Flask Blueprint, əlaqəli xüsusiyyətləri birlikdə saxlamağımızı təmin edir və daha yaxşı inkişaf təcrübələrində kömək edir. Flask Blueprints-in üstünlükləri aşağıdakılardır:
+
+  Böyük miqyaslı tətbiqlərin asan təşkili.
+  Eyni Blueprint-i dəfələrlə qeyd etməklə kodun təkrar istifadəsini artırır.
+  Bir sıra əməliyyatlar qeydə alınır və plan tərtib edildikdən sonra yenidən oxudula bilər.  

@@ -54,50 +54,50 @@ function Accordion(){
     }
 }
 
-let slayt=document.getElementsByClassName("slayt")
+// let slayt=document.getElementsByClassName("slayt")
 
-let slaytSayisi=slayt.length
+// let slaytSayisi=slayt.length
 
-let slaytNo= 0;
+// let slaytNo= 0;
 
-slaytGoster(slaytNo)
+// slaytGoster(slaytNo)
 
-function onceki(){
+// function onceki(){
 
-    slaytNo--
+//     slaytNo--
 
-    slaytGoster(slaytNo)
+//     slaytGoster(slaytNo)
 
-}
+// }
 
-function sonraki(){
+// function sonraki(){
 
-    slaytNo++
+//     slaytNo++
 
-    slaytGoster(slaytNo)
-}
+//     slaytGoster(slaytNo)
+// }
 
-function slaytGoster(slaytNumarasi){
+// function slaytGoster(slaytNumarasi){
 
-    slaytNo=slaytNumarasi;
+//     slaytNo=slaytNumarasi;
 
-    if(slaytNumarasi >=slaytSayisi){
+//     if(slaytNumarasi >=slaytSayisi){
 
-        slaytNo= 0;
-    }
+//         slaytNo= 0;
+//     }
 
-    if(slaytNumarasi <0){
+//     if(slaytNumarasi <0){
 
-        slaytNo=slaytSayisi -1;
-    }
+//         slaytNo=slaytSayisi -1;
+//     }
 
-    for(i= 0;i <slaytSayisi;i++){
+//     for(i= 0;i <slaytSayisi;i++){
 
-        slayt[i].style.display= "none"
-    }
+//         slayt[i].style.display= "none"
+//     }
 
-    slayt[slaytNo].style.display= "block"
-}
+//     slayt[slaytNo].style.display="block"
+// }
 
 var slideIndex = 1;
 showSlides(slideIndex);
