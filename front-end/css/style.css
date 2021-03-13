@@ -2358,3 +2358,20 @@ body{
 .write-comments .comment-submit:hover .comment-btn{
     border: 1px solid #68e0cf;
 }
+.works_modal .modal_content .modal-counter{
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    bottom: -40px;
+    color: white;
+}
+.works_modal .modal_content .popup-number{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+}
+.works_modal .modal-scroll{
+    overflow-y: scroll;
+}

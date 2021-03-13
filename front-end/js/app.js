@@ -54,51 +54,6 @@ function Accordion(){
     }
 }
 
-// let slayt=document.getElementsByClassName("slayt")
-
-// let slaytSayisi=slayt.length
-
-// let slaytNo= 0;
-
-// slaytGoster(slaytNo)
-
-// function onceki(){
-
-//     slaytNo--
-
-//     slaytGoster(slaytNo)
-
-// }
-
-// function sonraki(){
-
-//     slaytNo++
-
-//     slaytGoster(slaytNo)
-// }
-
-// function slaytGoster(slaytNumarasi){
-
-//     slaytNo=slaytNumarasi;
-
-//     if(slaytNumarasi >=slaytSayisi){
-
-//         slaytNo= 0;
-//     }
-
-//     if(slaytNumarasi <0){
-
-//         slaytNo=slaytSayisi -1;
-//     }
-
-//     for(i= 0;i <slaytSayisi;i++){
-
-//         slayt[i].style.display= "none"
-//     }
-
-//     slayt[slaytNo].style.display="block"
-// }
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -114,13 +69,84 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length ) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
   slides[slideIndex-1].style.display = "block";  
+
+}
+
+var slideIndex1 = 1;
+showSlides1(slideIndex1);
+
+function plusSlides1(n) {
+    event.preventDefault()
+  showSlides1(slideIndex1 += n);
+}
+
+function currentSlide1(n) {
+  showSlides1(slideIndex1 = n);
+}
+
+function showSlides1(n) {
+  var i;
+  var slides1 = document.getElementsByClassName("mySlides1");
+  if (n > slides1.length ) {slideIndex1 = 1}    
+  if (n < 1) {slideIndex1 = slides1.length}
+  for (i = 0; i < slides1.length; i++) {
+      slides1[i].style.display = "none";  
+  }
+  slides1[slideIndex1-1].style.display = "block";  
+
+}
+
+var slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+    event.preventDefault()
+  showSlides2(slideIndex2 += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+  var i;
+  var slides2 = document.getElementsByClassName("mySlides2");
+  if (n > slides2.length ) {slideIndex2 = 1}    
+  if (n < 1) {slideIndex2 = slides2.length}
+  for (i = 0; i < slides2.length; i++) {
+      slides2[i].style.display = "none";  
+  }
+  slides2[slideIndex2-1].style.display = "block";  
+
+}
+
+var slideIndex3 = 1;
+showSlides3(slideIndex3);
+
+function plusSlides3(n) {
+    event.preventDefault()
+  showSlides3(slideIndex3 += n);
+}
+
+function currentSlide3(n) {
+  showSlides3(slideIndex3 = n);
+}
+
+function showSlides3(n) {
+  var i;
+  var slides3 = document.getElementsByClassName("mySlides3");
+  if (n > slides3.length ) {slideIndex3 = 1}    
+  if (n < 1) {slideIndex3 = slides3.length}
+  for (i = 0; i < slides3.length; i++) {
+      slides3[i].style.display = "none";  
+  }
+  slides3[slideIndex3-1].style.display = "block";  
 
 }
 
