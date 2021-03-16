@@ -896,28 +896,39 @@ body{
     margin: 0px;
     margin-top: 20px;
 }
-.design-percentage{
-    list-style: none;
-    width: 100%;
-    background-color: #585d65;
-    height: 2px;
-    margin-top: 25px;
-    border-radius: 5px;
-}
-.bar{
+.design-skills-item .progress{
     display: block;
+    height: 2px;
+    position: relative;
+    width: 100%;
+    background: #585d65;
+    top: 25px;
+}
+.design-skills-item .progress .percentage{
+    left: 0;
+    top: 0;
     position: absolute;
-    right: 70px;
-    bottom: 30px;
-    color: #68e0cf;
+    height: 2px;
+    width: 0;
+    background: #68e0cf;
+    transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+}
+.design-skills-item .progress .percentage{
+    background-color: #68e0cf;
+}
+.design-skills-item .progress .percentage .percent{
+    position: absolute;
+    top: -25px;
+    right: 0;
     font-size: 12px;
+    color: #68e0cf;
     font-weight: 600;
 }
-.bar-line{
-    display: block;
-    height: 2px;
-    background-color: #68e0cf;
-    width: 90%;
+.design-skills-item .progress .percentage .percent{
+    color: #68e0cf;
 }
 #language-skills{
     margin-top: 50px;
@@ -926,7 +937,7 @@ body{
 .language-skills-start{
     max-width: 680px;
     margin-left: 50px;
-    height: 680px;
+    height: 730px;
 }
 .h-language-skills{
     color: white;
@@ -961,29 +972,101 @@ body{
     font-size: 14px;
     line-height: 2;
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-.language-percentage{
+.language-skills-item .progress{
+    display: block;
+    height: 2px;
     position: relative;
-    width: 100%;
-    height: 14px;
-    margin-top: 25px;
-    border-radius: 5px;
+    width: 292.3px;
+    background: #585d65;
+    top: 30px;
 }
-.language-percent{
-    position: absolute;
-    top: 0;
+.language-skills-item .progress{
+    height: 14px;
+    background: 0 0 !important;
+}
+.language-skills-item .progress .percentage{
     left: 0;
+    top: 0;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #68e0cf;
+    transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+}
+.language-skills-item .progress .percentage{
+    background-color: #68e0cf;
+}
+.language-skills-item .progress .percentage{
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    height: 14px;
+    background: 0 0 !important;
+    z-index: 2;
+}
+.language-skills-item .progress .percentage .percent{
+    position: absolute;
+    top: -25px;
+    right: 0;
+    font-size: 12px;
+    color: #68e0cf;
+    font-weight: 600;
+}
+.language-skills-item .progress .percentage .percent{
+    color: #68e0cf;
+}
+
+.language-skills-item .progress .percentage .da{
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: 14px;
 }
-.language-percent span{
+.language-skills-item .progress .percentage .da{
+    top: 0;
+}
+.language-skills-item .progress .percentage .da span{
+    display: block;
     width: 14px;
     height: 14px;
+    background: #585d65;
     border-radius: 14px;
-    background-color:  #68e0cf;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -khtml-border-radius: 14px;
+}
+.language-skills-item .progress .percentage .da span{
+    background: #68e0cf;
+}
+.language-skills-item .progress .percentage .da span{
+    background-color: #68e0cf;
+}
+.language-skills-item .progress .dg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 14px;
+}
+.language-skills-item .progress .dg span{
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #585d65;
+    border-radius: 14px;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -khtml-border-radius: 14px;
 }
 #coding-skills{
     margin-top: 50px;
@@ -1017,35 +1100,25 @@ body{
     height: 250px;
     margin-top: 15px;
 }
-.graphics{
+.coding-skills-item .chart{
+    margin: 25px;
     width: 90px;
-    overflow: initial;
-    transform: rotate(-90deg);
-    position: relative;
-    left: 35px;
-    bottom: 20px;
+    height: 90px;
 }
-.circle{
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke-width: 3;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-}
-.circle.front{
-    stroke: #68e0cf;
-    stroke-dashoffset: calc(270 - (270*30) / 100); 
-    stroke-linecap: round;
-}
-.coding-number{
+.coding-skills-item canvas{
     display: block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.coding-skills-item .chart span{
     color: #68e0cf;
+    display:block;
+    position: absolute;
+    left: 34px;
+    top: 36px;
     font-size: 12px;
     font-weight: 600;
-    position: absolute;
-    top: 62px;
-    left: 40px;
 }
 .coding-name{
     position: relative;
@@ -2374,4 +2447,7 @@ body{
 }
 .works_modal .modal-scroll{
     overflow-y: scroll;
+}
+.bordercolor{
+    border-bottom-color: red;
 }
