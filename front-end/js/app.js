@@ -73,6 +73,25 @@ var drawCircle = function(color, lineWidth, percent) {
 // drawCircle('#efefef', options.lineWidth, 100 / 100);
 drawCircle('#68e0cf', options.lineWidth, options.percent / 100);
 
+const buttons = document.querySelectorAll('.filters-menu li');
+const section = document.querySelectorAll('.thumb');
+buttons.forEach(item =>{
+  item.addEventListener('click', ()=>{
+    buttons.forEach(item =>{
+      item.className = ""; 
+    });
+    item.classList = "active";
+    //show images
+    let values = item.textContent;
+    section.forEach(show =>{
+      show.style.display = "none";
+      if(show.getAttribute("data-id") === values || values === "All"){
+        show.style.display = "block";
+      }
+    });
+  });
+});
+
 
 // function Accordion(){
 //     event.preventDefault()

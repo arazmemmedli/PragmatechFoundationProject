@@ -1113,222 +1113,147 @@
                         <span class="portfolio-word">Latest Works</span>
                     </div>
                     <div class="filters-menu">
-                        <div class="filters">
-                            <div class="btn-group">
-                                <label data-text="All" class="glitech-effect">
-                                    <input type="radio" class="active">
-                                    All
-                                </label>
-                            </div>
-                            <div class="btn-group">
-                                <label data-text="Video">
-                                    <input type="radio">
-                                    Video
-                                </label>
-                            </div>
-                            <div class="btn-group">
-                                <label data-text="Music">
-                                    <input type="radio">
-                                    Music
-                                </label>
-                            </div>
-                            <div class="btn-group">
-                                <label data-text="Links">
-                                    <input type="radio">
-                                    Links
-                                </label>
-                            </div>
-                            <div class="btn-group">
-                                <label data-text="Image">
-                                    <input type="radio">
-                                    Image
-                                </label>
-                            </div>
-                            <div class="btn-group">
-                                <label data-text="Gallery">
-                                    <input type="radio">
-                                    Gallery
-                                </label>
-                            </div>
-                            <div class="btn-group">
-                                <label data-text="Content">
-                                    <input type="radio">
-                                    Content
-                                </label>
-                            </div>
-                        </div>
+                        <ul>
+                            <li class="active" onclick="filterSelection()">All</li>
+                            <li>Video</li>
+                            <li>Music</li>
+                            <li>Links</li>
+                            <li>Image</li>
+                            <li>Gallery</li>
+                            <li>Content</li>
+                        </ul>
                     </div>
                     <div class="portfolio-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Gallery">
-                                            <a href="#" id="open_modal" data-modal="works_modal">
-                                                <img src="img/work1-680x680.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-images"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>                               
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Gallery</div>
-                                            <a href="#" class="gallery-title">Alabaster Complete <br>Collection</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Video">
-                                            <a href="#" id="open_modal" data-modal="works_modal1">
-                                                <img src="img/work2-680x680.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-video"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Video</div>
-                                            <a href="#" class="gallery-title">Book of John Paper</a>
-                                        </div>
-                                    </div>
+                        <section class="js-filter">
+                            <div class="thumb" data-id="Gallery">
+                                <a href="#" id="open_modal" data-modal="works_modal">
+                                    <img src="img/work1-680x680.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-images"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Gallery</div>
+                                    <a href="#" class="gallery-title">Alabaster Complete <br>Collection</a>
+                                </div> 
+                            </div>
+                            <div class="thumb" data-id="Video">
+                                <a href="#" id="open_modal" data-modal="works_modal1">
+                                    <img src="img/work2-680x680.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-video"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Video</div>
+                                    <a href="#" class="gallery-title">Book of John Paper</a>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Image">
-                                            <a href="#" id="open_modal" data-modal="works_modal2">
-                                                <img src="img/work7.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-image"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Image</div>
-                                            <a href="#" class="gallery-title">White Rose Photo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Image">
-                                            <a href="#" id="open_modal" data-modal="works_modal3">
-                                                <img src="img/work4-680x680.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-image"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Image</div>
-                                            <a href="#" class="gallery-title">Honest Company</a>
-                                        </div>
-                                    </div>
+                            <div class="thumb" data-id="Image">
+                                <a href="#" id="open_modal" data-modal="works_modal2">
+                                    <img src="img/work7.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-image"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Image</div>
+                                    <a href="#" class="gallery-title">White Rose Photo</a>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Gallery">
-                                            <a href="#" id="open_modal" data-modal="works_modal4">
-                                                <img src="img/work5-680x680.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-images"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Gallery</div>
-                                            <a href="#" class="gallery-title">Brown Short Dog</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Music">
-                                            <a href="#" id="open_modal" data-modal="works_modal5">
-                                                <img src="img/work6-680x680.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-music"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Music</div>
-                                            <a href="#" class="gallery-title">Brown Complete Building</a>
-                                        </div>
-                                    </div>
+                            <div class="thumb" data-id="Image">
+                                <a href="#" id="open_modal" data-modal="works_modal3">
+                                    <img src="img/work4-680x680.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-image"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Image</div>
+                                    <a href="#" class="gallery-title">Honest Company</a>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Links">
-                                            <a href="https://www.google.com/" target="_blank">
-                                                <img src="img/work3-680x680.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-link"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Links</div>
-                                            <a href="#" class="gallery-title">Black Car</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="portfolio-item">
-                                        <div class="portfolio-images" data-id="Content">
-                                            <a href="#" id="open_modal" data-modal="works_modal6">
-                                                <img src="img/work8-680x680.jpg">
-                                                <span class="portfolio-info">
-                                                    <span class="centrize">
-                                                        <span class="portfolio-icon">
-                                                            <i class="fas fa-plus"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <div class="portfolio-gallery">
-                                            <div class="category">Content</div>
-                                            <a href="#" class="gallery-title">Yellow and Blue Striped</a>
-                                        </div>
-                                    </div>
+                            <div class="thumb" data-id="Gallery">
+                                <a href="#" id="open_modal" data-modal="works_modal4">
+                                    <img src="img/work5-680x680.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-images"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Gallery</div>
+                                    <a href="#" class="gallery-title">Brown Short Dog</a>
                                 </div>
                             </div>
-                        </div>
+                            <div class="thumb" data-id="Music">
+                                <a href="#" id="open_modal" data-modal="works_modal5">
+                                    <img src="img/work6-680x680.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-music"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Music</div>
+                                    <a href="#" class="gallery-title">Brown Complete Building</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Links">
+                                <a href="https://www.google.com/" target="_blank">
+                                    <img src="img/work3-680x680.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-link"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Links</div>
+                                    <a href="#" class="gallery-title">Black Car</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Content">
+                                <a href="#" id="open_modal" data-modal="works_modal6">
+                                    <img src="img/work8-680x680.jpg">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Content</div>
+                                    <a href="#" class="gallery-title">Yellow and Blue Striped</a>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
