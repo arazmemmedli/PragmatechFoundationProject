@@ -1,0 +1,56 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="experience-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/admin/experience/" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.e_date(class_='form-control',placeholder='Tarix daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.e_name(class_='form-control',placeholder='Name daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.e_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.e_submit(class_='btn btn-success',value='Gonder')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="experience-table">
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Experience Date</th>
+                <th scope="col">Experience Name</th>
+                <th scope="col">Experience Subject</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for experience in experiences %}
+              <tr>
+                <td>{{experience.id}}</td>
+                <td>{{experience.e_date}}</td>
+                <td>{{experience.e_name}}</td>
+                <td>{{experience.e_subject}}</td>
+                <td>
+                    <a href="/experience/delete/{{experience.id}}"><i class="bi bi-trash mx-1"></i></a>
+                    <a href="/experience/update/{{experience.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                    <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

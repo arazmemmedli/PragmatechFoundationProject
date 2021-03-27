@@ -1,0 +1,42 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="pricing-category-form">
+  <div class="container">
+    <form action="/admin/pricing/category/" method="POST">
+        <div class="form-group mt-2">
+            {{form.p_title(class_='form-control',placeholder='Metin daxil edin.')}}
+        </div>
+        <div class="form-group mt-2">
+            {{form.c_submit(class_='btn btn-success',value='Gonder')}}
+        </div>
+    </form>
+  </div>
+</section>
+<section id="pricing-table-category">
+    <div class="container mt-2">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Pricing Title</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for p_category in pricingcategories %}
+              <tr>
+                <td>{{p_category.id}}</td>
+                <td>{{p_category.p_title}}</td>
+                <td>
+                    <a href="/pricing/category/delete/{{p_category.id}}"><i class="bi bi-trash mx-1"></i></a>
+                    <a href="/pricing/category/update/{{p_category.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                    <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

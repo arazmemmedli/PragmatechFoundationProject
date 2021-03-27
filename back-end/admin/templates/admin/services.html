@@ -1,0 +1,56 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="services_form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/admin/services/" method="POST">
+                    <div class="form-group mt-2">
+                        {{form.s_icon(class_='form-control',placeholder='Icon elave edin.')}}
+                    </div>
+                    <div class="form-group mt-2">
+                        {{form.s_name(class_='form-control',placeholder='Services adini daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-2">
+                        {{form.s_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-2">
+                        {{form.submit(class_='btn btn-success',value='Gonder')}} 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="service_table">
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Services Icon</th>
+                <th scope="col">Services Name</th>
+                <th scope="col">Services Text</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for services in S_Services %}
+              <tr>
+                <td>{{services.id}}</td>
+                <td>{{services.s_icon}}</td>
+                <td>{{services.s_name}}</td>
+                <td>{{services.s_subject}}</td>
+                <td>
+                    <a href="/services/delete/{{services.id}}"><i class="bi bi-trash mx-1"></i></a>
+                    <a href="/services/update/{{services.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                    <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

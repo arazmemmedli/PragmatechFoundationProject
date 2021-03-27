@@ -1,0 +1,26 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="experience-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/experience/update/{{experience.id}}" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.e_date(class_='form-control',placeholder='Tarix daxil edin.',value=experience.e_date)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.e_name(class_='form-control',placeholder='Name daxil edin.',value=experience.e_name)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.e_subject(class_='form-control',placeholder='Metin daxil edin.',value=experience.e_subject)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.e_submit(class_='btn btn-success',value='Gonder')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %}

@@ -1,0 +1,39 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">About Text</th>
+      <th scope="col">About Age</th>
+      <th scope="col">About Freelance</th>
+      <th scope="col">About Phone</th>
+      <th scope="col">About Residence</th>
+      <th scope="col">About Address</th>
+      <th scope="col">About Email</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for about in abouts %}
+    <tr>
+      <td>{{about.id}}</td>
+      <td>{{about.a_subject}}</td>
+      <td>{{about.a_age}}</td>
+      <td>{{about.a_freelance}}</td>
+      <td>{{about.a_phone}}</td>
+      <td>{{about.a_residence}}</td>
+      <td>{{about.a_address}}</td>
+      <td>{{about.a_e_mail}}</td>
+      <td>
+        <a href="/delete/{{about.id}}"><i class="bi bi-trash mx-1"></i></a>
+        <a href="/update/{{about.id}}"><i class="bi bi-pencil mx-1"></i></a>
+        <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock  %}
+

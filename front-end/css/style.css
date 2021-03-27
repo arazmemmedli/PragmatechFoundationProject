@@ -1020,7 +1020,6 @@ body{
 .language-skills-item .progress .percentage .percent{
     color: #68e0cf;
 }
-
 .language-skills-item .progress .percentage .da{
     position: absolute;
     left: 0;
@@ -1100,25 +1099,23 @@ body{
     height: 250px;
     margin-top: 15px;
 }
-.coding-skills-item .chart{
-    margin: 25px;
-    width: 90px;
-    height: 90px;
+.coding-progress{
+    position: relative;
+    bottom: 20px;
+    right: 8px;
 }
-.coding-skills-item canvas{
-    display: block;
-    position:absolute;
-    top:0;
-    left:0;
+.progress-coding-circle{
+    stroke: #68e0cf;
+    transform-origin: center;
+    transform: rotate(-90deg);
 }
-.coding-skills-item .chart span{
-    color: #68e0cf;
-    display:block;
-    position: absolute;
-    left: 34px;
-    top: 36px;
+.coding-number{
     font-size: 12px;
+    position: absolute;
+    color: #68e0cf;
+    top: 38%;
     font-weight: 600;
+    left: 22%;
 }
 .coding-name{
     position: relative;
@@ -1310,7 +1307,7 @@ body{
 }
 .portfolio-start{
     max-width: 685px;
-    height: 1770px;
+    height: 1810px;
     margin-left: 50px;
     position: relative;
     bottom: 40px;
@@ -1350,7 +1347,7 @@ body{
     color: #68e0cf;
 }
 .portfolio-container{
-    margin-top: 15px;
+    margin-top: 40px;
 }
 .portfolio-container .col-6{
     padding: 0px;

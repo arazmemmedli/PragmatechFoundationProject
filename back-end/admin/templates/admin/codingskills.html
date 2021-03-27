@@ -1,0 +1,61 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="codingskills-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/admin/codingskills/" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.cs_percent(class_='form-control',placeholder='Faiz daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_number(class_='form-control',placeholder='Eded daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_name(class_='form-control',placeholder='Ad daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_submit(class_='btn btn-success',value='Gonder')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="codingskills-table">
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Coding Skills Percent</th>
+                <th scope="col">Coding Skills Number</th>
+                <th scope="col">Coding Skills Name</th>
+                <th scope="col">Coding Skills Subject</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for codingskill in codingskills %}
+              <tr>
+                <td>{{codingskill.id}}</td>
+                <td>{{codingskill.cs_percent}}</td>
+                <td>{{codingskill.cs_number}}</td>
+                <td>{{codingskill.cs_name}}</td>
+                <td>{{codingskill.cs_subject}}</td>
+                <td>
+                    <a href="/codingskills/delete/{{codingskill.id}}"><i class="bi bi-trash mx-1"></i></a>
+                    <a href="/codingskills/update/{{codingskill.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                    <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

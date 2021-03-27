@@ -1,0 +1,39 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section class="about">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <h1>This is Add About Section</h1>
+              <form action="/admin/about/add" method="POST">
+                <div class="form-group my-2">
+                  <input type="text" name="a_subject" class="form-control" placeholder="Metin daxil edin">
+                </div>
+                <div class="form-group my-2">
+                  <input type="number" name="a_age" class="form-control" placeholder="Yasinizi daxil edin">
+                </div>
+                <div class="form-group my-2">
+                  <input type="text" name="a_freelance" class="form-control">
+                </div>
+                <div class="form-group my-2">
+                  <input type="tel" name="a_phone" placeholder="Phone daxil edin" class="form-control">
+                </div>
+                <div class="form-group my-2">
+                  <input type="text" name="a_residence" placeholder="Yasayis yerinizi daxil edin" class="form-control">
+                </div>
+                <div class="form-group my-2">
+                  <input type="text" name="a_address" placeholder="Unvaninizi daxil edin" class="form-control">
+                </div>
+                <div class="form-group my-2">
+                  <input type="email" name="a_e_mail" placeholder="Emailinizi daxil edin" class="form-control">
+                </div>
+                <div class="form-group my-2">
+                  <input type="submit" class="btn btn-success" value="Gonder">
+                </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock  %}

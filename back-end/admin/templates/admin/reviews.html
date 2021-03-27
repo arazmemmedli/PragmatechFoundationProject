@@ -1,0 +1,66 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="reviews-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/admin/reviews/" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        {{form.r_img(class_='form-control',placeholder='Şəkil daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.r_name(class_='form-control',placeholder='Ad daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.r_company(class_='form-control',placeholder='Ixtisas daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.r_icon(class_='form-control',placeholder='Ikon daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.r_subject(class_='form-control',placeholder='Movzu daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.r_submit(class_='btn btn-success',value='Gonder')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="reviews-table">
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Reviews Img</th>
+                <th scope="col">Reviews Ad</th>
+                <th scope="col">Reviews İxtisas</th>
+                <th scope="col">Reviews Ikon</th>
+                <th scope="col">Reviews Metin</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for reviews in t_reviews %}
+              <tr>
+                <td>{{reviews.id}}</td>
+                <td>{{reviews.r_img}}</td>
+                <td>{{reviews.r_name}}</td>
+                <td>{{reviews.r_company}}</td>
+                <td>{{reviews.r_icon}}</td>
+                <td>{{reviews.r_subject}}</td>
+                <td>
+                    <a href="/reviews/delete/{{reviews.id}}"><i class="bi bi-trash mx-1"></i></a>
+                    <a href="/reviews/update/{{reviews.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                    <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

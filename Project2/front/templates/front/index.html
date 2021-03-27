@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/grid.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/style.css')}}">
+    <title>Myour – One Page Resume WordPress Theme – Just another WordPress site</title>
+</head>
+<body>
+    <div id="works_modal" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="slideshow-container">
+            
+                    <div class="mySlides fade">
+                      <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">1 of 4</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">2 of 4</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">3 of 4</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <img src="{{url_for('.static',filename='img/work2-680x680.jpg')}}" style="width:100%">
+                        <div class="popup-counter">4 of 4</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-caret-left"></i></a>
+                    <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                    
+                    </div>
+            </div>
+        </div>
+    </div>
+     <div id="works_modal1" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="video">
+                    <iframe class="book-video" src="https://www.youtube.com/embed/S4L8T2kFFck" width="956" height="538" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal2" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="popup-images">
+                    <img src="{{url_for('.static',filename='img/work7.jpg')}}" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal3" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="popup-images">
+                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal4" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="slideshow-container">
+            
+                  <div class="mySlides1 fade">
+                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}" style="width:100%">
+                    <div class="popup-counter">1 of 4</div>
+                  </div>
+                  
+                  <div class="mySlides1 fade">
+                    <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}" style="width:100%">
+                    <div class="popup-counter">2 of 4</div>
+                  </div>
+                  
+                  <div class="mySlides1 fade">
+                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" style="width:100%">
+                    <div class="popup-counter">3 of 4</div>
+                  </div>
+          
+                  <div class="mySlides1 fade">
+                      <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">4 of 4</div>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides1(-1)"> <i class="fas fa-caret-left"></i></a>
+                  <a class="next" onclick="plusSlides1(1)"><i class="fas fa-caret-right"></i></a>
+                  
+                  </div>
+             </div>
+        </div>
+     </div>
+     <div id="works_modal5" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="popup-images">
+                    <img src="{{url_for('.static',filename='img/work3-680x680.jpg')}}" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal6" class="works_modal">
+         <div class="modal_body modal-scroll">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="content-images">
+                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" alt="">
+                </div>
+                <div class="content-desc">
+                    <div class="content-category">
+                        <span>Content</span>
+                    </div>
+                    <h4>Yellow and Blue Striped</h4>
+                    <div class="content-post">
+                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
+                        <ul>
+                            <li>Now there is more fashion. There is no so-called trends.</li>
+                            <li>Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style.</li>
+                            <li>Think about the content that you want to invest in a created object, and only then will form.</li>
+                            <li>The thing is your spirit. A spirit unlike forms hard copy.</li>
+                        </ul>
+                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
+                        <div class="gallery-item">
+                            <a href="#" id="open_modal" data-modal="works_modal9">
+                                <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="#" id="open_modal" data-modal="works_modal10">
+                                <img src="{{url_for('.static',filename='img/work7.jpg')}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="content-btn">
+                        View Project
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+             </div>
+         </div>
+     </div>
+     <div class="works_modal" id="works_modal9">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="slideshow-container">
+           
+                    <div class="mySlides2 fade">
+                      <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" style="max-width: 1280px">
+                      <span class="popup-number">1/2</span>
+                      <div class="modal-counter" style="right: 47%;">work5</div>
+                    </div>
+                    
+                    <div class="mySlides2 fade">
+                      <img src="{{url_for('.static',filename='img/work7.jpg')}}" style="max-width: 1280px">
+                      <span class="popup-number">2/2</span>
+                      <div class="modal-counter" style="right: 47%;">work7</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides2(-1)"> <i class="fas fa-caret-left"></i></a>
+                    <a class="next" onclick="plusSlides2(1)"><i class="fas fa-caret-right"></i></a>
+                    
+                    </div>
+             </div>
+         </div>
+     </div>
+     <div class="works_modal" id="works_modal10">
+        <div class="modal_body">
+            <div class="modal_content">
+               <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+               <div class="slideshow-container">
+          
+                   <div class="mySlides3 fade">
+                     <img src="{{url_for('.static',filename='img/work7.jpg')}}" style="max-width: 1280px">
+                     <span class="popup-number">1/2</span>
+                     <div class="modal-counter" style="right: 47%;">work7</div>
+                   </div>
+                   
+                   <div class="mySlides3 fade">
+                     <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" style="max-width: 1280px">
+                     <span class="popup-number">2/2</span>
+                     <div class="modal-counter" style="right: 47%;">work5</div>
+                   </div>
+                   
+                   <a class="prev" onclick="plusSlides3(-1)"> <i class="fas fa-caret-left"></i></a>
+                   <a class="next" onclick="plusSlides3(1)"><i class="fas fa-caret-right"></i></a>
+                   
+                   </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="header-logo">
+                <img src="{{url_for('.static',filename='./img/logo.png')}}" alt="">
+                <span class="word">
+                    Joé <br>Wilson
+                </span>
+            </div>
+            <a href="#" class="button header-button">
+                download cv <span class="header-icon"><i class="fas fa-download"></i></span>
+            </a>
+            <div class="header-menu">
+                <div class="header-ul">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="menu-word">home</span> <span class="header-icons"><i class="fas fa-angle-down"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Resume
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contacts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Buy theme
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-title"></div>
+            <div class="background">
+                <div class="background-plan">
+                    <div class="background-img"></div>
+                    <div class="background-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div id="icon-fixed">
+            <div class="icons">
+                <a href="https://www.facebook.com/" target="_blank">
+                   <span class="a-icons"><i class="fab fa-facebook-f"></i></span> 
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <span class="a-icons"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a href="https://dribbble.com/" target="_blank">
+                    <span class="a-icons"><i class="fab fa-dribbble"></i></span>
+                </a>
+            </div>
+        </div>
+        <div id="blog">
+            <section id="contact">
+                <div class="contact-share">
+                    <div class="contact-title">
+                        <h1 class="h-title">Joé <br>Wilson</h1>
+                        <div class="contact-container">
+                            <h4><span id="spin"></span> |</h4>
+                            <span class="p-text">
+                                <p>Hello! I am Web Developer from United States, New York. I have rich experience in web site design and building, also I am good at wordpress. I love to talk with you about our unique.</p>
+                            </span>
+                            <a href="#" class="btn">
+                                contact me <span class="a-icon"><i class="fas fa-chevron-right"></i></span>
+                            </a>
+                            <span class="contact-border">
+                                <i class="fas fa-angle-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="about-me">
+                    <div class="about-title">
+                        <h1 class="h-about">About Me</h1>
+                        <h4>My Story</h4>
+                    </div>
+                    {% for About in Abouts %}
+                    <div class="about-text">
+                        <p class="about-p">{{About.a_subject}}</p>
+                    </div>
+                    <div class="information">
+                        <table>
+                            <tr>
+                                <td>AGE:</td>
+                                <td>{{About.a_age}}</td>
+                            </tr>
+                            <tr>
+                                <td>FREELANCE:</td>
+                                <td>{{About.a_freelance}}</td>
+                            </tr>
+                            <tr>
+                                <td>PHONE:</td>
+                                <td>{{About.a_phone}}</td>
+                            </tr>
+                        </table>
+                        <table class="information-table">
+                            <tr>
+                                <td>RESIDENCE:</td>
+                                <td>{{About.a_residence}}</td>
+                            </tr>
+                            <tr>
+                                <td>ADDRESS:</td>
+                                <td>{{About.a_address}}</td>
+                            </tr>
+                            <tr>
+                                <td>E-MAIL:</td>
+                                <td>{{About.a_e_mail}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            <section id="services">
+                <div class="services-start">
+                    <div class="services-title">
+                        <h2 class="h-services">services</h2>
+                        <h4>What I Do</h4>
+                    </div>
+                    <div class="services-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="services-item">
+                                        <i class="fas fa-university"></i>
+                                        <h3>Economic <br>Science</h3>
+                                        <p>Economics is a social science concerned with the production, consumption of goods and services.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="services-item">
+                                        <i class="far fa-chart-bar"></i>
+                                        <h3>Marketing <br>&Advertising</h3>
+                                        <p>Advertising Management though is a complex process of employing various media to sell a product or service.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="services-item">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Web <br>Development</h3>
+                                        <p>The web development process includes: web design, web content, client-side / server-side scripting and network security configuration.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="services-item">
+                                        <i class="fas fa-music"></i>
+                                        <h3>Music <br>Writing</h3>
+                                        <p>Sheet music is the basic form in which Western classical music is notated so that it can be learned and performed by solo singers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="services-item">
+                                        <i class="fas fa-gamepad"></i>
+                                        <h3>Game <br>Development</h3>
+                                        <p>Come Up With a Game Idea. An idea is the first thing that comes to mind when a game is being described before creating.</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="services-item">
+                                        <i class="fas fa-video"></i>
+                                        <h3>Photograpy <br>& Video</h3>
+                                        <p>Sessions. If you are a photographer that spends most of the time in a portrait studio, you can charge for your session</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pricing">
+                <div class="pricing-start">
+                    <div class="pricing-title">
+                        <h2 class="h-pricing">Pricing</h2>
+                        <h5 class="pricing-word">MY PLANS</h5>
+                        <span class="pricing-line"></span>
+                        <span class="small-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('content-slider','slider-item','slider-container',332,'prev',2)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('content-slider','slider-item','slider-container',332,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <!-- <span class="pricing-word">MY PLANS</span> -->
+                    </div>
+                    <div class="pricing-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="content-slider">
+                                        <div class="slider-container">
+                                            <div class="slider-item">
+                                                <span class="pricing-icons">
+                                                    <i class="fas fa-star"></i>
+                                                </span>
+                                                <span class="pricing-name">
+                                                    Basic
+                                                </span>
+                                                <div class="pricing-number">
+                                                    <span class="pricing-usd">
+                                                        $
+                                                    </span>
+                                                    <span class="number">
+                                                        39
+                                                    </span>
+                                                    <span class="pricing-hour">
+                                                        hour
+                                                    </span>
+                                                </div>
+                                                <div class="pricing-list">
+                                                    <ul>
+                                                        <li>Web Development</li>
+                                                        <li>Advetising</li>
+                                                        <li>Game Development</li>
+                                                        <li>Music Writing</li>
+                                                        <li>Photograpy</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pricing-button">
+                                                    <a href="#" class="pricing-btn">
+                                                        BUY NOW <i class="fas fa-angle-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="slider-item">
+                                                <span class="pricing-icons">
+                                                    <i class="fas fa-rocket"></i>
+                                                </span>
+                                                <span class="pricing-name">
+                                                    Premium
+                                                </span>
+                                                <div class="pricing-number">
+                                                    <span class="pricing-usd">
+                                                        $
+                                                    </span>
+                                                    <span class="number">
+                                                        59
+                                                    </span>
+                                                    <span class="pricing-hour">
+                                                        hour
+                                                    </span>
+                                                </div>
+                                                <div class="pricing-list">
+                                                    <ul>
+                                                        <li>Web Development</li>
+                                                        <li>Advetising</li>
+                                                        <li>Game Development</li>
+                                                        <li style="text-decoration: none; color: white;">Music Writing</li>
+                                                        <li style="text-decoration: none; color: white;">Photograpy</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pricing-button">
+                                                    <a href="#" class="pricing-btn">
+                                                        BUY NOW <i class="fas fa-angle-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="slider-item">
+                                                <span class="pricing-icons">
+                                                    <i class="fas fa-space-shuttle"></i>
+                                                </span>
+                                                <span class="pricing-name">
+                                                    Ultimate
+                                                </span>
+                                                <div class="pricing-number">
+                                                    <span class="pricing-usd">
+                                                        $
+                                                    </span>
+                                                    <span class="number">
+                                                        79
+                                                    </span>
+                                                    <span class="pricing-hour">
+                                                        hour
+                                                    </span>
+                                                </div>
+                                                <div class="pricing-list">
+                                                    <ul>
+                                                        <li>Web Development</li>
+                                                        <li>Advetising</li>
+                                                        <li>Game Development</li>
+                                                        <li style="text-decoration: none; color: white;">Music Writing</li>
+                                                        <li style="text-decoration: none; color: white;">Photograpy</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="pricing-button">
+                                                    <a href="#" class="pricing-btn">
+                                                        BUY NOW <i class="fas fa-angle-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <div class="experience-start">
+                    <div class="experience-title">
+                        <h2 class="h-experience">experience</h2>
+                        <h4 class="experience-word">WORKING WITH</h4>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn"  onclick="slideShow('maintenance-slider','slayt-item','slayt-container',664,'prev',2)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('maintenance-slider','slayt-item','slayt-container',664,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="experience-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="maintenance-slider">
+                                        <div class="slayt-container">
+                                            <div class="slayt-item">
+                                                <span class="experience-letter">
+                                                    Present
+                                                </span>
+                                                <h3 >The Turin <br>Olympics</h3>
+                                                <p class="experience-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                            <div class="slayt-item">
+                                                <span class="experience-number">
+                                                    2016-2018
+                                                </span>
+                                                <h3 >Red <br>Drifting</h3>
+                                                <p class="experience-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                            <div class="slayt-item">
+                                                <span class="experience-number">
+                                                    2014-2016
+                                                </span>
+                                                <h3>World <br>Economy</h3>
+                                                <p class="experience-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                            <div class="slayt-item">
+                                                <span class="experience-number">
+                                                    2012-2014
+                                                </span>
+                                                <h3 >Art Director <br>Facebook</h3>
+                                                <p class="experience-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education">
+                <div class="education-start">
+                    <div class="education-title">
+                        <h2 class="h-education">Education</h2>
+                        <span class="education-word">Studied At</span>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('education-slider','education-item','education-container',664,'prev',2)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('education-slider','education-item','education-container',664,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="educat-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="education-slider">
+                                        <div class="education-container">
+                                            <div class="education-item">
+                                                <span class="education-number">
+                                                    2011-2012
+                                                </span>
+                                                <h3>Art University <br>New York</h3>
+                                                <p class="education-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                            <div class="education-item">
+                                                <span class="education-number">
+                                                    2010-2011
+                                                </span>
+                                                <h3>Programming Course <br>Paris</h3>
+                                                <p class="education-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                            <div class="education-item">
+                                                <span class="education-number">
+                                                    2009-2010
+                                                </span>
+                                                <h3>Web Design Course <br>London</h3>
+                                                <p class="education-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                            <div class="education-item">
+                                                <span class="education-number">
+                                                    2008-2009
+                                                </span>
+                                                <h3>Art Course <br>London</h3>
+                                                <p class="education-text">Etiam sit amet arci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="design-skills">
+                <div class="design-skills-start">
+                    <div class="design-skills-title">
+                        <h1 class="h-design-skills">Design Skills</h1>
+                        <span class="design-skills-word">Creative Ability</span>
+                    </div>
+                    <div class="design-skills-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="design-skills-item">
+                                        <span class="design-name">Web Layout</span>
+                                        <p class="design-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 90%;">
+                                                <span class="percent">
+                                                    <span>90%</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="design-skills-item">
+                                        <span class="design-name">Illustrations</span>
+                                        <p class="design-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 70%;">
+                                                <span class="percent">
+                                                    <span>70%</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="design-skills-item">
+                                        <span class="design-name">Photoshop</span>
+                                        <p class="design-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 95%;">
+                                                <span class="percent">
+                                                    <span>95%</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="design-skills-item">
+                                        <span class="design-name">Graphic Design</span>
+                                        <p class="design-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 85%;">
+                                                <span class="percent">
+                                                    <span>85%</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="language-skills">
+                <div class="language-skills-start">
+                    <div class="language-skills-title">
+                        <h1 class="h-language-skills">Language <br>Skills</h1>
+                        <span class="language-skills-word">Reading And Writing</span>
+                    </div>
+                    <div class="language-skills-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="language-skills-item">
+                                        <span class="language-name">English</span>
+                                        <p class="language-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 90%;">
+                                                <span class="percent">
+                                                    <span>90%</span>
+                                                </span>
+                                                <span class="da" style="width: 292.3px;">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                            <span class="dg">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="language-skills-item">
+                                        <span class="language-name">German</span>
+                                        <p class="language-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 70%;">
+                                                <span class="percent">
+                                                    <span>90%</span>
+                                                </span>
+                                                <span class="da" style="width: 292.3px;">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                            <span class="dg">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="language-skills-item" style="margin-top: 50px;">
+                                        <span class="language-name">Italian</span>
+                                        <p class="language-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 55%;">
+                                                <span class="percent">
+                                                    <span>90%</span>
+                                                </span>
+                                                <span class="da" style="width: 292.3px;">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                            <span class="dg">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="language-skills-item" style="margin-top: 50px;">
+                                        <span class="language-name">French</span>
+                                        <p class="language-text">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: 85%;">
+                                                <span class="percent">
+                                                    <span>90%</span>
+                                                </span>
+                                                <span class="da" style="width: 292.3px;">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                            <span class="dg">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="coding-skills">
+                <div class="coding-skills-start">
+                    <div class="coding-skills-title">
+                        <h1 class="h-coding-skills">Coding Skills</h1>
+                        <span class="coding-skills-word">Developing On</span>
+                    </div>
+                    <div class="coding-skills-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="coding-skills-item">
+                                        <div class="chart" id="graph" data-percent="90" ></div>
+                                        <span class="coding-name">WordPress</span>
+                                        <p class="coding-text">Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="coding-skills-item">
+                                        <span class="coding-name">PHP,MYSQL</span>
+                                        <p class="coding-text">Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="coding-skills-item">
+                                        <span class="coding-name">JavaScript</span>
+                                        <p class="coding-text">Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="coding-skills-item">
+                                        <span class="coding-name">Angular</span>
+                                        <p class="coding-text">Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="coding-skills-item">
+                                        <span class="coding-name">HTML,CSS</span>
+                                        <p class="coding-text">Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="coding-skills-item">
+                                        <span class="coding-name">Python</span>
+                                        <p class="coding-text">Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="reviews">
+                <div class="reviews-start">
+                    <div class="reviews-title">
+                        <h1 class="h-reviews">Reviews</h1>
+                        <span class="reviews-word">What Customers Say</span>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('reviews-slider','reviews-item','reviews-container',664,'prev',2)">
+                                <i class="fas fa-chevron-left" ></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('reviews-slider','reviews-item','reviews-container',664,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="reviews-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="reviews-slider">
+                                        <div class="reviews-container">
+                                            <div class="reviews-item">
+                                                <div class="reviews-images">
+                                                    <img src="{{url_for('.static',filename='img/rev1.png')}}">
+                                                </div>
+                                                <div class="reviews-name">
+                                                    <h3>Joseph Mackey</h3>
+                                                    <span>Architect</span>
+                                                </div>
+                                                <div class="reviews-paragraf">
+                                                    <div class="reviews-icon">
+                                                        <i class="fas fa-quote-right"></i>
+                                                    </div>
+                                                    <div class="reviews-text">
+                                                        <p>Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item">
+                                                <div class="reviews-images">
+                                                    <img src="{{url_for('.static',filename='img/user_03.jpg')}}">
+                                                </div>
+                                                <div class="reviews-name">
+                                                    <h3>Laura Owens</h3>
+                                                    <span>Designer</span>
+                                                </div>
+                                                <div class="reviews-paragraf">
+                                                    <div class="reviews-icon">
+                                                        <i class="fas fa-quote-right"></i>
+                                                    </div>
+                                                    <div class="reviews-text">
+                                                        <p>Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item">
+                                                <div class="reviews-images">
+                                                    <img src="{{url_for('.static',filename='img/user_02.jpg')}}">
+                                                </div>
+                                                <div class="reviews-name">
+                                                    <h3>Olivia Riley</h3>
+                                                    <span>Ceo</span>
+                                                </div>
+                                                <div class="reviews-paragraf">
+                                                    <div class="reviews-icon">
+                                                        <i class="fas fa-quote-right"></i>
+                                                    </div>
+                                                    <div class="reviews-text">
+                                                        <p>Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reviews-item">
+                                                <div class="reviews-images">
+                                                    <img src="{{url_for('.static',filename='img/rev1.png')}}">
+                                                </div>
+                                                <div class="reviews-name">
+                                                    <h3>Javier Parker</h3>
+                                                    <span>Developer</span>
+                                                </div>
+                                                <div class="reviews-paragraf">
+                                                    <div class="reviews-icon">
+                                                        <i class="fas fa-quote-right"></i>
+                                                    </div>
+                                                    <div class="reviews-text">
+                                                        <p>Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="clients">
+                <div class="clients-start">
+                    <div class="clients-title">
+                        <h1 class="h-clients">Clients</h1>
+                        <span class="clients-word">My Partners</span>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('clients-slider','clients-item','clients-container',332,'prev',4)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('clients-slider','clients-item','clients-container',332,'next',4)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clients-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="clients-slider">
+                                        <div class="clients-container">
+                                            <div class="clients-item">
+                                                <div class="clients-images">
+                                                    <a href="#">
+                                                        <img src="{{url_for('.static',filename='img/client4-256x232.png')}}" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="clients-item">
+                                                <div class="clients-images">
+                                                    <a href="#">
+                                                        <img src="{{url_for('.static',filename='img/client1-256x123.png')}}" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="clients-item">
+                                                <div class="clients-images">
+                                                    <a href="#">
+                                                        <img src="{{url_for('.static',filename='img/client2-256x92.png')}}" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="clients-item">
+                                                <div class="clients-images">
+                                                    <a href="#">
+                                                        <img src="{{url_for('.static',filename='img/client3.png')}}" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="clients-item">
+                                                <div class="clients-images">
+                                                    <a href="#">
+                                                        <img src="{{url_for('.static',filename='img/client4-256x232.png')}}" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="clients-item">
+                                                <div class="clients-images">
+                                                    <a href="#">
+                                                        <img src="{{url_for('.static',filename='img/client1-256x123.png')}}" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio">
+                <div class="portfolio-start">
+                    <div class="portfolio-title">
+                        <h1 class="h-portfolio">Portfolio</h1>
+                        <span class="portfolio-word">Latest Works</span>
+                    </div>
+                    <div class="filters-menu">
+                        <ul>
+                            <li class="active" onclick="filterSelection()">All</li>
+                            <li>Video</li>
+                            <li>Music</li>
+                            <li>Links</li>
+                            <li>Image</li>
+                            <li>Gallery</li>
+                            <li>Content</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-container">
+                        <section class="js-filter">
+                            <div class="thumb" data-id="Gallery">
+                                <a href="#" id="open_modal" data-modal="works_modal">
+                                    <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-images"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Gallery</div>
+                                    <a href="#" class="gallery-title">Alabaster Complete <br>Collection</a>
+                                </div> 
+                            </div>
+                            <div class="thumb" data-id="Video">
+                                <a href="#" id="open_modal" data-modal="works_modal1">
+                                    <img src="{{url_for('.static',filename='img/work2-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-video"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Video</div>
+                                    <a href="#" class="gallery-title">Book of John Paper</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Image">
+                                <a href="#" id="open_modal" data-modal="works_modal2">
+                                    <img src="{{url_for('.static',filename='img/work7.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-image"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Image</div>
+                                    <a href="#" class="gallery-title">White Rose Photo</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Image">
+                                <a href="#" id="open_modal" data-modal="works_modal3">
+                                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-image"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Image</div>
+                                    <a href="#" class="gallery-title">Honest Company</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Gallery">
+                                <a href="#" id="open_modal" data-modal="works_modal4">
+                                    <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-images"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Gallery</div>
+                                    <a href="#" class="gallery-title">Brown Short Dog</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Music">
+                                <a href="#" id="open_modal" data-modal="works_modal5">
+                                    <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-music"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Music</div>
+                                    <a href="#" class="gallery-title">Brown Complete Building</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Links">
+                                <a href="https://www.google.com/" target="_blank">
+                                    <img src="{{url_for('.static',filename='img/work3-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-link"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Links</div>
+                                    <a href="#" class="gallery-title">Black Car</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Content">
+                                <a href="#" id="open_modal" data-modal="works_modal6">
+                                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Content</div>
+                                    <a href="#" class="gallery-title">Yellow and Blue Striped</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section id="form-contact">
+                <div class="form-contact-start">
+                    <div class="form-contact-title">
+                        <h1 class="h-form-contact">Contact</h1>
+                        <span class="form-contact-word">Let's Talk</span>
+                    </div>
+                    <div class="form-contact-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-contact-item">
+                                       <form action="" name="userForm">
+                                        <div class="contact-form">
+                                            <div class="form-group">
+                                                <div class="label">
+                                                    <span>Full Name</span>
+                                                    <span class="form-star">*</span>
+                                                </div>
+                                                <input type="text" name="name" id="name" class="form-control" placeholder="ej.:Genoveva Lian Hullt">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-tag">
+                                                    <span>Email Address</span>
+                                                    <span class="form-star">*</span>
+                                                </div>
+                                                <input type="email" name="email" id="email" class="form-control form-email" placeholder="example@domain.com">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-tags">
+                                                    <span>Message</span>
+                                                    <span class="form-star">*</span>
+                                                </div>
+                                                <textarea name="message" id="" cols="25" rows="8" class="form-text form-control" placeholder="To Write"></textarea>
+                                            </div>
+                                            <div class="group-btn" onclick="Accordion(event)">
+                                                <button type="submit" class="form-btn">
+                                                    <span>Send Message</span>
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                            <div class="form-output">One or more fields have an error. Please check and try again.</div>
+                                            <div class="contact-output">Thank you for your message. It has been sent.</div>
+                                        </div>
+                                       </form>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-contact-box">
+                                        <div class="form-title">
+                                            <span class="form-name">Joe Wilson</span>
+                                            <span class="form-subname">Consultant & Mentor</span>
+                                            <div class="form-table">
+                                                <ul>
+                                                    <li>
+                                                        <span class="form-table-word">Age:</span>
+                                                        <span class="table-word"> 24</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Residence:</span>
+                                                        <span class="table-word"> USA</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Freelance:</span>
+                                                        <span class="table-word"> Available</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Address:</span>
+                                                        <span class="table-word"> San Francisco</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Phone:</span>
+                                                        <span class="table-word"> +1 256 254 84 56</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">E-mail:</span>
+                                                        <span class="table-word"> jwilson@domain.com</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="author">
+                                                    <span>Joe Wilson</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="{{url_for('.static',filename='js/app.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="codingskills-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/codingskills/update/{{codingskill.id}}" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.cs_percent(class_='form-control',placeholder='Faiz daxil edin.',value=codingskill.cs_percent)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_number(class_='form-control',placeholder='Eded daxil edin.',value=codingskill.cs_number)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_name(class_='form-control',placeholder='Ad daxil edin.',value=codingskill.cs_name)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_subject(class_='form-control',placeholder='Metin daxil edin.',value=codingskill.cs_subject)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cs_submit(class_='btn btn-success',value='Gonder')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %}

@@ -1,0 +1,56 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="languageskills-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.ls_name(class_='form-control',placeholder='Name daxil edin.')}}                        
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.ls_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.ls_percent(class_='form-control',placeholder='Faiz daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.ls_submit(class_='btn btn-success',value='Gonder')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="languageskills-table">
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Language Skills Name</th>
+                <th scope="col">Language Skills Subject</th>
+                <th scope="col">Language Skills Percent</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for languageskill in languageskills %}
+              <tr>
+                <td>{{languageskill.id}}</td>
+                <td>{{languageskill.ls_name}}</td>
+                <td>{{languageskill.ls_subject}}</td>
+                <td>{{languageskill.ls_percent}}</td>
+                <td>
+                    <a href="/languageskills/delete/{{languageskill.id}}"><i class="bi bi-trash mx-1"></i></a>
+                    <a href="/languageskills/update/{{languageskill.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                    <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

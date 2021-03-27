@@ -1,0 +1,16 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="pricing-category-form">
+  <div class="container">
+    <form action="/pricing/category/update/{{p_category.id}}" method="POST">
+        <div class="form-group mt-2">
+            {{form.p_title(class_='form-control',placeholder='Metin daxil edin.',value=p_category.p_title)}}
+        </div>
+        <div class="form-group mt-2">
+            {{form.c_submit(class_='btn btn-success',value='Gonder')}}
+        </div>
+    </form>
+  </div>
+</section>
+{% endblock  %}

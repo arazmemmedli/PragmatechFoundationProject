@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/grid.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/style.css')}}">
+    <title>Myour – One Page Resume WordPress Theme – Just another WordPress site</title>
+</head>
+<body>
+    <div id="works_modal" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="slideshow-container">
+            
+                    <div class="mySlides fade">
+                      <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">1 of 4</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">2 of 4</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">3 of 4</div>
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <img src="{{url_for('.static',filename='img/work2-680x680.jpg')}}" style="width:100%">
+                        <div class="popup-counter">4 of 4</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-caret-left"></i></a>
+                    <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+                    
+                    </div>
+            </div>
+        </div>
+    </div>
+     <div id="works_modal1" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="video">
+                    <iframe class="book-video" src="https://www.youtube.com/embed/S4L8T2kFFck" width="956" height="538" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal2" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="popup-images">
+                    <img src="{{url_for('.static',filename='img/work7.jpg')}}" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal3" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="popup-images">
+                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal4" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="slideshow-container">
+            
+                  <div class="mySlides1 fade">
+                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}" style="width:100%">
+                    <div class="popup-counter">1 of 4</div>
+                  </div>
+                  
+                  <div class="mySlides1 fade">
+                    <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}" style="width:100%">
+                    <div class="popup-counter">2 of 4</div>
+                  </div>
+                  
+                  <div class="mySlides1 fade">
+                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" style="width:100%">
+                    <div class="popup-counter">3 of 4</div>
+                  </div>
+          
+                  <div class="mySlides1 fade">
+                      <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}" style="width:100%">
+                      <div class="popup-counter">4 of 4</div>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides1(-1)"> <i class="fas fa-caret-left"></i></a>
+                  <a class="next" onclick="plusSlides1(1)"><i class="fas fa-caret-right"></i></a>
+                  
+                  </div>
+             </div>
+        </div>
+     </div>
+     <div id="works_modal5" class="works_modal">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="popup-images">
+                    <img src="{{url_for('.static',filename='img/work3-680x680.jpg')}}" alt="">
+                </div>
+             </div>
+         </div>
+     </div>
+     <div id="works_modal6" class="works_modal">
+         <div class="modal_body modal-scroll">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="content-images">
+                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" alt="">
+                </div>
+                <div class="content-desc">
+                    <div class="content-category">
+                        <span>Content</span>
+                    </div>
+                    <h4>Yellow and Blue Striped</h4>
+                    <div class="content-post">
+                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
+                        <ul>
+                            <li>Now there is more fashion. There is no so-called trends.</li>
+                            <li>Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style.</li>
+                            <li>Think about the content that you want to invest in a created object, and only then will form.</li>
+                            <li>The thing is your spirit. A spirit unlike forms hard copy.</li>
+                        </ul>
+                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
+                        <div class="gallery-item">
+                            <a href="#" id="open_modal" data-modal="works_modal9">
+                                <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="#" id="open_modal" data-modal="works_modal10">
+                                <img src="{{url_for('.static',filename='img/work7.jpg')}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="content-btn">
+                        View Project
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+             </div>
+         </div>
+     </div>
+     <div class="works_modal" id="works_modal9">
+         <div class="modal_body">
+             <div class="modal_content">
+                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+                <div class="slideshow-container">
+           
+                    <div class="mySlides2 fade">
+                      <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" style="max-width: 1280px">
+                      <span class="popup-number">1/2</span>
+                      <div class="modal-counter" style="right: 47%;">work5</div>
+                    </div>
+                    
+                    <div class="mySlides2 fade">
+                      <img src="{{url_for('.static',filename='img/work7.jpg')}}" style="max-width: 1280px">
+                      <span class="popup-number">2/2</span>
+                      <div class="modal-counter" style="right: 47%;">work7</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides2(-1)"> <i class="fas fa-caret-left"></i></a>
+                    <a class="next" onclick="plusSlides2(1)"><i class="fas fa-caret-right"></i></a>
+                    
+                    </div>
+             </div>
+         </div>
+     </div>
+     <div class="works_modal" id="works_modal10">
+        <div class="modal_body">
+            <div class="modal_content">
+               <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
+               <div class="slideshow-container">
+          
+                   <div class="mySlides3 fade">
+                     <img src="{{url_for('.static',filename='img/work7.jpg')}}" style="max-width: 1280px">
+                     <span class="popup-number">1/2</span>
+                     <div class="modal-counter" style="right: 47%;">work7</div>
+                   </div>
+                   
+                   <div class="mySlides3 fade">
+                     <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" style="max-width: 1280px">
+                     <span class="popup-number">2/2</span>
+                     <div class="modal-counter" style="right: 47%;">work5</div>
+                   </div>
+                   
+                   <a class="prev" onclick="plusSlides3(-1)"> <i class="fas fa-caret-left"></i></a>
+                   <a class="next" onclick="plusSlides3(1)"><i class="fas fa-caret-right"></i></a>
+                   
+                   </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="header-logo">
+                <img src="{{url_for('.static',filename='./img/logo.png')}}" alt="">
+                <span class="word">
+                    Joé <br>Wilson
+                </span>
+            </div>
+            <a href="#" class="button header-button">
+                download cv <span class="header-icon"><i class="fas fa-download"></i></span>
+            </a>
+            <div class="header-menu">
+                <div class="header-ul">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="menu-word">home</span> <span class="header-icons"><i class="fas fa-angle-down"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Resume
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contacts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Buy theme
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-title"></div>
+            <div class="background">
+                <div class="background-plan">
+                    <div class="background-img"></div>
+                    <div class="background-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div id="icon-fixed">
+            <div class="icons">
+                <a href="https://www.facebook.com/" target="_blank">
+                   <span class="a-icons"><i class="fab fa-facebook-f"></i></span> 
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <span class="a-icons"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a href="https://dribbble.com/" target="_blank">
+                    <span class="a-icons"><i class="fab fa-dribbble"></i></span>
+                </a>
+            </div>
+        </div>
+        <div id="blog">
+            <section id="contact">
+                <div class="contact-share">
+                    <div class="contact-title">
+                        <h1 class="h-title">Joé <br>Wilson</h1>
+                        <div class="contact-container">
+                            <h4><span id="spin"></span> |</h4>
+                            <span class="p-text">
+                                <p>Hello! I am Web Developer from United States, New York. I have rich experience in web site design and building, also I am good at wordpress. I love to talk with you about our unique.</p>
+                            </span>
+                            <a href="#" class="btn">
+                                contact me <span class="a-icon"><i class="fas fa-chevron-right"></i></span>
+                            </a>
+                            <span class="contact-border">
+                                <i class="fas fa-angle-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="about-me">
+                    <div class="about-title">
+                        <h1 class="h-about">About Me</h1>
+                        <h4>My Story</h4>
+                    </div>
+                    {% for About in Abouts %}
+                    <div class="about-text">
+                        <p class="about-p">{{About.a_subject}}</p>
+                    </div>
+                    <div class="information">
+                        <table>
+                            <tr>
+                                <td>AGE:</td>
+                                <td>{{About.a_age}}</td>
+                            </tr>
+                            <tr>
+                                <td>FREELANCE:</td>
+                                <td>{{About.a_freelance}}</td>
+                            </tr>
+                            <tr>
+                                <td>PHONE:</td>
+                                <td>{{About.a_phone}}</td>
+                            </tr>
+                        </table>
+                        <table class="information-table">
+                            <tr>
+                                <td>RESIDENCE:</td>
+                                <td>{{About.a_residence}}</td>
+                            </tr>
+                            <tr>
+                                <td>ADDRESS:</td>
+                                <td>{{About.a_address}}</td>
+                            </tr>
+                            <tr>
+                                <td>E-MAIL:</td>
+                                <td>{{About.a_e_mail}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            <section id="services">
+                <div class="services-start">
+                    <div class="services-title">
+                        <h2 class="h-services">services</h2>
+                        <h4>What I Do</h4>
+                    </div>
+                    <div class="services-container">
+                        <div class="container">
+                            <div class="row">
+                                {% for servic in services %}
+                                <div class="col-6">
+                                    <div class="services-item">
+                                        <i class="{{servic.s_icon}}"></i>
+                                        <h3>{{servic.s_name}}</h3>
+                                        <p>{{servic.s_subject}}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pricing">
+                <div class="pricing-start">
+                    <div class="pricing-title">
+                        <h2 class="h-pricing">Pricing</h2>
+                        <h5 class="pricing-word">MY PLANS</h5>
+                        <span class="pricing-line"></span>
+                        <span class="small-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('content-slider','slider-item','slider-container',332,'prev',2)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('content-slider','slider-item','slider-container',332,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <!-- <span class="pricing-word">MY PLANS</span> -->
+                    </div>
+                    <div class="pricing-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="content-slider">
+                                        <div class="slider-container">
+                                            {% for pricing in Pricings %}
+                                            <div class="slider-item">
+                                                <span class="pricing-icons">
+                                                    <i class="{{pricing.p_icon}}"></i>
+                                                </span>
+                                                <span class="pricing-name">
+                                                    {{pricing.p_name}}
+                                                </span>
+                                                <div class="pricing-number">
+                                                    <span class="pricing-usd">
+                                                        $
+                                                    </span>
+                                                    <span class="number">
+                                                        {{pricing.p_number}}
+                                                    </span>
+                                                    <span class="pricing-hour">
+                                                        hour
+                                                    </span>
+                                                </div>
+                                                <div class="pricing-list">
+                                                    <ul>
+                                                    {% for title in Pricingcategories %}
+                                                        <li>
+                                                                {{title.p_title}}
+                                                        </li>
+                                                    {% endfor %}
+                                                    </ul>
+                                                </div>
+                                                <div class="pricing-button">
+                                                    <a href="#" class="pricing-btn">
+                                                        BUY NOW <i class="fas fa-angle-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <div class="experience-start">
+                    <div class="experience-title">
+                        <h2 class="h-experience">experience</h2>
+                        <h4 class="experience-word">WORKING WITH</h4>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn"  onclick="slideShow('maintenance-slider','slayt-item','slayt-container',664,'prev',2)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('maintenance-slider','slayt-item','slayt-container',664,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="experience-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="maintenance-slider">
+                                        <div class="slayt-container">
+                                            {% for Experience in Experiences %}
+                                            <div class="slayt-item">
+                                                <span class="experience-letter">
+                                                    {{Experience.e_date}}
+                                                </span>
+                                                <h3 >{{Experience.e_name}}</h3>
+                                                <p class="experience-text">{{Experience.e_subject}}</p>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education">
+                <div class="education-start">
+                    <div class="education-title">
+                        <h2 class="h-education">Education</h2>
+                        <span class="education-word">Studied At</span>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('education-slider','education-item','education-container',664,'prev',2)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('education-slider','education-item','education-container',664,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="educat-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="education-slider">
+                                        <div class="education-container">
+                                            {% for Education in Educations %}
+                                            <div class="education-item">
+                                                <span class="education-number">
+                                                    {{Education.ed_date}}
+                                                </span>
+                                                <h3>{{Education.ed_name}}</h3>
+                                                <p class="education-text">{{Education.ed_subject}}</p>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="design-skills">
+                <div class="design-skills-start">
+                    <div class="design-skills-title">
+                        <h1 class="h-design-skills">Design Skills</h1>
+                        <span class="design-skills-word">Creative Ability</span>
+                    </div>
+                    <div class="design-skills-container">
+                        <div class="container">
+                            <div class="row">
+                                {% for Designskill in Designskills %}
+                                <div class="col-6">
+                                    <div class="design-skills-item">
+                                        <span class="design-name">{{Designskill.ds_name}}</span>
+                                        <p class="design-text">{{Designskill.ds_subject}}</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: {{Designskill.ds_percent}};">
+                                                <span class="percent">
+                                                    <span>{{Designskill.ds_number}}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="language-skills">
+                <div class="language-skills-start">
+                    <div class="language-skills-title">
+                        <h1 class="h-language-skills">Language <br>Skills</h1>
+                        <span class="language-skills-word">Reading And Writing</span>
+                    </div>
+                    <div class="language-skills-container">
+                        <div class="container">
+                            <div class="row">
+                                {% for Languageskill in Languageskills %}
+                                <div class="col-6">
+                                    <div class="language-skills-item">
+                                        <span class="language-name">{{Languageskill.ls_name}}</span>
+                                        <p class="language-text">{{Languageskill.ls_subject}}</p>
+                                        <div class="progress">
+                                            <div class="percentage" style="width: {{Languageskill.ls_percent}};">
+                                                <span class="percent">
+                                                    <span>90%</span>
+                                                </span>
+                                                <span class="da" style="width: 292.3px;">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                            <span class="dg">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="coding-skills">
+                <div class="coding-skills-start">
+                    <div class="coding-skills-title">
+                        <h1 class="h-coding-skills">Coding Skills</h1>
+                        <span class="coding-skills-word">Developing On</span>
+                    </div>
+                    <div class="coding-skills-container">
+                        <div class="container">
+                            <div class="row">
+                                {% for Codingskill in Codingskills %}
+                                <div class="col-4">
+                                    <div class="coding-skills-item">
+                                        <div class="coding-progress">
+                                            <svg class="progress" width="108" height="108">
+                                                <circle class="progress-coding-circle" id="open-cricle" stroke="#000" stroke-width="3" cx="54" cy="54" r="46" fill="transparent" data-percent="40"/>
+                                            </svg>
+                                            <div class="coding-number">
+                                                <span>{{Codingskill.cs_number}}</span>
+                                            </div>
+                                        </div>
+                                        <span class="coding-name">{{Codingskill.cs_name}}</span>
+                                        <p class="coding-text">{{Codingskill.cs_subject}}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="reviews">
+                <div class="reviews-start">
+                    <div class="reviews-title">
+                        <h1 class="h-reviews">Reviews</h1>
+                        <span class="reviews-word">What Customers Say</span>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('reviews-slider','reviews-item','reviews-container',664,'prev',2)">
+                                <i class="fas fa-chevron-left" ></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('reviews-slider','reviews-item','reviews-container',664,'next',2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="reviews-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="reviews-slider">
+                                        <div class="reviews-container">
+                                            {% for i_review in i_reviews %}
+                                            <div class="reviews-item">
+                                                <div class="reviews-images">
+                                                    <img src="admin/static/uploads/{{i_review.r_img}}">
+                                                </div>
+                                                <div class="reviews-name">
+                                                    <h3>{{i_review.r_name}}</h3>
+                                                    <span>{{i_review.r_company}}</span>
+                                                </div>
+                                                <div class="reviews-paragraf">
+                                                    <div class="reviews-icon">
+                                                        <i class="{{i_review.r_icon}}"></i>
+                                                    </div>
+                                                    <div class="reviews-text">
+                                                        <p>{{i_review.r_subject}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="clients">
+                <div class="clients-start">
+                    <div class="clients-title">
+                        <h1 class="h-clients">Clients</h1>
+                        <span class="clients-word">My Partners</span>
+                        <span class="experience-line"></span>
+                        <span class="tiny-line"></span>
+                        <div class="slider-controls">
+                            <a class="slider-btn prevBtn" onclick="slideShow('clients-slider','clients-item','clients-container',332,'prev',4)">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a class="slider-button nextBtn" onclick="slideShow('clients-slider','clients-item','clients-container',332,'next',4)">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clients-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="clients-slider">
+                                        <div class="clients-container">
+                                            {% for i_client in i_clients %}
+                                            <div class="clients-item">
+                                                <div class="clients-images">
+                                                    <a href="#">
+                                                        <img src="admin/static/uploads/{{i_client.c_img}}" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio">
+                <div class="portfolio-start">
+                    <div class="portfolio-title">
+                        <h1 class="h-portfolio">Portfolio</h1>
+                        <span class="portfolio-word">Latest Works</span>
+                    </div>
+                    <div class="filters-menu">
+                        <ul>
+                            <li class="active" onclick="filterSelection()">All</li>
+                            <li>Video</li>
+                            <li>Music</li>
+                            <li>Links</li>
+                            <li>Image</li>
+                            <li>Gallery</li>
+                            <li>Content</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-container">
+                        <section class="js-filter">
+                            <div class="thumb" data-id="Gallery">
+                                <a href="#" id="open_modal" data-modal="works_modal">
+                                    <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-images"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Gallery</div>
+                                    <a href="#" class="gallery-title">Alabaster Complete <br>Collection</a>
+                                </div> 
+                            </div>
+                            <div class="thumb" data-id="Video">
+                                <a href="#" id="open_modal" data-modal="works_modal1">
+                                    <img src="{{url_for('.static',filename='img/work2-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-video"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Video</div>
+                                    <a href="#" class="gallery-title">Book of John Paper</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Image">
+                                <a href="#" id="open_modal" data-modal="works_modal2">
+                                    <img src="{{url_for('.static',filename='img/work7.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-image"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Image</div>
+                                    <a href="#" class="gallery-title">White Rose Photo</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Image">
+                                <a href="#" id="open_modal" data-modal="works_modal3">
+                                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-image"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Image</div>
+                                    <a href="#" class="gallery-title">Honest Company</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Gallery">
+                                <a href="#" id="open_modal" data-modal="works_modal4">
+                                    <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-images"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Gallery</div>
+                                    <a href="#" class="gallery-title">Brown Short Dog</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Music">
+                                <a href="#" id="open_modal" data-modal="works_modal5">
+                                    <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-music"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Music</div>
+                                    <a href="#" class="gallery-title">Brown Complete Building</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Links">
+                                <a href="https://www.google.com/" target="_blank">
+                                    <img src="{{url_for('.static',filename='img/work3-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-link"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Links</div>
+                                    <a href="#" class="gallery-title">Black Car</a>
+                                </div>
+                            </div>
+                            <div class="thumb" data-id="Content">
+                                <a href="#" id="open_modal" data-modal="works_modal6">
+                                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}">
+                                    <span class="portfolio-info">
+                                        <span class="centrize">
+                                            <span class="portfolio-icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="portfolio-gallery">
+                                    <div class="category">Content</div>
+                                    <a href="#" class="gallery-title">Yellow and Blue Striped</a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <section id="form-contact">
+                <div class="form-contact-start">
+                    <div class="form-contact-title">
+                        <h1 class="h-form-contact">Contact</h1>
+                        <span class="form-contact-word">Let's Talk</span>
+                    </div>
+                    <div class="form-contact-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-contact-item">
+                                       <form action="/" name="userForm" method="POST">
+                                            <div class="form-group">
+                                                <div class="label">
+                                                    <span>Full Name</span>
+                                                    <span class="form-star">*</span>
+                                                </div>
+                                                <input type="text" name="fullname" id="name" class="form-control" placeholder="ej.:Genoveva Lian Hullt">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-tag">
+                                                    <span>Email Address</span>
+                                                    <span class="form-star">*</span>
+                                                </div>
+                                                <input type="email" name="email" id="email" class="form-control form-email" placeholder="example@domain.com">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-tags">
+                                                    <span>Message</span>
+                                                    <span class="form-star">*</span>
+                                                </div>
+                                                <textarea name="message" id="" cols="25" rows="8" class="form-text form-control" placeholder="To Write"></textarea>
+                                            </div>
+                                            <div class="group-btn" onclick="Accordion(event)">
+                                                <button type="submit" class="form-btn">
+                                                    <span>Send Message</span>
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                            <div class="form-output">One or more fields have an error. Please check and try again.</div>
+                                            <div class="contact-output">Thank you for your message. It has been sent.</div>
+                                       </form>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-contact-box">
+                                        <div class="form-title">
+                                            <span class="form-name">Joe Wilson</span>
+                                            <span class="form-subname">Consultant & Mentor</span>
+                                            <div class="form-table">
+                                                <ul>
+                                                    <li>
+                                                        <span class="form-table-word">Age:</span>
+                                                        <span class="table-word"> 24</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Residence:</span>
+                                                        <span class="table-word"> USA</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Freelance:</span>
+                                                        <span class="table-word"> Available</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Address:</span>
+                                                        <span class="table-word"> San Francisco</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">Phone:</span>
+                                                        <span class="table-word"> +1 256 254 84 56</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="form-table-word">E-mail:</span>
+                                                        <span class="table-word"> jwilson@domain.com</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="author">
+                                                    <span>Joe Wilson</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="{{url_for('.static',filename='js/app.js')}}"></script>
+</body>
+</html>
