@@ -36,7 +36,7 @@ from admin.ls_routes import languageskills_bp
 from admin.cs_routes import codingskills_bp
 from admin.reviews_routes import reviews_bp
 from admin.clients_routes import clients_bp
-from admin.contact_routes import contact_bp
+
 
 app.register_blueprint(admin_bp)
 app.register_blueprint(web_bp)
@@ -50,4 +50,4 @@ app.register_blueprint(languageskills_bp)
 app.register_blueprint(codingskills_bp)
 app.register_blueprint(reviews_bp)
 app.register_blueprint(clients_bp)
-app.register_blueprint(contact_bp)
+

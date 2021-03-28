@@ -70,3 +70,4 @@ class ReviewsForm(FlaskForm):
 class ClientsForm(FlaskForm):
     c_img=FileField('c_img')
     c_submit=SubmitField()
+

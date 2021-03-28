@@ -41,3 +41,8 @@ def contact_form():
         db.session.commit()
         return redirect('/admin/contact/')
     return render_template('web/index.html')
+
+@web_bp.route('/admin/contact/')
+def contact():
+    t_contacts=Contact.query.all()
+    return render_template('admin/contact.html',t_contacts=t_contacts)
