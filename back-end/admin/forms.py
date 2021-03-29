@@ -71,3 +71,9 @@ class ClientsForm(FlaskForm):
     c_img=FileField('c_img')
     c_submit=SubmitField()
 
+class ContactForm(FlaskForm):
+    fullname=StringField('fullname')
+    email=StringField('email')
+    message=TextAreaField('message')
+    
+

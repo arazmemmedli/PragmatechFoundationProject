@@ -31,7 +31,7 @@ def admin_index():
 
 @web_bp.route('/',methods=['GET','POST'])
 def contact_form():
-    if request.method=="POST":
+    if request.method=='POST':
         contacts=Contact(
             fullname=request.form['fullname'],
             email=request.form['email'],

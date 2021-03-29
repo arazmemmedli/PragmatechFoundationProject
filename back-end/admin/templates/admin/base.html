@@ -9,65 +9,130 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <title>Hello, world!</title>
   </head>
   <body>
-    <section class="edu-nav">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <section id="main-navba">
+      <nav class="navbar navbar-light mt-2" style="background: #585d65;border-radius: 80px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="color: #68e0cf; font-size: 18px;font-weight: 800;">Araz Məmmədli</a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </section>
+    <section id="offcanvas">
+      <button class="btn btn-primary mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Səhifələr</button>
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Səhifələr</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" style="background: #373b40;">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/admin">Ana Səhifə</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/about">Haqqında</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/services">Xidmətlər</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/pricing" tabindex="-1" aria-disabled="true">Qiymətləndirmə</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/pricing/category" tabindex="-1" aria-disabled="true">Qiymətləndirmə Category</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/experience" tabindex="-1" aria-disabled="true">Təcrübə</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/education" tabindex="-1" aria-disabled="true">Təhsil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/designskills" tabindex="-1" aria-disabled="true">Dizayn Bacarıqları</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/languageskills" tabindex="-1" aria-disabled="true">Dil Bacarıqları</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/codingskills" tabindex="-1" aria-disabled="true">Kodlaşdırma Bacarıqları</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/reviews" tabindex="-1" aria-disabled="true">Rəylər</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/clients" tabindex="-1" aria-disabled="true">Müştərilər</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/contact" tabindex="-1" aria-disabled="true">Əlaqə</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="edu-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark">
             <div class="container">
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/admin/about">About</a>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="/admin">Ana səhifə</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/services">Services</a>
+                    <a class="nav-link text-info" href="/admin/about">Haqqında</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/pricing">Pricing</a>
+                    <a class="nav-link text-info" href="/admin/services">Xidmətlər</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/pricing/category">Pricing Category</a>
+                    <a class="nav-link text-info" href="/admin/pricing">Qiymətləndirmə</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/experience">Experience</a>
+                    <a class="nav-link text-info" href="/admin/pricing/category">Qiymətləndirmə Category</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/education">Education</a>
+                    <a class="nav-link text-info" href="/admin/experience">Təcrübə</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/designskills">Design Skills</a>
+                    <a class="nav-link text-info" href="/admin/education">Təhsil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/languageskills">Language Skills</a>
+                    <a class="nav-link text-info" href="/admin/designskills">Dizayn Bacarıqları</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/codingskills">Coding Skills</a>
+                    <a class="nav-link text-info" href="/admin/languageskills">Dil bacarıqları</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/reviews">Reviews</a>
+                    <a class="nav-link text-info" href="/admin/codingskills">Kodlaşdırma bacarıqları</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/clients">Clients</a>
+                    <a class="nav-link text-info" href="/admin/reviews">Rəylər</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/admin/contact">Contact</a>
+                    <a class="nav-link text-info" href="/admin/clients">Müştərilər</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-info" href="/admin/contact">Əlaqə</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-    </section>
+    </section> -->
     {% block content %}
     data
     {% endblock %}
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>

@@ -31,6 +31,7 @@ function slideShow(class1,class2,class3,px,btn,figur){
     }
 }
 
+//Coding Skills Circle Progress Bar
 const circle = document.querySelector('.progress-coding-circle');
 const radius = circle.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;
@@ -45,6 +46,7 @@ function setProgress(percent) {
 }
 setProgress(90)
 
+// Porfolio Section Gallery Filter
 const buttons = document.querySelectorAll('.filters-menu li');
 const section = document.querySelectorAll('.thumb');
 buttons.forEach(item =>{
@@ -64,48 +66,63 @@ buttons.forEach(item =>{
   });
 });
 
-
-// function Accordion(){
-//     event.preventDefault()
-//     for(let i=0;i<document.forms['userForm'].elements.length -1;i++){
-//         if(document.forms['userForm'].elements[0].value==""){
-//             document.forms['userForm'].elements[0].style.borderBottomColor="red"
-//             document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-//         }
-//         if(document.forms['userForm'].elements[1].value==""){
-//             document.forms['userForm'].elements[1].style.borderBottomColor="red"
-//             document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-//         }
-//         if(document.forms['userForm'].elements[2].value==""){
-//             document.forms['userForm'].elements[2].style.borderBottomColor="red"
-//             document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-//         }
-//         else{
-//             document.forms['userForm'].elements[i].style.borderBottomColor="#585d65"
-//             document.querySelector('.group-btn').nextElementSibling.className='form-output close'
-//             document.querySelector('.form-output').nextElementSibling.className='contact-output open'
-//         }
-//     }
-// }
-
-let form=document.forms.userForm;
-
-form.onsubmit = function() {
-  event.preventDefault()
-  if (form.name.value == "" || form.email.value == "" || form.message.value == ""){
-    form.name.style.borderBottomColor = "red"
-    form.email.style.borderBottomColor = "red"
-    form.message.style.borderBottomColor = "red"
-    document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'   
-  }else {
-    form.name.style.borderBottomColor = "#585d65"
-    form.email.style.borderBottomColor = "#585d65"
-    form.message.style.borderBottomColor = "#585d65" 
-    document.querySelector('.group-btn').nextElementSibling.className='form-output close'
-    document.querySelector('.form-output').nextElementSibling.className='contact-output open'
-  }
+//Scroll section
+let scrollItems = document.querySelectorAll('.smoothScroll');
+for(let i=0; i <scrollItems.length; i++) {
+  scrollItems[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    const sectionId = event.target.getAttribute("href").substr(1);
+    document.getElementById(sectionId).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
 }
 
+// Contact form section
+function Accordion(){
+    event.preventDefault()
+    for(let i=0;i<document.forms['userForm'].elements.length -1;i++){
+        if(document.forms['userForm'].elements[0].value==""){
+            document.forms['userForm'].elements[0].style.borderBottomColor="red"
+            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
+        }
+        if(document.forms['userForm'].elements[1].value==""){
+            document.forms['userForm'].elements[1].style.borderBottomColor="red"
+            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
+        }
+        if(document.forms['userForm'].elements[2].value==""){
+            document.forms['userForm'].elements[2].style.borderBottomColor="red"
+            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
+        }
+        else{
+            document.forms['userForm'].elements[i].style.borderBottomColor="#585d65"
+            document.querySelector('.group-btn').nextElementSibling.className='form-output close'
+            document.querySelector('.form-output').nextElementSibling.className='contact-output open'
+        }
+    }
+}
+
+
+// let form=document.forms.userForm;
+
+// form.onsubmit = function() {
+//   event.preventDefault()
+//   if (form.name.value == "" || form.email.value == "" || form.message.value == ""){
+//     form.name.style.borderBottomColor = "red"
+//     form.email.style.borderBottomColor = "red"
+//     form.message.style.borderBottomColor = "red"
+//     document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'   
+//   }else {
+//     form.name.style.borderBottomColor = "#585d65"
+//     form.email.style.borderBottomColor = "#585d65"
+//     form.message.style.borderBottomColor = "#585d65" 
+//     document.querySelector('.group-btn').nextElementSibling.className='form-output close'
+//     document.querySelector('.form-output').nextElementSibling.className='contact-output open'
+//   }
+// }
+
+// Portfolio Popup Slider
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -202,6 +219,7 @@ function showSlides3(n) {
 
 }
 
+//Portfolio Modal
 let modalsref=document.querySelectorAll("#open_modal");
 modalsref.forEach(function(ref){
     ref.onclick = function(){
