@@ -1,0 +1,15 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="card mt-3">
+
+        <div class="card-body">
+            <h5 class="card-title">{{t_contact.fullname}}</h5>
+            <p class="card-text">{{t_contact.message}}</p>
+            <a href="/admin/contact/" class="btn btn-primary">Bütün Mesajlar</a>
+            <a href="/contact/delete/{{t_contact.id}}" class="btn btn-primary">Mesaji sil</a>
+        </div>
+    </div>
+</div>
+{% endblock  %}

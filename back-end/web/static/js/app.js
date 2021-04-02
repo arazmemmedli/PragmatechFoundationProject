@@ -67,48 +67,6 @@ buttons.forEach(item =>{
   });
 });
 
-
-function Accordion(){
-    event.preventDefault()
-    for(let i=0;i<document.forms['userForm'].elements.length -1;i++){
-        if(document.forms['userForm'].elements[0].value==""){
-            document.forms['userForm'].elements[0].style.borderBottomColor="red"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-        }
-        if(document.forms['userForm'].elements[1].value==""){
-            document.forms['userForm'].elements[1].style.borderBottomColor="red"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-        }
-        if(document.forms['userForm'].elements[2].value==""){
-            document.forms['userForm'].elements[2].style.borderBottomColor="red"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-        }
-        else{
-            document.forms['userForm'].elements[i].style.borderBottomColor="#585d65"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output close'
-            document.querySelector('.form-output').nextElementSibling.className='contact-output open'
-        }
-    }
-}
-
-// let form=document.forms.userForm;
-
-// form.onsubmit = function() {
-//   event.preventDefault()
-//   if (form.name.value == "" || form.email.value == "" || form.message.value == ""){
-//     form.name.style.borderBottomColor = "red"
-//     form.email.style.borderBottomColor = "red"
-//     form.message.style.borderBottomColor = "red"
-//     document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'   
-//   }else {
-//     form.name.style.borderBottomColor = "#585d65"
-//     form.email.style.borderBottomColor = "#585d65"
-//     form.message.style.borderBottomColor = "#585d65" 
-//     document.querySelector('.group-btn').nextElementSibling.className='form-output close'
-//     document.querySelector('.form-output').nextElementSibling.className='contact-output open'
-//   }
-// }
-
 var slideIndex = 1;
 showSlides(slideIndex);
 

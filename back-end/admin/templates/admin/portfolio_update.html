@@ -1,0 +1,32 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="portfolio-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/portfolio/update/{{portfolio.id}}" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.p_title(class='form-control',placeholder='Başlıq əlavə edin.',value=portfolio.p_title)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.p_icon(class='form-control',placeholder='İkon əlavə edin.',value=portfolio.p_icon)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.data_modal(class='form-control',placeholder='Modal əlavə edin.',value=portfolio.data_modal)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.portfoliocategory_name(class='form-control')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.portfolioimages_name(class='form-control')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.port_submit(class='btn btn-success',value='Göndər')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %}

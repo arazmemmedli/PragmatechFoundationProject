@@ -23,6 +23,8 @@ from app.models import CodingSkills
 from app.models import Reviews
 from app.models import Clients
 from app.models import Contact
+from app.models import Portfolio,PortfolioCategory,PortfolioImages
+
 
 from admin.routes import admin_bp
 from web.routes import web_bp
@@ -36,6 +38,7 @@ from admin.ls_routes import languageskills_bp
 from admin.cs_routes import codingskills_bp
 from admin.reviews_routes import reviews_bp
 from admin.clients_routes import clients_bp
+from admin.portfolio_routes import portfolio_bp
 
 
 app.register_blueprint(admin_bp)
@@ -50,4 +53,5 @@ app.register_blueprint(languageskills_bp)
 app.register_blueprint(codingskills_bp)
 app.register_blueprint(reviews_bp)
 app.register_blueprint(clients_bp)
+app.register_blueprint(portfolio_bp)
 

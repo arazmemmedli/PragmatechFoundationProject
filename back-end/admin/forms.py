@@ -1,8 +1,22 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,FileField,IntegerField,SubmitField,TextAreaField
+from wtforms import StringField,FileField,IntegerField,SubmitField,TextAreaField,SelectField
+from app import db
+from app.models import Portfolio,PortfolioCategory,PortfolioImages
+
+PortfolioCategoryList=[]
+PortfolioImagesList=[]
+for c_obj in PortfolioCategory.query.all():
+    PortfolioCategoryList.append(
+        (c_obj.cat_name)
+    )
+
+for i_obj in PortfolioImages.query.all():
+    PortfolioImagesList.append(
+        (i_obj.p_img)
+    )
 
 class AboutForm(FlaskForm):
-    a_subject=StringField('a_subject')
+    a_subject=TextAreaField('a_subject')
     a_age=IntegerField('a_age')
     a_freelance=StringField('a_freelance')
     a_phone=StringField('a_phone')
@@ -14,7 +28,7 @@ class AboutForm(FlaskForm):
 class ServicesForm(FlaskForm):
     s_icon=StringField('s_icon')
     s_name=StringField('s_name')
-    s_subject=StringField('s_subject')
+    s_subject=TextAreaField('s_subject')
     submit=SubmitField()
 
 class PricingForm(FlaskForm):
@@ -30,25 +44,25 @@ class PricingCategoryForm(FlaskForm):
 class ExperienceForm(FlaskForm):
     e_date=StringField('e_date')
     e_name=StringField('e_name')
-    e_subject=StringField('e_subject')
+    e_subject=TextAreaField('e_subject')
     e_submit=SubmitField()
 
 class EducationForm(FlaskForm):
     ed_date=StringField('ed_date')
     ed_name=StringField('ed_name')
-    ed_subject=StringField('ed_subject')
+    ed_subject=TextAreaField('ed_subject')
     ed_submit=SubmitField()
 
 class DesignSkillsForm(FlaskForm):
     ds_name=StringField('ds_name')
-    ds_subject=StringField('ds_subject')
+    ds_subject=TextAreaField('ds_subject')
     ds_percent=StringField('ds_percent')
     ds_number=StringField('ds_number')
     ds_submit=SubmitField()
 
 class LanguageSkillsForm(FlaskForm):
     ls_name=StringField('ls_name')
-    ls_subject=StringField('ls_subject')
+    ls_subject=TextAreaField('ls_subject')
     ls_percent=StringField('ls_percent')
     ls_submit=SubmitField()
 
@@ -56,7 +70,7 @@ class CodingSkillsForm(FlaskForm):
     cs_percent=StringField('cs_percent')
     cs_number=StringField('cs_number')
     cs_name=StringField('cs_name')
-    cs_subject=StringField('cs_subject')
+    cs_subject=TextAreaField('cs_subject')
     cs_submit=SubmitField()
 
 class ReviewsForm(FlaskForm):
@@ -64,7 +78,7 @@ class ReviewsForm(FlaskForm):
     r_name=StringField('r_name')
     r_company=StringField('r_company')
     r_icon=StringField('r_icon')
-    r_subject=StringField('r_subject')
+    r_subject=TextAreaField('r_subject')
     r_submit=SubmitField()
 
 class ClientsForm(FlaskForm):
@@ -75,5 +89,20 @@ class ContactForm(FlaskForm):
     fullname=StringField('fullname')
     email=StringField('email')
     message=TextAreaField('message')
-    
+
+class PortfolioCategoryForm(FlaskForm):
+    cat_name=StringField('cat_name')
+    cat_submit=SubmitField()
+
+class PortfolioImagesForm(FlaskForm):
+    p_img=FileField('p_img')
+    p_submit=SubmitField()
+
+class PortfolioForm(FlaskForm):
+    p_title=StringField('p_title')
+    p_icon=StringField('p_icon')
+    data_modal=StringField('data_modal')
+    portfoliocategory_name=SelectField('portfoliocategory_name',choices=PortfolioCategoryList)
+    portfolioimages_name=SelectField('portfolioimages_name',choices=PortfolioImagesList)
+    port_submit=SubmitField()
 

@@ -76,6 +76,37 @@ class Contact(db.Model):
     email = db.Column(db.String(140))
     message = db.Column(db.Text)
 
+class PortfolioCategory(db.Model):
+    __tablename__='portfolio_category'
+    id = db.Column(db.Integer, primary_key=True)
+    cat_name = db.Column(db.String(100))
+    posts = db.relationship('Portfolio', backref='portfolio_category')
+
+class PortfolioImages(db.Model):
+    __tablename__='portfolio_images'
+    id = db.Column(db.Integer, primary_key=True)
+    p_img = db.Column(db.String(200))
+    p_posts = db.relationship('Portfolio', backref='portfolio_images')
+
+class Portfolio(db.Model):
+    __tablename__='portfolio'
+    id = db.Column(db.Integer, primary_key=True)
+    p_title = db.Column(db.String(140))
+    p_icon = db.Column(db.String(70))
+    data_modal = db.Column(db.String(100))
+    portfoliocategory_name=db.Column(db.String(100), db.ForeignKey('portfolio_category.cat_name'), nullable=False)
+    portfolioimages_name=db.Column(db.String(200), db.ForeignKey('portfolio_images.p_img'), nullable=False)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -411,7 +411,7 @@ body{
     margin: 0px;
     padding: 0px;
     margin-top: 5px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 800;
 }
 .services-item p{
@@ -1379,6 +1379,7 @@ body{
     color: #68e0cf;
     font-weight: 600;
     font-size: 11px;
+    text-transform: uppercase;
 }
 .portfolio-gallery a{
     text-decoration: none;
@@ -1524,7 +1525,7 @@ body{
     font-weight: 600;
     position: relative;
     color: white;
-    height: 174px;
+    height: 205px;
 }
 .group-btn .form-btn{
     width: 200px;
@@ -1612,7 +1613,7 @@ body{
     color: white;
 }
 .contact-output{
-    display: none;
+    display: block;
     width: 260px;
     height: 61px;
     margin: 2em .5em 1em;

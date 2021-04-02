@@ -7,20 +7,23 @@
             <div class="col-12">
                 <form action="/services/update/{{services.id}}" method="POST">
                     <div class="form-group mt-2">
-                        {{form.s_icon(class_='form-control',placeholder='Icon elave edin.',value=services.s_icon)}}
+                        {{form.s_icon(class_='form-control',placeholder='İkon əlavə edin.',value=services.s_icon)}}
                     </div>
                     <div class="form-group mt-2">
-                        {{form.s_name(class_='form-control',placeholder='Services adini daxil edin.',value=services.s_name)}}
+                        {{form.s_name(class_='form-control',placeholder='Xidmət adini daxil edin.',value=services.s_name)}}
                     </div>
                     <div class="form-group mt-2">
-                        {{form.s_subject(class_='form-control',placeholder='Metin daxil edin.',value=services.s_subject)}}
+                        {{form.s_subject(class_='form-control',placeholder='Məlumat daxil edin.',value=services.s_subject)}}
                     </div>
                     <div class="form-group mt-2">
-                        {{form.submit(class_='btn btn-success',value='Update')}} 
+                        {{form.submit(class_='btn btn-success',value='Yenilə')}} 
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('s_subject');
+</script>
 {% endblock  %}

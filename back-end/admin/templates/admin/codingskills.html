@@ -16,7 +16,7 @@
                         {{form.cs_name(class_='form-control',placeholder='Ad daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.cs_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                        {{form.cs_subject(class_='form-control',placeholder='Məlumat daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
                         {{form.cs_submit(class_='btn btn-success',value='Gonder')}}
@@ -32,11 +32,11 @@
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Coding Skills Percent</th>
-                <th scope="col">Coding Skills Number</th>
-                <th scope="col">Coding Skills Name</th>
-                <th scope="col">Coding Skills Subject</th>
-                <th scope="col">Action</th>
+                <th scope="col">Kodlaşdırma bacarıq faizi</th>
+                <th scope="col">Kodlaşdırma bacarıq Ədədi</th>
+                <th scope="col">Kodlaşdırma bacarıq Adı</th>
+                <th scope="col">Kodlaşdırma bacarıq Məlumatı</th>
+                <th scope="col">Əməliyyat</th>
               </tr>
             </thead>
             <tbody>
@@ -58,4 +58,7 @@
           </table>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('cs_subject');
+</script>
 {% endblock  %}

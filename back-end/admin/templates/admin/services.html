@@ -7,16 +7,16 @@
             <div class="col-12">
                 <form action="/admin/services/" method="POST">
                     <div class="form-group mt-2">
-                        {{form.s_icon(class_='form-control',placeholder='Icon elave edin.')}}
+                        {{form.s_icon(class_='form-control',placeholder='İkon əlave edin.')}}
                     </div>
                     <div class="form-group mt-2">
-                        {{form.s_name(class_='form-control',placeholder='Services adini daxil edin.')}}
+                        {{form.s_name(class_='form-control',placeholder='Xidmət adini daxil edin.')}}
                     </div>
                     <div class="form-group mt-2">
-                        {{form.s_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                        {{form.s_subject(class_='form-control',placeholder='Məlumat daxil edin.')}}
                     </div>
                     <div class="form-group mt-2">
-                        {{form.submit(class_='btn btn-success',value='Gonder')}} 
+                        {{form.submit(class_='btn btn-success',value='Göndər')}} 
                     </div>
                 </form>
             </div>
@@ -29,10 +29,10 @@
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Services Icon</th>
-                <th scope="col">Services Name</th>
-                <th scope="col">Services Text</th>
-                <th scope="col">Action</th>
+                <th scope="col">İkon</th>
+                <th scope="col">Xidmət Adı</th>
+                <th scope="col">Xidmət Məlumatı</th>
+                <th scope="col">Əməliyyat</th>
               </tr>
             </thead>
             <tbody>
@@ -53,4 +53,7 @@
           </table>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('s_subject');
+</script>
 {% endblock  %}

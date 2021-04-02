@@ -7,10 +7,10 @@
             <div class="col-12">
                 <form action="/designskills/update/{{designskill.id}}" method="POST">
                     <div class="form-group mt-3">
-                        {{form.ds_name(class_='form-control',placeholder='Name daxil edin.',value=designskill.ds_name)}}
+                        {{form.ds_name(class_='form-control',placeholder='Ad daxil edin.',value=designskill.ds_name)}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.ds_subject(class_='form-control',placeholder='Metin daxil edin.',value=designskill.ds_subject)}}
+                        {{form.ds_subject(class_='form-control',placeholder='Məlumat daxil edin.',value=designskill.ds_subject)}}
                     </div>
                     <div class="form-group mt-3">
                         {{form.ds_percent(class_='form-control',placeholder='Faiz daxil edin.',value=designskill.ds_percent)}}
@@ -26,4 +26,7 @@
         </div>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('ds_subject');
+</script>
 {% endblock  %}

@@ -13,16 +13,16 @@
                         {{form.r_name(class_='form-control',placeholder='Ad daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.r_company(class_='form-control',placeholder='Ixtisas daxil edin.')}}
+                        {{form.r_company(class_='form-control',placeholder='İxtisas daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.r_icon(class_='form-control',placeholder='Ikon daxil edin.')}}
+                        {{form.r_icon(class_='form-control',placeholder='İkon daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.r_subject(class_='form-control',placeholder='Movzu daxil edin.')}}
+                        {{form.r_subject(class_='form-control',placeholder='Mövzu daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.r_submit(class_='btn btn-success',value='Gonder')}}
+                        {{form.r_submit(class_='btn btn-success',value='Göndər')}}
                     </div>
                 </form>
             </div>
@@ -35,12 +35,12 @@
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Reviews Img</th>
-                <th scope="col">Reviews Ad</th>
-                <th scope="col">Reviews İxtisas</th>
-                <th scope="col">Reviews Ikon</th>
-                <th scope="col">Reviews Metin</th>
-                <th scope="col">Action</th>
+                <th scope="col">Şəkil</th>
+                <th scope="col">Ad</th>
+                <th scope="col">İxtisas</th>
+                <th scope="col">Ikon</th>
+                <th scope="col">Metin</th>
+                <th scope="col">Əməliyyat</th>
               </tr>
             </thead>
             <tbody>
@@ -63,4 +63,7 @@
           </table>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('r_subject');
+</script>
 {% endblock  %}

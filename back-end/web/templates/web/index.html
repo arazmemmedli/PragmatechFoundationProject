@@ -311,7 +311,7 @@
                     </div>
                     {% for About in Abouts %}
                     <div class="about-text">
-                        <p class="about-p">{{About.a_subject}}</p>
+                        <p class="about-p">{{About.a_subject|safe}}</p>
                     </div>
                     <div class="information">
                         <table>
@@ -721,145 +721,31 @@
                     </div>
                     <div class="filters-menu">
                         <ul>
-                            <li class="active" onclick="filterSelection()">All</li>
-                            <li>Video</li>
-                            <li>Music</li>
-                            <li>Links</li>
-                            <li>Image</li>
-                            <li>Gallery</li>
-                            <li>Content</li>
+                            {% for i_category in i_categories %}
+                            <li onclick="filterSelection()">{{i_category.cat_name}}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="portfolio-container">
                         <section class="js-filter">
-                            <div class="thumb" data-id="Gallery">
-                                <a href="#" id="open_modal" data-modal="works_modal">
-                                    <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}">
+                            {% for i_portfolio in i_portfolios %}
+                            <div class="thumb" data-id="{{i_portfolio.portfoliocategory_name}}">
+                                <a href="#" id="open_modal" data-modal="{{i_portfolio.data_modal}}">
+                                    <img src="admin/static/uploads/{{i_portfolio.portfolioimages_name}}">
                                     <span class="portfolio-info">
                                         <span class="centrize">
                                             <span class="portfolio-icon">
-                                                <i class="fas fa-images"></i>
+                                                <i class="{{i_portfolio.p_icon}}"></i>
                                             </span>
                                         </span>
                                     </span>
                                 </a>
                                 <div class="portfolio-gallery">
-                                    <div class="category">Gallery</div>
-                                    <a href="#" class="gallery-title">Alabaster Complete <br>Collection</a>
+                                    <div class="category">{{i_portfolio.portfoliocategory_name}}</div>
+                                    <a href="#" class="gallery-title">{{i_portfolio.p_title}}</a>
                                 </div> 
                             </div>
-                            <div class="thumb" data-id="Video">
-                                <a href="#" id="open_modal" data-modal="works_modal1">
-                                    <img src="{{url_for('.static',filename='img/work2-680x680.jpg')}}">
-                                    <span class="portfolio-info">
-                                        <span class="centrize">
-                                            <span class="portfolio-icon">
-                                                <i class="fas fa-video"></i>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="portfolio-gallery">
-                                    <div class="category">Video</div>
-                                    <a href="#" class="gallery-title">Book of John Paper</a>
-                                </div>
-                            </div>
-                            <div class="thumb" data-id="Image">
-                                <a href="#" id="open_modal" data-modal="works_modal2">
-                                    <img src="{{url_for('.static',filename='img/work7.jpg')}}">
-                                    <span class="portfolio-info">
-                                        <span class="centrize">
-                                            <span class="portfolio-icon">
-                                                <i class="fas fa-image"></i>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="portfolio-gallery">
-                                    <div class="category">Image</div>
-                                    <a href="#" class="gallery-title">White Rose Photo</a>
-                                </div>
-                            </div>
-                            <div class="thumb" data-id="Image">
-                                <a href="#" id="open_modal" data-modal="works_modal3">
-                                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}">
-                                    <span class="portfolio-info">
-                                        <span class="centrize">
-                                            <span class="portfolio-icon">
-                                                <i class="fas fa-image"></i>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="portfolio-gallery">
-                                    <div class="category">Image</div>
-                                    <a href="#" class="gallery-title">Honest Company</a>
-                                </div>
-                            </div>
-                            <div class="thumb" data-id="Gallery">
-                                <a href="#" id="open_modal" data-modal="works_modal4">
-                                    <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}">
-                                    <span class="portfolio-info">
-                                        <span class="centrize">
-                                            <span class="portfolio-icon">
-                                                <i class="fas fa-images"></i>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="portfolio-gallery">
-                                    <div class="category">Gallery</div>
-                                    <a href="#" class="gallery-title">Brown Short Dog</a>
-                                </div>
-                            </div>
-                            <div class="thumb" data-id="Music">
-                                <a href="#" id="open_modal" data-modal="works_modal5">
-                                    <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}">
-                                    <span class="portfolio-info">
-                                        <span class="centrize">
-                                            <span class="portfolio-icon">
-                                                <i class="fas fa-music"></i>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="portfolio-gallery">
-                                    <div class="category">Music</div>
-                                    <a href="#" class="gallery-title">Brown Complete Building</a>
-                                </div>
-                            </div>
-                            <div class="thumb" data-id="Links">
-                                <a href="https://www.google.com/" target="_blank">
-                                    <img src="{{url_for('.static',filename='img/work3-680x680.jpg')}}">
-                                    <span class="portfolio-info">
-                                        <span class="centrize">
-                                            <span class="portfolio-icon">
-                                                <i class="fas fa-link"></i>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="portfolio-gallery">
-                                    <div class="category">Links</div>
-                                    <a href="#" class="gallery-title">Black Car</a>
-                                </div>
-                            </div>
-                            <div class="thumb" data-id="Content">
-                                <a href="#" id="open_modal" data-modal="works_modal6">
-                                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}">
-                                    <span class="portfolio-info">
-                                        <span class="centrize">
-                                            <span class="portfolio-icon">
-                                                <i class="fas fa-plus"></i>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="portfolio-gallery">
-                                    <div class="category">Content</div>
-                                    <a href="#" class="gallery-title">Yellow and Blue Striped</a>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </section>
                     </div>
                 </div>
@@ -881,30 +767,31 @@
                                                     <span>Full Name</span>
                                                     <span class="form-star">*</span>
                                                 </div>
-                                                <input type="text" name="fullname" id="name" class="form-control" placeholder="ej.:Genoveva Lian Hullt">
+                                                <input type="text" name="fullname" id="name" class="form-control" placeholder="ej.:Genoveva Lian Hullt" required>
                                             </div>
                                             <div class="form-group">
                                                 <div class="form-tag">
                                                     <span>Email Address</span>
                                                     <span class="form-star">*</span>
                                                 </div>
-                                                <input type="email" name="email" id="email" class="form-control form-email" placeholder="example@domain.com">
+                                                <input type="email" name="email" id="email" class="form-control form-email" placeholder="example@domain.com" required>
                                             </div>
                                             <div class="form-group">
                                                 <div class="form-tags">
                                                     <span>Message</span>
                                                     <span class="form-star">*</span>
                                                 </div>
-                                                <textarea name="message" id="message" cols="25" rows="8" class="form-text form-control" placeholder="To Write"></textarea>
+                                                <textarea name="message" id="" cols="25" rows="8" class="form-text form-control" placeholder="To Write" required></textarea>                                               
                                             </div>
-                                            <div class="group-btn" onclick="Accordion(event)">
+                                            <div class="group-btn">
                                                 <button type="submit" class="form-btn">
                                                     <span>Send Message</span>
                                                     <i class="fas fa-chevron-right"></i>
                                                 </button>
                                             </div>
-                                            <div class="form-output">One or more fields have an error. Please check and try again.</div>
-                                            <div class="contact-output">Thank you for your message. It has been sent.</div>
+                                            {% for contacts in get_flashed_messages() %}
+                                            <div class="contact-output">{{contacts}}</div>
+                                            {% endfor %}
                                        </form>
                                     </div>
                                 </div>

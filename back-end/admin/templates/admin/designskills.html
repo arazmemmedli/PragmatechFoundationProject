@@ -7,10 +7,10 @@
             <div class="col-12">
                 <form action="/admin/designskills/" method="POST">
                     <div class="form-group mt-3">
-                        {{form.ds_name(class_='form-control',placeholder='Name daxil edin.')}}
+                        {{form.ds_name(class_='form-control',placeholder='Ad daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.ds_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                        {{form.ds_subject(class_='form-control',placeholder='Məlumat daxil edin.')}}
                     </div>
                     <div class="form-group mt-3">
                         {{form.ds_percent(class_='form-control',placeholder='Faiz daxil edin.')}}
@@ -32,11 +32,11 @@
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Design Skills Name</th>
-                <th scope="col">Design Skills Subject</th>
-                <th scope="col">Design Skills Percent</th>
-                <th scope="col">Design Skills Number</th>
-                <th scope="col">Action</th>
+                <th scope="col">Dizayn Bacarıq Adı</th>
+                <th scope="col">Dizayn Bacarıq Məlumatı</th>
+                <th scope="col">Dizayn Bacarıq Faizi</th>
+                <th scope="col">Dizayn Bacarıq ədədi</th>
+                <th scope="col">Əməliyyat</th>
               </tr>
             </thead>
             <tbody>
@@ -58,4 +58,7 @@
           </table>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('ds_subject');
+</script>
 {% endblock  %}

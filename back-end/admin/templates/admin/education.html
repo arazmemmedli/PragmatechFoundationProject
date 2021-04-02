@@ -13,7 +13,7 @@
                     {{form.ed_name(class_='form-control',placeholder='Name daxil edin.')}}
                 </div>
                 <div class="form-group mt-3">
-                    {{form.ed_subject(class_='form-control',placeholder='Metin daxil edin.')}}
+                    {{form.ed_subject(class_='form-control',placeholder='Məlumat daxil edin.')}}
                 </div>
                 <div class="form-group mt-3">
                     {{form.ed_submit(class_='btn btn-success',value='Gonder')}}
@@ -29,10 +29,10 @@
             <thead>
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Education Date</th>
-                <th scope="col">Education Name</th>
-                <th scope="col">Education Subject</th>
-                <th scope="col">Action</th>
+                <th scope="col">Təhsil Tarixi</th>
+                <th scope="col">Təhsil Aldığı Məktəb</th>
+                <th scope="col">Təhsil Haqda Məlumat</th>
+                <th scope="col">Əməliyyat</th>
               </tr>
             </thead>
             <tbody>
@@ -53,4 +53,7 @@
           </table>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('ed_subject');
+</script>
 {% endblock  %}

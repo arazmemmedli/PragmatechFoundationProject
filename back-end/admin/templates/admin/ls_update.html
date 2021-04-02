@@ -7,20 +7,23 @@
             <div class="col-12">
                 <form action="/languageskills/update/{{languageskill.id}}" method="POST">
                     <div class="form-group mt-3">
-                        {{form.ls_name(class_='form-control',placeholder='Name daxil edin.',value=languageskill.ls_name)}}                        
+                        {{form.ls_name(class_='form-control',placeholder='Dilin adın  daxil edin.',value=languageskill.ls_name)}}                        
                     </div>
                     <div class="form-group mt-3">
-                        {{form.ls_subject(class_='form-control',placeholder='Metin daxil edin.',value=languageskill.ls_subject)}}
+                        {{form.ls_subject(class_='form-control',placeholder='Dil haqda məlumat daxil edin.',value=languageskill.ls_subject)}}
                     </div>
                     <div class="form-group mt-3">
                         {{form.ls_percent(class_='form-control',placeholder='Faiz daxil edin.',value=languageskill.ls_percent)}}
                     </div>
                     <div class="form-group mt-3">
-                        {{form.ls_submit(class_='btn btn-success',value='Gonder')}}
+                        {{form.ls_submit(class_='btn btn-success',value='Göndər')}}
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+<script>
+  CKEDITOR.replace('ls_subject');
+</script>
 {% endblock  %}

@@ -10,7 +10,7 @@
                 <th scope="col">Əlaqə Adı</th>
                 <th scope="col">Əlaqə Emaili</th>
                 <th scope="col">Mesaj</th>
-                <th scope="col">Action</th>
+                <th scope="col">Əməliyyat</th>
               </tr>
             </thead>
             <tbody>
@@ -21,7 +21,7 @@
                 <td>{{t_contact.email}}</td>
                 <td>{{t_contact.message}}</td>
                 <td>
-                    <a href=""><i class="bi bi-trash mx-1"></i></a>
+                    <a href="/contact/details/{{t_contact.id}}"><i class="bi bi-book"></i></a>
                 </td>
               </tr>
               {% endfor %}
