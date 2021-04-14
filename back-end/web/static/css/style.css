@@ -1670,10 +1670,8 @@ body{
     height: 100%;
 }
 #myblog{
-    position: relative;
     margin: 0 auto;
-    top: 150px;
-    height: 560vh; 
+    margin-top: 150px;
     margin-left: calc(12% + 7.2%);
     margin-right: calc(12% + -5%);
 }
@@ -1773,10 +1771,8 @@ body{
     margin-left: calc(12% + 92px);
     height: auto;
     width: auto;
-    top: 0;
+    padding-top: 150px;
     left: 0;
-    bottom: auto;
-    margin-bottom: 52px;
 }
 .footer-inner{
     margin: 0 auto;
@@ -1913,6 +1909,7 @@ body{
 .popup-images img{
     margin-top: 20px;
     object-fit: cover;
+    height: 680px;
 }
 .mySlides {display: none}
 .mySlides img {vertical-align: middle;}
@@ -2137,18 +2134,20 @@ body{
 .my-content .content-box p a{
     color: #68e0cf;
 }
-.my-content .content-box .block-quality{
+.my-content .content-box blockquote{
     border-left: 2px solid #68e0cf;
     padding: 0 20px;
+    margin: 0px;
 }
-.content-box .block-quality p{
-    font-size: 16px;
+.content-box-text blockquote p{
+    font-size: 16px !important;
     font-weight: 600;
 }
-.content-box .block-quality cite{
+.content-box-text cite{
     color: white;
     font-style: normal;
-    font-size: 14px;
+    font-size: 13px !important;
+    font-weight: normal;
 }
 .my-content .content-box-text .designer-word{
     color: white;
@@ -2247,6 +2246,9 @@ body{
 .content-box-text .related-posts .h-related{
     color: white;
     font-weight: 800;
+}
+.related-posts .container .related-item{
+    padding-top: 30px;
 }
 .related-posts .related-item img{
     max-width: 100%;
@@ -2361,6 +2363,14 @@ body{
     position: absolute;
     right: 0;
     top: 0;
+}
+.comments-desc .comment-info .comment-delete{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.comments-desc .comment-info .comment-delete a{
+    color: white;
 }
 .comment-info .comment-reply a{
     text-decoration: none;

@@ -35,7 +35,6 @@ function slideShow(class1,class2,class3,px,btn,figur){
 const circle = document.querySelector('.progress-coding-circle');
 const radius = circle.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;
-const dataPercent=circle.getAttribute('data-percent')
 
 circle.style.strokeDasharray = `${circumference} ${circumference}`;
 circle.style.strokeDashoffset = circumference;
@@ -45,6 +44,71 @@ function setProgress(percent) {
     circle.style.strokeDashoffset = offset;
 }
 setProgress(90)
+
+const circle2 = document.querySelector('.progress-coding-circle2');
+const radius2 = circle2.r.baseVal.value;
+const circumference2 = 2 * Math.PI * radius2;
+
+circle2.style.strokeDasharray = `${circumference2} ${circumference2}`;
+circle2.style.strokeDashoffset = circumference2;
+
+function setProgress2(percent2) {
+    const offset2 = circumference2 - percent2 / 100 * circumference2;
+    circle2.style.strokeDashoffset = offset2;
+}
+setProgress2(75)
+
+const circle3 = document.querySelector('.progress-coding-circle3');
+const radius3 = circle3.r.baseVal.value;
+const circumference3 = 2 * Math.PI * radius3;
+
+circle3.style.strokeDasharray = `${circumference3} ${circumference3}`;
+circle3.style.strokeDashoffset = circumference3;
+
+function setProgress3(percent3) {
+    const offset3 = circumference3 - percent3 / 100 * circumference3;
+    circle3.style.strokeDashoffset = offset3;
+}
+setProgress3(85)
+
+const circle4 = document.querySelector('.progress-coding-circle4');
+const radius4 = circle4.r.baseVal.value;
+const circumference4 = 2 * Math.PI * radius4;
+
+circle4.style.strokeDasharray = `${circumference4} ${circumference4}`;
+circle4.style.strokeDashoffset = circumference4;
+
+function setProgress4(percent4) {
+    const offset4 = circumference4 - percent4 / 100 * circumference4;
+    circle4.style.strokeDashoffset = offset4;
+}
+setProgress4(80)
+
+const circle5 = document.querySelector('.progress-coding-circle5');
+const radius5 = circle5.r.baseVal.value;
+const circumference5 = 2 * Math.PI * radius5;
+
+circle5.style.strokeDasharray = `${circumference5} ${circumference5}`;
+circle5.style.strokeDashoffset = circumference5;
+
+function setProgress5(percent5) {
+    const offset5 = circumference5 - percent5 / 100 * circumference5;
+    circle5.style.strokeDashoffset = offset5;
+}
+setProgress5(95)
+
+const circle6 = document.querySelector('.progress-coding-circle6');
+const radius6 = circle6.r.baseVal.value;
+const circumference6 = 2 * Math.PI * radius6;
+
+circle6.style.strokeDasharray = `${circumference6} ${circumference6}`;
+circle6.style.strokeDashoffset = circumference6;
+
+function setProgress6(percent6) {
+    const offset6 = circumference6 - percent6 / 100 * circumference6;
+    circle6.style.strokeDashoffset = offset6;
+}
+setProgress6(90)
 
 // Porfolio Section Gallery Filter
 const buttons = document.querySelectorAll('.filters-menu li');
@@ -74,53 +138,30 @@ for(let i=0; i <scrollItems.length; i++) {
     const sectionId = event.target.getAttribute("href").substr(1);
     document.getElementById(sectionId).scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "center"
     })
   })
 }
 
 // Contact form section
-function Accordion(){
-    event.preventDefault()
-    for(let i=0;i<document.forms['userForm'].elements.length -1;i++){
-        if(document.forms['userForm'].elements[0].value==""){
-            document.forms['userForm'].elements[0].style.borderBottomColor="red"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-        }
-        if(document.forms['userForm'].elements[1].value==""){
-            document.forms['userForm'].elements[1].style.borderBottomColor="red"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-        }
-        if(document.forms['userForm'].elements[2].value==""){
-            document.forms['userForm'].elements[2].style.borderBottomColor="red"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'
-        }
-        else{
-            document.forms['userForm'].elements[i].style.borderBottomColor="#585d65"
-            document.querySelector('.group-btn').nextElementSibling.className='form-output close'
-            document.querySelector('.form-output').nextElementSibling.className='contact-output open'
-        }
-    }
+
+let form=document.forms.userForm;
+
+form.onsubmit = function() {
+  event.preventDefault()
+  if (form.name.value == "" || form.email.value == "" || form.message.value == ""){
+    form.name.style.borderBottomColor = "red"
+    form.email.style.borderBottomColor = "red"
+    form.message.style.borderBottomColor = "red"
+    document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'   
+  }else {
+    form.name.style.borderBottomColor = "#585d65"
+    form.email.style.borderBottomColor = "#585d65"
+    form.message.style.borderBottomColor = "#585d65"
+    document.querySelector('.group-btn').nextElementSibling.className='form-output close'
+    document.querySelector('.form-output').nextElementSibling.className='contact-output open'
+  }
 }
-
-
-// let form=document.forms.userForm;
-
-// form.onsubmit = function() {
-//   event.preventDefault()
-//   if (form.name.value == "" || form.email.value == "" || form.message.value == ""){
-//     form.name.style.borderBottomColor = "red"
-//     form.email.style.borderBottomColor = "red"
-//     form.message.style.borderBottomColor = "red"
-//     document.querySelector('.group-btn').nextElementSibling.className='form-output form-output-open'   
-//   }else {
-//     form.name.style.borderBottomColor = "#585d65"
-//     form.email.style.borderBottomColor = "#585d65"
-//     form.message.style.borderBottomColor = "#585d65" 
-//     document.querySelector('.group-btn').nextElementSibling.className='form-output close'
-//     document.querySelector('.form-output').nextElementSibling.className='contact-output open'
-//   }
-// }
 
 // Portfolio Popup Slider
 var slideIndex = 1;

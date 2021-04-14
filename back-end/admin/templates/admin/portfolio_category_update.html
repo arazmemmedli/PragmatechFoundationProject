@@ -1,0 +1,20 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="portfolio-category-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/portfolio/category/update/{{portfoliocategory.id}}" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.cat_name(class='form-control',placeholder='Kategoriya əlavə edin.',value=portfoliocategory.cat_name)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.cat_submit(class='btn btn-success',value='Göndər')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %}

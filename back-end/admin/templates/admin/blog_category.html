@@ -1,0 +1,46 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id='blog_category_form'>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/admin/blog/category/" method="POST">
+                    <div class="form-group mt-3">
+                        {{form.name(class='form-control',placeholder='Kategoriyanın adın daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.submit(class='btn btn-success',value='Göndər')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="blog_category_table">
+    <div class="container mt-5">
+        <table class="table table-sm" style="color: white;">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Kategoriya</th>
+                    <th scope="col">Əməliyyat</th>
+                  </tr>
+            </thead>
+            <tbody>
+            {% for t_blogcategory in t_blogcategories %}
+                <tr>
+                    <td>{{t_blogcategory.id}}</td>
+                    <td>{{t_blogcategory.name}}</td>
+                    <td>
+                        <a href=""><i class="bi bi-trash mx-1"></i></a>
+                        <a href=""><i class="bi bi-pencil mx-1"></i></a>
+                        <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

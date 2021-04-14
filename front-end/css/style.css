@@ -95,15 +95,6 @@ body{
 }
 .menu-word{
     position: relative;
-    bottom: 3px;
-}
-.header-icons{
-    font-size: 18px;
-}
-.header-icons i{
-    position: relative;
-    left: 2px;
-    width: 19px;
 }
 .header-menu ul li:hover a{
     color: #68e0cf;
@@ -316,9 +307,8 @@ body{
     color:  #68e0cf;
 }
 #about{
-    position: relative;
-    top: 50px;
-    height: 570px;
+    margin-top: 50px;
+    padding-bottom: 50px;
     border-bottom: 1px solid #585d65;
 }
 .about-me{
@@ -368,15 +358,14 @@ body{
     padding-left: 10px;
 }
 #services{
-    position: relative;
-    top: 100px;
+    margin-top: 50px;
+    padding-bottom: 30px;
     overflow: hidden;
     border-bottom: 1px solid #585d65;
 }
 .services-start{
     max-width: 650px;
     margin-left: 50px;
-    height: 945px;
 }
 .h-services{
     color: white;
@@ -423,15 +412,14 @@ body{
     line-height: 2;
 }
 #pricing{
-    position: relative;
+    margin-top: 50px;
+    padding-bottom: 50px;
     overflow: hidden;
-    top: 150px;
     border-bottom: 1px solid #585d65;
 }
 .pricing-start{
     max-width: 695px;
     margin-left: 50px;
-    height: 625px;
 }
 .pricing-title{
     display: flex;
@@ -448,15 +436,15 @@ body{
     font-size: 14px;
     font-weight: 600;
     position: absolute;
-    top: 50px;
+    padding-top: 60px;
 }
 .pricing-line{
     display: inline-block;
     width: 100px;
-    border-top: 1px solid #585d65; 
+    border-top: 1px solid #585d65;
     position: absolute;
     right: 0;
-    top: 42px;
+    margin-top: 41px;
 }
 .small-line{
     display: inline-block;
@@ -464,7 +452,7 @@ body{
     width: 15px;
     border-top: 1px solid #585d65;
     right: 155px;
-    top: 42px;
+    margin-top: 41px;
 }
 .slider-controls a{
     text-decoration: none;
@@ -615,16 +603,14 @@ body{
     margin-top: 15px;
 }
 #experience{
-    position: relative;
+    margin-top: 20px;
+    padding-bottom: 30px;
     overflow: hidden;
-    top: 150px;
     border-bottom: 1px solid #585d65;
 }
 .experience-start{
     max-width: 695px;
-    position: relative;
     margin-left: 50px;
-    height: 430px;
 }
 .experience-title{
     display: flex;
@@ -643,7 +629,7 @@ body{
     color: #68e0cf;
     font-size: 14px;
     position: absolute;
-    top: 70px;
+    margin-top: 85px;
 }
 .experience-line{
     display: inline-block;
@@ -651,7 +637,7 @@ body{
     right: 0;
     width: 100px;
     border-top: 1px solid  #585d65;
-    top: 42px;
+    margin-top: 41px;
 }
 .tiny-line{
     display: inline-block;
@@ -659,7 +645,7 @@ body{
     right: 155px;
     width: 15px;
     border-top: 1px solid  #585d65;
-    top: 42px;
+    margin-top: 41px;
 }
 .experience-btn{
     position: absolute;
@@ -747,7 +733,6 @@ body{
 }
 #education{
     overflow: hidden;
-    margin-top: 140px;
     border-bottom: 1px solid  #585d65;
 }
 .education-start{
@@ -854,12 +839,12 @@ body{
 #design-skills{
     overflow: hidden;
     margin-top: 50px;
+    padding-bottom: 50px;
     border-bottom: 1px solid  #585d65;
 }
 .design-skills-start{
     max-width: 680px;
     margin-left: 50px;
-    height: 590px;
 }
 .h-design-skills{
     color: white;
@@ -932,12 +917,12 @@ body{
 }
 #language-skills{
     margin-top: 50px;
+    padding-bottom: 80px;
     border-bottom: 1px solid  #585d65;
 }
 .language-skills-start{
     max-width: 680px;
     margin-left: 50px;
-    height: 730px;
 }
 .h-language-skills{
     color: white;
@@ -1069,12 +1054,12 @@ body{
 }
 #coding-skills{
     margin-top: 50px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #585d65;
 }
 .coding-skills-start{
     max-width: 680px;
     margin-left: 50px;
-    height: 750px;
 }
 .h-coding-skills{
     color: white;
@@ -1104,8 +1089,9 @@ body{
     bottom: 20px;
     right: 8px;
 }
-.progress-coding-circle{
+.coding-skills-item .coding-progress svg circle{
     stroke: #68e0cf;
+    stroke-linecap: round;
     transform-origin: center;
     transform: rotate(-90deg);
 }
@@ -1134,16 +1120,15 @@ body{
 }
 #reviews{
     margin-top: 50px;
+    padding-bottom: 50px;
     border-bottom: 1px solid #585d65;
 }
 .reviews-start{
     max-width: 695px;
     margin-left: 50px;
-    height: 435px;
 }
 .reviews-title{
     display: flex;
-    position: relative;
 }
 .h-reviews{
     color: white;
@@ -1157,7 +1142,7 @@ body{
     font-size: 14px;
     font-weight: 600;
     position: absolute;
-    bottom: -15px; 
+    margin-top: 80px;
     text-transform: capitalize;
 }
 .reviews-body{
@@ -1228,16 +1213,15 @@ body{
 }
 #clients{
     margin-top: 50px;
+    padding-bottom: 65px;
     border-bottom: 1px solid #585d65;
 }
 .clients-start{
     max-width: 695px;
     margin-left: 50px;
-    height: 320px;
 }
 .clients-title{
     display: flex;
-    position: relative;
 }
 .h-clients{
     color: white;
@@ -1250,7 +1234,7 @@ body{
     font-size: 14px;
     font-weight: 600;
     position: absolute;
-    bottom: -15px;
+    margin-top: 75px;
     text-transform: uppercase;
 }
 .clients-body{
@@ -1302,15 +1286,14 @@ body{
     -o-transition: opacity 1s cubic-bezier(.165,.85,.45,1) 0s;;
 }
 #portfolio{
-    margin-top: 90px;
+    margin-top: 50px;
+    padding-bottom: 50px;
     border-bottom: 1px solid #585d65;
 }
 .portfolio-start{
     max-width: 685px;
     height: 1810px;
     margin-left: 50px;
-    position: relative;
-    bottom: 40px;
 }
 .h-portfolio{
     color: white;
@@ -2229,6 +2212,7 @@ body{
     text-decoration: none;
     color: gray;
     margin: 0 5px;
+    cursor: pointer;
 }
 .social-share a i{
     transition: all .3s ease;

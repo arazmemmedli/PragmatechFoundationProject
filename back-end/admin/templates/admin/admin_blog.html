@@ -1,0 +1,79 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="blog-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/admin/blog/" method="POST" enctype="multipart/form-data">
+                    <div class="form-group mt-3">
+                        {{form.blog_img(class='form-control',placeholder='Blogun şəkilin əlavə edin')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_date(class='form-control',placeholder='Blogun tarixin əlavə edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_title(class='form-control',placeholder='Blogun adın əlavə edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.short_info(class='form-control',placeholder='Mətin daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.content(class='form-control',placeholder='Blogun linkin daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_url(class='form-control',placeholder='Blogun linkin daxil edin.')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blogcategory_id(class='form-control')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_submit(class='btn btn-success',value='Göndər')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="blog-table">
+    <div class="container mt-5">
+        <table class="table table-sm" style="color: white;">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Blogun Şəkili</th>
+                    <th scope="col">Blogun Tarixi</th>
+                    <th scope="col">Blogun Adı</th>
+                    <th scope="col">Blogun Məlumatı</th>
+                    <th scope="col">Blogun Məzmunu</th>
+                    <th scope="col">Blogun Urli</th>
+                    <th scope="col">Blogun Kategoriyası</th>
+                    <th scope="col">Əməliyyat</th>
+                  </tr>
+            </thead>
+            <tbody>
+                {% for t_blog in t_blogs %}
+                <tr>
+                    <td>{{t_blog.id}}</td>
+                    <td>{{t_blog.blog_img}}</td>
+                    <td>{{t_blog.blog_date}}</td>
+                    <td>{{t_blog.blog_title}}</td>
+                    <td>{{t_blog.short_info}}</td>
+                    <td>{{t_blog.content}}</td>
+                    <td>{{t_blog.blog_url}}</td>
+                    <td>{{t_blog.blogcategory_id}}</td>
+                    <td>
+                        <a href="/blog/delete/{{t_blog.id}}"><i class="bi bi-trash mx-1"></i></a>
+                        <a href="/blog/update/{{t_blog.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                        <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                    </td>
+                  </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+<script>
+  CKEDITOR.replace('content');
+</script>
+{% endblock  %}

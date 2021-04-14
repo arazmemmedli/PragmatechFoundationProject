@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField,FileField,IntegerField,SubmitField,TextAreaField,SelectField
+from wtforms import StringField,FileField,IntegerField,SubmitField,TextAreaField,SelectField,DateTimeField
 from app import db
 from app.models import Portfolio,PortfolioCategory,PortfolioImages
+from app.models import BlogPost,BlogCategory
 
 PortfolioCategoryList=[]
 PortfolioImagesList=[]
@@ -15,6 +16,11 @@ for i_obj in PortfolioImages.query.all():
         (i_obj.p_img)
     )
 
+BlogCategoryList=[]
+for obj in BlogCategory.query.all():
+    BlogCategoryList.append(
+        (obj.name)
+    )
 class AboutForm(FlaskForm):
     a_subject=TextAreaField('a_subject')
     a_age=IntegerField('a_age')
@@ -106,3 +112,21 @@ class PortfolioForm(FlaskForm):
     portfolioimages_name=SelectField('portfolioimages_name',choices=PortfolioImagesList)
     port_submit=SubmitField()
 
+class BlogForm(FlaskForm):
+    blog_img=FileField('blog_img')
+    blog_date=StringField('blog_date')
+    blog_title=StringField('blog_title')
+    short_info=TextAreaField('short_info')
+    content=TextAreaField('content')
+    blog_url=StringField('blog_url')
+    blogcategory_id=SelectField('blogcategory_id',choices=BlogCategoryList)
+    blog_submit=SubmitField()
+
+class BlogCategoryForm(FlaskForm):
+    name=StringField('name')
+    submit=SubmitField()
+
+class PortfolioModalForm(FlaskForm):
+    m_data_modal=StringField('m_data_modal')
+    portfolimodalimages_name=SelectField('portfolimodalimages_name',choices=PortfolioImagesList)
+    m_submit=SubmitField()

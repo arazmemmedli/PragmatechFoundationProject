@@ -14,87 +14,95 @@
     <script src="/admin/static/ckeditor/ckeditor.js"></script>
     <title>Hello, world!</title>
   </head>
-  <body>
-    <section id="main-navba">
-      <nav class="navbar navbar-light mt-2" style="background: #585d65;border-radius: 80px;">
-        <div class="container-fluid">
-          <a class="navbar-brand" style="color: #68e0cf; font-size: 18px;font-weight: 800;">Araz Məmmədli</a>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
+  <body style="background: #373b40;">
+    <section id="main-navbar">
+      <nav class="navbar navbar-light mt-3" style="background-color: #585d65;border-radius: 80px;">
+        <a class="navbar-brand" href="#" style="display: flex;align-items: center;">
+          <img src="/web/static/img/logo2.png" style="object-fit: cover;height: auto;width: 100px;margin-left: 20px;" width="30" height="30" class="d-inline-block align-top" alt="">
+          <span style="color: #68e0cf;font-size: 22px;font-weight: 800;display: inline-block;margin-left: 10px;">Araz Memmedli</span>
+        </a>
+        <a class="btn btn-outline-primary" style="margin-right: 10px" href="#">Sign out</a>
       </nav>
     </section>
     <section id="offcanvas">
-      <button class="btn btn-primary mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Səhifələr</button>
+      <button class="btn btn-success mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Səhifələr</button>
       <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div class="offcanvas-header">
+        <div class="offcanvas-header" style="background: #68e0cf;">
           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Səhifələr</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body" style="background: #585d65;">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/admin">Ana Səhifə</a>
+              <a class="nav-link active" aria-current="page" href="/admin" style="color: #68e0cf">Ana Səhifə</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/about">Haqqında</a>
+              <a class="nav-link" href="/admin/about" style="color: #68e0cf">Haqqında</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/services">Xidmətlər</a>
+              <a class="nav-link" href="/admin/services" style="color: #68e0cf">Xidmətlər</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/pricing" tabindex="-1" aria-disabled="true">Qiymətləndirmə</a>
+              <a class="nav-link" href="/admin/pricing" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Qiymətləndirmə</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/pricing/category" tabindex="-1" aria-disabled="true">Qiymətləndirmə Category</a>
+              <a class="nav-link" href="/admin/pricing/category" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Qiymətləndirmə Category</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/experience" tabindex="-1" aria-disabled="true">Təcrübə</a>
+              <a class="nav-link" href="/admin/experience" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Təcrübə</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/education" tabindex="-1" aria-disabled="true">Təhsil</a>
+              <a class="nav-link" href="/admin/education" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Təhsil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/designskills" tabindex="-1" aria-disabled="true">Dizayn Bacarıqları</a>
+              <a class="nav-link" href="/admin/designskills" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Dizayn Bacarıqları</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/languageskills" tabindex="-1" aria-disabled="true">Dil Bacarıqları</a>
+              <a class="nav-link" href="/admin/languageskills" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Dil Bacarıqları</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/codingskills" tabindex="-1" aria-disabled="true">Kodlaşdırma Bacarıqları</a>
+              <a class="nav-link" href="/admin/codingskills" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Kodlaşdırma Bacarıqları</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/reviews" tabindex="-1" aria-disabled="true">Rəylər</a>
+              <a class="nav-link" href="/admin/reviews" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Rəylər</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/clients" tabindex="-1" aria-disabled="true">Müştərilər</a>
+              <a class="nav-link" href="/admin/clients" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Müştərilər</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin/contact" tabindex="-1" aria-disabled="true">Əlaqə</a>
+              <a class="nav-link" href="/admin/contact" tabindex="-1" aria-disabled="true" style="color: #68e0cf">Əlaqə</a>
             </li>
             <li class="nav-item">
-              <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button style="background-color: #585d65;color: #0d6efd;" class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      Portfolio
-                    </button>
-                  </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body" style="background-color: #585d65;">
-                        <a href="/admin/portfolio" class="nav-link" tabindex="-1" aria-disabled="true">Portfolio Əlavə</a>
-                        <a href="/admin/portfolio/category" class="nav-link" tabindex="-1" aria-disabled="true">Portfolio Kategoriya</a>
-                        <a href="/admin/portfolio/images" class="nav-link" tabindex="-1" aria-disabled="true">Portfolio İmages</a>
+              <p>
+                <button class="btn btn-primary" style="border: none;background-color: #585d65;color: #68e0cf;margin-left: 5px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Portfolio
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <a href="/admin/portfolio" class="nav-link" tabindex="-1" aria-disabled="true">Portfolio Əlavə</a>
+                  <a href="/admin/portfolio/category" class="nav-link" tabindex="-1" aria-disabled="true">Portfolio Kategoriya</a>
+                  <a href="/admin/portfolio/images" class="nav-link" tabindex="-1" aria-disabled="true">Portfolio İmages</a>
+                   <a href="/admin/portfolio/modal" class="nav-link" tabindex="-1" aria-disabled="true">Portfolio Modal</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <p>
+                <a class="btn btn-primary" style="border: none;background-color: #585d65;color: #68e0cf;margin-left: 5px;" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Blog</a>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                      <a href="/admin/blog" class="nav-link" tabindex="-1" aria-disabled="true">Blog Əlavə</a>
+                      <a href="/admin/blog/category" class="nav-link" tabindex="-1" aria-disabled="true">Blog Kategoriya</a>
+                      <a href="" class="nav-link" tabindex="-1" aria-disabled="true">Blog İmages</a>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-          </ul>
-        </div>
-      </div>
     </section>
     <!-- <section class="edu-nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark">

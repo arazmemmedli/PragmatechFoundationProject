@@ -19,7 +19,7 @@
 </section>
 <section id="portfolio-category-table">
     <div class="container mt-5">
-        <table class="table table-sm">
+        <table class="table table-sm" style="color: white;">
             <thead>
                 <tr>
                     <th scope="col">Id</th>
@@ -34,7 +34,7 @@
                     <td>{{portfoliocategory.cat_name}}</td>
                     <td>
                         <a href="/portfolio/category/delete/{{portfoliocategory.id}}"><i class="bi bi-trash mx-1"></i></a>
-                        <a href=""><i class="bi bi-pencil mx-1"></i></a>
+                        <a href="/portfolio/category/update/{{portfoliocategory.id}}"><i class="bi bi-pencil mx-1"></i></a>
                         <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
                     </td>
                   </tr>

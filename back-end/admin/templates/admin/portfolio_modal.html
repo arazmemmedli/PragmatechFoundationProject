@@ -1,0 +1,53 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="portfolio-modal-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <form action="/admin/portfolio/modal/" method="POST">
+                        <div class="form-group mt-3">
+                            {{form.m_data_modal(class='form-control',placeholder='Data əlavə edin.')}}
+                        </div>
+                        <div class="form-group mt-3">
+                            {{form.portfolimodalimages_name(class='form-control')}}
+                        </div>
+                        <div class="form-group mt-3">
+                            {{form.m_submit(class='btn btn-success',value='Göndər')}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portfolio-modal-table">
+    <div class="container mt-5">
+        <table class="table table-sm" style="color: white;">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Data Modal</th>
+                    <th scope="col">Modalın şəkili</th>
+                    <th scope="col">Əməliyyat</th>
+                  </tr>
+            </thead>
+            <tbody>
+                {% for t_modal in t_modals %}
+                <tr>
+                    <td>{{t_modal.id}}</td>
+                    <td>{{t_modal.m_data_modal}}</td>
+                    <td>{{t_modal.portfolimodalimages_name}}</td>
+                    <td>
+                        <a href="/portfolio/modal/delete/{{t_modal.id}}"><i class="bi bi-trash mx-1"></i></a>
+                        <a href="/portfolio/modal/update/{{t_modal.id}}"><i class="bi bi-pencil mx-1"></i></a>
+                        <a href=""><i class="bi bi-envelope-open mx-1"></i></a>
+                    </td>
+                  </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock  %}

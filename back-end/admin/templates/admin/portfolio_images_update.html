@@ -1,0 +1,20 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="portfolio-images-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/portfolio/images/update/{{t_image.id}}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group mt-3">
+                        {{form.p_img(class='form-control')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.p_submit(class='btn btn-success',value='Göndər')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock  %}

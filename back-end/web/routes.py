@@ -11,7 +11,7 @@ from app.models import CodingSkills
 from app.models import Reviews
 from app.models import Clients
 from app.models import Contact
-from app.models import Portfolio,PortfolioCategory,PortfolioImages
+from app.models import Portfolio,PortfolioCategory,PortfolioImages,PortfolioModal
 from app import app,db
 web_bp=Blueprint('web',__name__,static_folder='static',template_folder='templates',static_url_path='web/static',url_prefix='/')
 
@@ -31,7 +31,8 @@ def admin_index():
     i_categories=PortfolioCategory.query.all()
     i_portfolios=Portfolio.query.all()
     i_images=PortfolioImages.query.all()
-    return render_template('web/index.html',Abouts=Abouts,services=services,Pricings=Pricings,Pricingcategories=Pricingcategories,Experiences=Experiences,Educations=Educations,Designskills=Designskills,Languageskills=Languageskills,Codingskills=Codingskills,i_reviews=i_reviews,i_clients=i_clients,i_categories=i_categories,i_portfolios=i_portfolios,i_images=i_images)
+    i_modals=PortfolioModal.query.all()
+    return render_template('web/index.html',Abouts=Abouts,services=services,Pricings=Pricings,Pricingcategories=Pricingcategories,Experiences=Experiences,Educations=Educations,Designskills=Designskills,Languageskills=Languageskills,Codingskills=Codingskills,i_reviews=i_reviews,i_clients=i_clients,i_categories=i_categories,i_portfolios=i_portfolios,i_images=i_images,i_modals=i_modals)
 
 @web_bp.route('/',methods=['GET','POST'])
 def contact_form():

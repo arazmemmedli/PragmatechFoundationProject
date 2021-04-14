@@ -1,6 +1,6 @@
 from flask import Blueprint,render_template,redirect,request
-from admin.forms import PortfolioCategoryForm,PortfolioImagesForm,PortfolioForm
-from app.models import Portfolio,PortfolioCategory,PortfolioImages
+from admin.forms import PortfolioCategoryForm,PortfolioImagesForm,PortfolioForm,PortfolioModalForm
+from app.models import Portfolio,PortfolioCategory,PortfolioImages,PortfolioModal
 from app import app,db
 from werkzeug.utils import secure_filename
 import os
@@ -52,6 +52,40 @@ def portfolio_images():
         return redirect('/admin/portfolio/images/')
     return render_template('admin/portfolio_images.html',form=portfolioImagesForm,t_images=t_images)
 
+@portfolio_bp.route('/admin/portfolio/modal/',methods=['GET','POST'])
+def portfolio_modal():
+    form=PortfolioModalForm()
+    t_modals=PortfolioModal.query.all()
+    if request.method == 'POST':
+        portfoliomodal=PortfolioModal(
+            m_data_modal=form.m_data_modal.data,
+            portfolimodalimages_name=form.portfolimodalimages_name.data
+        )
+        db.session.add(portfoliomodal)
+        db.session.commit()
+        return redirect('/admin/portfolio/modal/')
+    return render_template('admin/portfolio_modal.html',form=form,t_modals=t_modals)
+
+@portfolio_bp.route('/portfolio/modal/update/<id>',methods=['GET','POST'])
+def portfolio_modal_update(id):
+    form=PortfolioModalForm()
+    deyisdirilecekOlanPortfolioModal=PortfolioModal.query.get(id)
+    if request.method == 'POST':
+        m_data_modal=form.m_data_modal.data
+        portfolimodalimages_name=form.portfolimodalimages_name.data
+        deyisdirilecekOlanPortfolioModal.m_data_modal=m_data_modal
+        deyisdirilecekOlanPortfolioModal.portfolimodalimages_name=portfolimodalimages_name
+        db.session.commit()
+        return redirect('/admin/portfolio/modal/')
+    return render_template('admin/portfoliomodal_update.html',form=form,t_modal=deyisdirilecekOlanPortfolioModal)
+
+@portfolio_bp.route('/portfolio/modal/delete/<id>')
+def portfolio_modal_delete(id):
+    silinecekOlanPortfolioModal=PortfolioModal.query.get(id)
+    db.session.delete(silinecekOlanPortfolioModal)
+    db.session.commit()
+    return redirect('/admin/portfolio/modal/')
+
 @portfolio_bp.route('/portfolio/update/<id>',methods=['GET','POST'])
 def admin_portfolio_update(id):
     portfolioForm=PortfolioForm()
@@ -60,7 +94,7 @@ def admin_portfolio_update(id):
         p_title=portfolioForm.p_title.data
         p_icon=portfolioForm.p_icon.data
         data_modal=portfolioForm.data_modal.data
-        portfoliocategory_name=portfolioForm.portfoliocategory_name.data,
+        portfoliocategory_name=portfolioForm.portfoliocategory_name.data
         portfolioimages_name=portfolioForm.portfolioimages_name.data
         deyisdirilecekOlanPortfolio.p_title=p_title
         deyisdirilecekOlanPortfolio.p_icon=p_icon
@@ -91,4 +125,33 @@ def portfolio_images_delete(id):
     db.session.delete(silinecekOlanPortfolioImages)
     db.session.commit()
     return redirect('/admin/portfolio/images/')
+
+@portfolio_bp.route('/portfolio/category/update/<id>',methods=['GET','POST'])
+def portfolio_category_update(id):
+    portfolioCategoryForm=PortfolioCategoryForm()
+    deyisdirilecekOlanPortfolioCategory=PortfolioCategory.query.get(id)
+    if request.method == 'POST':
+        cat_name=portfolioCategoryForm.cat_name.data
+        deyisdirilecekOlanPortfolioCategory.cat_name=cat_name
+        db.session.commit()
+        return redirect('/admin/portfolio/category/')
+    return render_template('admin/portfolio_category_update.html',form=portfolioCategoryForm,portfoliocategory=deyisdirilecekOlanPortfolioCategory)
+
+@portfolio_bp.route('/portfolio/images/update/<id>',methods=['GET','POST'])
+def portfolio_images_update(id):
+    portfolioImagesForm=PortfolioImagesForm()
+    deyisdirilecekOlanPortfolioImages=PortfolioImages.query.get(id)
+    if request.method == 'POST':
+        p_img=portfolioImagesForm.p_img.data
+        filename=secure_filename(p_img.filename)
+        p_img.save(os.path.join(app.config['UPLOAD_PATH'],filename))
+        p_img=filename
+        deyisdirilecekOlanPortfolioImages.p_img=p_img
+        db.session.commit()
+        return redirect('/admin/portfolio/images/')
+    return render_template('admin/portfolio_images_update.html',form=portfolioImagesForm,t_image=deyisdirilecekOlanPortfolioImages)
+
+
+    
+
     

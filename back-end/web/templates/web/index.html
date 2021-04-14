@@ -12,202 +12,18 @@
     <title>Myour – One Page Resume WordPress Theme – Just another WordPress site</title>
 </head>
 <body>
-    <div id="works_modal" class="works_modal">
+    {% for i_modal in i_modals %}
+    <div id="{{i_modal.m_data_modal}}" class="works_modal">
         <div class="modal_body">
             <div class="modal_content">
                 <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="slideshow-container">
-            
-                    <div class="mySlides fade">
-                      <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}" style="width:100%">
-                      <div class="popup-counter">1 of 4</div>
-                    </div>
-                    
-                    <div class="mySlides fade">
-                      <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" style="width:100%">
-                      <div class="popup-counter">2 of 4</div>
-                    </div>
-                    
-                    <div class="mySlides fade">
-                      <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}" style="width:100%">
-                      <div class="popup-counter">3 of 4</div>
-                    </div>
-            
-                    <div class="mySlides fade">
-                        <img src="{{url_for('.static',filename='img/work2-680x680.jpg')}}" style="width:100%">
-                        <div class="popup-counter">4 of 4</div>
-                    </div>
-                    
-                    <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-caret-left"></i></a>
-                    <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
-                    
-                    </div>
+                <div class="popup-images">
+                    <img src="admin/static/uploads/{{i_modal.portfolimodalimages_name}}" alt="">
+                </div>
             </div>
         </div>
     </div>
-     <div id="works_modal1" class="works_modal">
-         <div class="modal_body">
-             <div class="modal_content">
-                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="video">
-                    <iframe class="book-video" src="https://www.youtube.com/embed/S4L8T2kFFck" width="956" height="538" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-             </div>
-         </div>
-     </div>
-     <div id="works_modal2" class="works_modal">
-         <div class="modal_body">
-             <div class="modal_content">
-                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="popup-images">
-                    <img src="{{url_for('.static',filename='img/work7.jpg')}}" alt="">
-                </div>
-             </div>
-         </div>
-     </div>
-     <div id="works_modal3" class="works_modal">
-         <div class="modal_body">
-             <div class="modal_content">
-                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="popup-images">
-                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}" alt="">
-                </div>
-             </div>
-         </div>
-     </div>
-     <div id="works_modal4" class="works_modal">
-         <div class="modal_body">
-             <div class="modal_content">
-                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="slideshow-container">
-            
-                  <div class="mySlides1 fade">
-                    <img src="{{url_for('.static',filename='img/work4-680x680.jpg')}}" style="width:100%">
-                    <div class="popup-counter">1 of 4</div>
-                  </div>
-                  
-                  <div class="mySlides1 fade">
-                    <img src="{{url_for('.static',filename='img/work6-680x680.jpg')}}" style="width:100%">
-                    <div class="popup-counter">2 of 4</div>
-                  </div>
-                  
-                  <div class="mySlides1 fade">
-                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" style="width:100%">
-                    <div class="popup-counter">3 of 4</div>
-                  </div>
-          
-                  <div class="mySlides1 fade">
-                      <img src="{{url_for('.static',filename='img/work1-680x680.jpg')}}" style="width:100%">
-                      <div class="popup-counter">4 of 4</div>
-                  </div>
-                  
-                  <a class="prev" onclick="plusSlides1(-1)"> <i class="fas fa-caret-left"></i></a>
-                  <a class="next" onclick="plusSlides1(1)"><i class="fas fa-caret-right"></i></a>
-                  
-                  </div>
-             </div>
-        </div>
-     </div>
-     <div id="works_modal5" class="works_modal">
-         <div class="modal_body">
-             <div class="modal_content">
-                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="popup-images">
-                    <img src="{{url_for('.static',filename='img/work3-680x680.jpg')}}" alt="">
-                </div>
-             </div>
-         </div>
-     </div>
-     <div id="works_modal6" class="works_modal">
-         <div class="modal_body modal-scroll">
-             <div class="modal_content">
-                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="content-images">
-                    <img src="{{url_for('.static',filename='img/work8-680x680.jpg')}}" alt="">
-                </div>
-                <div class="content-desc">
-                    <div class="content-category">
-                        <span>Content</span>
-                    </div>
-                    <h4>Yellow and Blue Striped</h4>
-                    <div class="content-post">
-                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
-                        <ul>
-                            <li>Now there is more fashion. There is no so-called trends.</li>
-                            <li>Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style.</li>
-                            <li>Think about the content that you want to invest in a created object, and only then will form.</li>
-                            <li>The thing is your spirit. A spirit unlike forms hard copy.</li>
-                        </ul>
-                        <p>Now there is more fashion. There is no so-called trends. Now chase after anything not necessary — nor for fashionable color nor the shape, nor for style. Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
-                        <div class="gallery-item">
-                            <a href="#" id="open_modal" data-modal="works_modal9">
-                                <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" alt="">
-                            </a>
-                        </div>
-                        <div class="gallery-item">
-                            <a href="#" id="open_modal" data-modal="works_modal10">
-                                <img src="{{url_for('.static',filename='img/work7.jpg')}}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <a href="#" class="content-btn">
-                        View Project
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-             </div>
-         </div>
-     </div>
-     <div class="works_modal" id="works_modal9">
-         <div class="modal_body">
-             <div class="modal_content">
-                <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-                <div class="slideshow-container">
-           
-                    <div class="mySlides2 fade">
-                      <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" style="max-width: 1280px">
-                      <span class="popup-number">1/2</span>
-                      <div class="modal-counter" style="right: 47%;">work5</div>
-                    </div>
-                    
-                    <div class="mySlides2 fade">
-                      <img src="{{url_for('.static',filename='img/work7.jpg')}}" style="max-width: 1280px">
-                      <span class="popup-number">2/2</span>
-                      <div class="modal-counter" style="right: 47%;">work7</div>
-                    </div>
-                    
-                    <a class="prev" onclick="plusSlides2(-1)"> <i class="fas fa-caret-left"></i></a>
-                    <a class="next" onclick="plusSlides2(1)"><i class="fas fa-caret-right"></i></a>
-                    
-                    </div>
-             </div>
-         </div>
-     </div>
-     <div class="works_modal" id="works_modal10">
-        <div class="modal_body">
-            <div class="modal_content">
-               <span class="modal_close" id="modal_close"><i class="fas fa-times"></i></span>
-               <div class="slideshow-container">
-          
-                   <div class="mySlides3 fade">
-                     <img src="{{url_for('.static',filename='img/work7.jpg')}}" style="max-width: 1280px">
-                     <span class="popup-number">1/2</span>
-                     <div class="modal-counter" style="right: 47%;">work7</div>
-                   </div>
-                   
-                   <div class="mySlides3 fade">
-                     <img src="{{url_for('.static',filename='img/work5-680x680.jpg')}}" style="max-width: 1280px">
-                     <span class="popup-number">2/2</span>
-                     <div class="modal-counter" style="right: 47%;">work5</div>
-                   </div>
-                   
-                   <a class="prev" onclick="plusSlides3(-1)"> <i class="fas fa-caret-left"></i></a>
-                   <a class="next" onclick="plusSlides3(1)"><i class="fas fa-caret-right"></i></a>
-                   
-                   </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
     <div class="page">
         <div class="header">
             <div class="header-logo">
@@ -248,7 +64,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="blog.html">
+                            <a href="/blog">
                                 Blog
                             </a>
                         </li>

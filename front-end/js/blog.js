@@ -63,3 +63,24 @@ modalsref.forEach(function(ref){
          let modal  = (ref.closest(".works_modal").setAttribute("style","opacity: 0; visibility: hidden;"));
      }
  });
+
+
+function myfun() {
+  window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmyour.bslthemes.com%2F2020%2F06%2F17%2Finspiring-design-trends-this-fall-2019%2F', 'facebook', 'width=600px height=900px');
+}
+
+function myfun2() {
+  window.open('https://twitter.com/intent/tweet?text=%20https%3A%2F%2Fmyour.bslthemes.com%2F2020%2F06%2F17%2Finspiring-design-trends-this-fall-2019%2F', 'twitter', 'width=500px height=500px');
+}
+
+function myfun3() {
+  window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fmyour.bslthemes.com%2F2020%2F06%2F17%2Finspiring-design-trends-this-fall-2019%2F&amp;title=Inspiring%20design%20trends%20this%20fall%202019', 'linkedin', 'width=500px height=500px');
+}
+
+function myfun4() {
+  window.open('http://www.reddit.com/submit?url=https%3A%2F%2Fmyour.bslthemes.com%2F2020%2F06%2F17%2Finspiring-design-trends-this-fall-2019%2F&amp;title=Inspiring%20design%20trends%20this%20fall%202019', 'reddit', 'width=500px height=500px');
+}
+
+function myfun5() {
+  window.open('http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmyour.bslthemes.com%2F2020%2F06%2F17%2Finspiring-design-trends-this-fall-2019%2F', 'pinterest', 'width=500px height=500px');
+}

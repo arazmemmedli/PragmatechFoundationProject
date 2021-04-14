@@ -1,0 +1,41 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<section id="blog-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/blog/update/{{t_blog.id}}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group mt-3">
+                        {{form.blog_img(class='form-control',placeholder='Blogun şəkilin əlavə edin')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_date(class='form-control',placeholder='Blogun tarixin əlavə edin.',value=t_blog.blog_date)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_title(class='form-control',placeholder='Blogun adın əlavə edin.',value=t_blog.blog_title)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.short_info(class='form-control',placeholder='Mətin daxil edin.',value=t_blog.short_info)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.content(class='form-control',placeholder='Blogun linkin daxil edin.',value=t_blog.content)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_url(class='form-control',placeholder='Blogun linkin daxil edin.',value=t_blog.blog_url)}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blogcategory_id(class='form-control')}}
+                    </div>
+                    <div class="form-group mt-3">
+                        {{form.blog_submit(class='btn btn-success',value='Göndər')}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+  CKEDITOR.replace('content');
+</script>
+{% endblock  %}

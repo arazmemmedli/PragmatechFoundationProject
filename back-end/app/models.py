@@ -1,5 +1,6 @@
 from app import db
 from app import migrate
+from datetime import datetime
 class AboutMe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     a_subject = db.Column(db.Text)
@@ -96,6 +97,44 @@ class Portfolio(db.Model):
     data_modal = db.Column(db.String(100))
     portfoliocategory_name=db.Column(db.String(100), db.ForeignKey('portfolio_category.cat_name'), nullable=False)
     portfolioimages_name=db.Column(db.String(200), db.ForeignKey('portfolio_images.p_img'), nullable=False)
+
+class PortfolioModal(db.Model):
+    __tablename__='portfolio_modal'
+    id = db.Column(db.Integer, primary_key=True)
+    m_data_modal = db.Column(db.String(120))
+    portfolimodalimages_name=db.Column(db.String(200), db.ForeignKey('portfolio_images.p_img'), nullable=False)
+
+class BlogCategory(db.Model):
+    __tablename__='blog_category'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120))
+    blog_posts = db.relationship('BlogPost', backref='blog_category')
+
+class BlogPost(db.Model):
+    __tablename__='blog_post'
+    id = db.Column(db.Integer, primary_key=True)
+    blog_img = db.Column(db.String(200))
+    blog_date = db.Column(db.String(120))
+    blog_title = db.Column(db.String(180))
+    short_info = db.Column(db.Text)
+    content = db.Column(db.Text)
+    blog_url = db.Column(db.String(140))
+    com_posts = db.relationship('Comment', backref='blog_post')
+    blogcategory_id=db.Column(db.Integer, db.ForeignKey('blog_category.id'), nullable=False) 
+
+class Comment(db.Model):
+    __tablename__='comment'
+    id = db.Column(db.Integer, primary_key=True)
+    com_name = db.Column(db.String(120))
+    com_email = db.Column(db.String(140))
+    comment = db.Column(db.Text)
+    com_date = db.Column(db.DateTime, nullable=False,default=datetime.utcnow)
+    blogpost_id=db.Column(db.Integer, db.ForeignKey('blog_post.id'), nullable=True)
+
+
+
+
+
 
 
 

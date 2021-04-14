@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/grid.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+     <div class="page">
+        <div class="header">
+            <div class="header-logo">
+                <img src="{{url_for('.static',filename='./img/logo.png')}}" alt="">
+                <span class="word">
+                    Joé <br>Wilson
+                </span>
+            </div>
+            <a href="#" class="button header-button">
+                download cv <span class="header-icon"><i class="fas fa-download"></i></span>
+            </a>
+            <div class="header-menu">
+                <div class="header-ul">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="menu-word">home</span> <span class="header-icons"><i class="fas fa-angle-down"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Resume
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contacts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Buy theme
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="blog-main">
+            <div class="blog-main-title"></div>
+            <div class="blog-left">
+                <div class="blog-filter">
+                    <div class="blog-color"></div>
+                </div>
+            </div>
+        </div>
+        <section id="myblog">
+            <div class="myblog-start">
+                <div class="myblog-title">
+                    <h1 class="h-myblog">Tag: html</h1>
+                    <span class="myblog-word">LATEST POSTS</span>
+                </div>
+                <div class="myblog-container">
+                    <div class="container">
+                        <div class="row">
+                            {% for h_blog in h_blogs %}
+                            <div class="col-6">
+                                <div class="myblog-item">
+                                    <div class="image">
+                                        <a href="/blog/detail/{{h_blog.id}}">
+                                            <img src="/admin/static/uploads/{{h_blog.blog_img}}" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="blog-date">
+                                        <a href="#">{{h_blog.blog_date}}</a>
+                                    </div>
+                                    <a href="#" class="myblog-name">{{h_blog.blog_title}}</a>
+                                    <div class="myblog-text">
+                                        <p>{{h_blog.short_info}}</p>
+                                    </div>
+                                    <div class="myblog-button">
+                                        <a href="{{h_blog.blog_url}}" class="myblog-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer">
+            <div class="footer-line"></div>
+            <div class="footer-inner">
+                <div class="footer-text">© 2020 Myour all right reserved.</div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://dribbble.com/" target="_blank">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

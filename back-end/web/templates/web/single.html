@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/grid.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/style.css')}}">
     <title>Document</title>
 </head>
 <body>
@@ -20,12 +20,12 @@
                <div class="slideshow-container">
            
                  <div class="mySlides4 fade">
-                   <img src="img/12_image.jpg" style="max-width: 1280px">
+                   <img src="{{url_for('.static',filename='img/12_image.jpg')}}" style="max-width: 1280px">
                    <div class="popup-counter" style="right: 9%;">1 of 2</div>
                  </div>
                  
                  <div class="mySlides4 fade">
-                   <img src="img/08_image.jpg" style="max-width: 1280px">
+                   <img src="{{url_for('.static',filename='img/08_image.jpg')}}" style="max-width: 1280px">
                    <div class="popup-counter" style="right: 9%;">2 of 2</div>
                  </div>
                  
@@ -43,12 +43,12 @@
                <div class="slideshow-container">
            
                  <div class="mySlides5 fade">
-                   <img src="img/08_image.jpg" style="max-width: 1280px">
+                   <img src="{{url_for('.static',filename='img/08_image.jpg')}}" style="max-width: 1280px">
                    <div class="popup-counter" style="right: 9%;">1 of 2</div>
                  </div>
                  
                  <div class="mySlides5 fade">
-                   <img src="img/12_image.jpg" style="max-width: 1280px">
+                   <img src="{{url_for('.static',filename='img/12_image.jpg')}}" style="max-width: 1280px">
                    <div class="popup-counter" style="right: 9%;">2 of 2</div>
                  </div>
                  
@@ -62,7 +62,7 @@
     <div class="page">
         <div class="header">
             <div class="header-logo">
-                <img src="./img/logo.png" alt="">
+                <img src="{{url_for('.static',filename='./img/logo.png')}}" alt="">
                 <span class="word">
                     Joé <br>Wilson
                 </span>
@@ -123,30 +123,14 @@
         <section id="myblog">
             <div class="myblog-start">
                 <div class="myblog-title">
-                    <h1 class="h-myblog">Inspiring design trends this fall 2019</h1>
-                    <span class="myblog-word">JUNE 17, 2020</span>
+                    <h1 class="h-myblog">{{blog.blog_title}}</h1>
+                    <span class="myblog-word">{{blog.blog_date}}</span>
                 </div>
                 <div class="single-container">
                     <div class="my-content">
                         <div class="content-box">
                             <div class="content-box-text">
-                                <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to them artificially.</p>
-                                <p>Modern design and a lack of love dilettantism. Looking for such&nbsp;<a href="#">designers</a>, which all use a little beauty and no matter how much they looked around either; which you always want to do something else. Designers do not only&nbsp;<a href="#">image-makers</a>, but also dreamers who tell stories and think. For me, all the things a good story is more important than its form.</p>
-                                <p>The designer must be an interpreter, and real and virtual needs must anticipate those questions of people that they do not think, and suddenly opened in the already created objects.</p>
-                                <div class="block-quality">
-                                    <p>For me, the design — it is the quality of life. Good design has little to do with trends. Tired of listening to how he try to give the status of a frivolous fashion phenomenon. In my opinion, the designer should strive to do more than separate things.</p>
-                                    <cite>
-                                        "Antonio Citterio"
-                                    </cite>
-                                </div>
-                                <p>Minimalism has reached a certain critical point, the top. Where to go? I do not know. <span class="designer-word">The main thing for the designer</span> — to create things that are pleasing to him, the work brings satisfaction, and cooperation with the customer — satisfaction. We need to understand what the customer wants, and to connect it with your wishes and possibilities. To create something outstanding, we need the enthusiasm of both. I am a very happy person, because I worked with wonderful customers who have helped me very.</p>
-                                <ul>
-                                    <li>Design — is not how the object looks, but how it works.</li>
-                                    <li>Good design — is innovative.</li>
-                                    <li>A good design — is as little design as possible.</li>
-                                    <li>Good design — aesthetic.</li>
-                                </ul>
-                                <p>Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
+                                {{blog.content | safe}}
                                 <h3>Simple Gallery</h3>
                                 <p>I want to create beautiful things, even if it’s not necessary for anyone, as a fight against ugly things. This is my intention.</p>
                                 <div class="container">
@@ -155,7 +139,7 @@
                                             <div class="item-gallery">
                                                 <div class="gallery-img">
                                                     <a href="#" id="open_modal" data-modal="works_modal7">
-                                                        <img src="img/12_image.jpg">
+                                                        <img src="{{url_for('.static',filename='img/12_image.jpg')}}">
                                                     </a>
                                                 </div>
                                             </div>
@@ -164,7 +148,7 @@
                                             <div class="item-gallery">
                                                 <div class="gallery-img">
                                                     <a href="#" id="open_modal" data-modal="works_modal8">
-                                                        <img src="img/08_image.jpg">
+                                                        <img src="{{url_for('.static',filename='img/08_image.jpg')}}">
                                                     </a>
                                                 </div>
                                             </div>
@@ -174,7 +158,7 @@
                                 <p>Fast, cheap and good — from these three things you should always choose two. If it’s fast and cheap, it will never be good. If it’s cheap and good, it will never work out quickly. And if it is good and fast, it will never come cheap. But remember: of the three you still have to always choose two.</p>
                                 <div class="post-text">
                                     <span class="post-links">
-                                        Posted in <a href="#">Design</a>, <a href="#">Music</a>, <a href="#">Uncategorized</a>, <a href="#">WordPress</a>
+                                        Posted in <a href="{{url_for('web_blog.category_design')}}">Design</a>, <a href="{{url_for('web_blog.category_music')}}">Music</a>, <a href="{{url_for('web_blog.category_uncategorized')}}">Uncategorized</a>, <a href="{{url_for('web_blog.category_wordpress')}}">WordPress</a>
                                     </span>
                                     <span class="post-admin">
                                         by <span class="by-admin">
@@ -183,8 +167,8 @@
                                     </span>
                                     <div class="tag-links">
                                         <span class="tags-links">Tags: 
-                                        <a href="https://myour.bslthemes.com/tag/design/" rel="tag">design</a>
-                                        <a href="https://myour.bslthemes.com/tag/html/" rel="tag">html</a></span>
+                                        <a href="/blog/tag/design/" rel="tag">design</a>
+                                        <a href="/blog/tag/html/" rel="tag">html</a></span>
                                     </div>
                                     <div class="social-share">
                                         <span>Share</span>
@@ -200,60 +184,26 @@
                                         </div>
                                         <div class="container">
                                             <div class="row">
+                                                {% for relatedpost in relatedposts %}
                                                 <div class="col-4">
                                                     <div class="related-item">
                                                         <div class="related-image">
-                                                            <a href="#">
-                                                                <img src="img/12_image.jpg" alt="">
+                                                            <a href="/blog/detail/{{relatedpost.id}}">
+                                                                <img src="/admin/static/uploads/{{relatedpost.blog_img}}" alt="">
                                                             </a>
                                                             <div class="image-title">
-                                                                <a href="#">Modern street art as a source of inspiration</a>
+                                                                <a href="#">{{relatedpost.blog_title}}</a>
                                                             </div>
                                                             <div class="image-desc">
-                                                                <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to…</p>
+                                                                <p>{{relatedpost.short_info}}</p>
                                                             </div>
                                                             <div class="related-button">
-                                                                <a href="#" class="related-btn">Read More</a>
+                                                                <a href="{{relatedpost.blog_url}}" class="related-btn">Read More</a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-4">
-                                                    <div class="related-item">
-                                                        <div class="related-image">
-                                                            <a href="#">
-                                                                <img src="img/image_news_03.jpg" alt="">
-                                                            </a>
-                                                            <div class="image-title">
-                                                                <a href="#">The main thing for the designer</a>
-                                                            </div>
-                                                            <div class="image-desc">
-                                                                <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to…</p>
-                                                            </div>
-                                                            <div class="related-button">
-                                                                <a href="#" class="related-btn">Read More</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div class="related-item">
-                                                        <div class="related-image">
-                                                            <a href="#">
-                                                                <img src="img/image_news_01.jpg" alt="">
-                                                            </a>
-                                                            <div class="image-title">
-                                                                <a href="#">Minimalism has reached a certain point</a>
-                                                            </div>
-                                                            <div class="image-desc">
-                                                                <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to…</p>
-                                                            </div>
-                                                            <div class="related-button">
-                                                                <a href="#" class="related-btn">Read More</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -265,98 +215,54 @@
                                     </div>
                                     <div class="blog-comments">
                                         <div class="comments-title">
-                                            <h3>3 Comments</h3>
+                                            <h3>Comments</h3>
                                         </div>
+                                        {% for comment in comments %}
                                         <div class="blog-content">
                                             <div class="blog-box">
                                                 <div class="comments-image">
-                                                    <img src="img/b642b4217b34b1e8d3bd915fc65c4452.png" alt="">
+                                                    <img src="{{url_for('.static',filename='img/b642b4217b34b1e8d3bd915fc65c4452.png')}}" alt="">
                                                 </div>
                                                 <div class="comments-desc">
                                                     <div class="comment-name">
-                                                        <span>James</span>
+                                                        <span>{{comment.com_name}}</span>
                                                     </div>
                                                     <div class="comment-text">
-                                                        <p>Fast, cheap and good — from these three things you should always choose two. If it’s fast and cheap, it will never be good. If it’s cheap and good, it will never work out quickly. And if it is good and fast, it will never come cheap. But remember: of the three you still have to always choose two.</p>
+                                                        <p>{{comment.comment}}</p>
                                                     </div>
                                                     <div class="comment-info">
-                                                        <span class="comment-time">9:30 pm</span>
-                                                        <span class="comment-date">June 17,2020</span>
+                                                        <span class="comment-time">{{comment.com_date}}</span>
                                                         <span class="comment-reply">
                                                             <a href="#">
                                                                 Reply
                                                                 <i class="fas fa-reply"></i>
                                                             </a>
                                                         </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="blog-content">
-                                            <div class="blog-box">
-                                                <div class="comments-image">
-                                                    <img src="img/b642b4217b34b1e8d3bd915fc65c4452.png" alt="">
-                                                </div>
-                                                <div class="comments-desc">
-                                                    <div class="comment-name">
-                                                        <span>Steven</span>
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <p>Think about the content that you want to invest in a created object, and only then will form. The thing is your spirit. A spirit unlike forms hard copy.</p>
-                                                    </div>
-                                                    <div class="comment-info">
-                                                        <span class="comment-time">9:30 pm</span>
-                                                        <span class="comment-date">June 17,2020</span>
-                                                        <span class="comment-reply">
-                                                            <a href="#">
-                                                                Reply
-                                                                <i class="fas fa-reply"></i>
+                                                        <div class="comment-delete">
+                                                            <a href="/detail/delete/{{comment.id}}">
+                                                                <i class="fas fa-trash-alt"></i>
                                                             </a>
-                                                        </span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="blog-content">
-                                            <div class="blog-box">
-                                                <div class="comments-image">
-                                                    <img src="img/b642b4217b34b1e8d3bd915fc65c4452.png" alt="">
-                                                </div>
-                                                <div class="comments-desc">
-                                                    <div class="comment-name">
-                                                        <span>William</span>
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <p>Minimalism has reached a certain critical point, the top. Where to go? I do not know. The main thing for the designer — to create things that are pleasing to him, the work brings satisfaction, and cooperation with the customer — satisfaction.</p>
-                                                    </div>
-                                                    <div class="comment-info">
-                                                        <span class="comment-time">9:30 pm</span>
-                                                        <span class="comment-date">June 17,2020</span>
-                                                        <span class="comment-reply">
-                                                            <a href="#">
-                                                                Reply
-                                                                <i class="fas fa-reply"></i>
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                     <div class="write-comments">
                                         <div class="write-comments-title">
                                             <h3>Write a comment</h3>
                                         </div>
                                         <div class="comments-form">
-                                            <form action="">
+                                            <form action="" method="POST">
                                                 <div class="comment-form-group">
                                                     <textarea name="comment" id="comment" placeholder="Comment"></textarea>
                                                 </div>
                                                 <div class="comment-form-group">
-                                                    <input type="text" id="fullname" name="fullname" placeholder="Name">
+                                                    <input type="text" id="fullname" name="com_name" placeholder="Name">
                                                 </div>
                                                 <div class="comment-form-group">
-                                                    <input type="email" id="email" name="email" placeholder="Email">
+                                                    <input type="email" id="email" name="com_email" placeholder="Email">
                                                 </div>
                                                 <p class="form-comment-text">
                                                     <input type="checkbox">
@@ -393,6 +299,6 @@
             </div>
         </div>
     </div>
-    <script src="js/blog.js"></script>
+    <script src="{{url_for('.static',filename='js/blog.js')}}"></script>
 </body>
 </html>

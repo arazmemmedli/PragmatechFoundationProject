@@ -64,7 +64,7 @@ def pricing_update(id):
         return redirect('/admin/pricing/')
     return render_template('admin/p_update.html',form=form,pricing=deyisdirilecekOlanPricing)
 
-@pricing_bp.route('/pricing/category/update/<id>')
+@pricing_bp.route('/pricing/category/update/<id>',methods=['GET','POST'])
 def pricingcategory_update(id):
     form=PricingCategoryForm()
     deyisdirilecekOlanPricingCategory=PricingCategory.query.get(id)

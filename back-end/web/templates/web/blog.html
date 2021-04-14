@@ -8,15 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/grid.css')}}">
+    <link rel="stylesheet" href="{{url_for('.static',filename='css/style.css')}}">
     <title>Document</title>
 </head>
 <body>
      <div class="page">
         <div class="header">
             <div class="header-logo">
-                <img src="./img/logo.png" alt="">
+                <img src="{{url_for('.static',filename='./img/logo.png')}}" alt="">
                 <span class="word">
                     Joé <br>Wilson
                 </span>
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <section id="myblog" style="height: 250vh;">
+        <section id="myblog">
             <div class="myblog-start">
                 <div class="myblog-title">
                     <h1 class="h-myblog">My Blog</h1>
@@ -83,92 +83,29 @@
                 <div class="myblog-container">
                     <div class="container">
                         <div class="row">
+                            {% for blog in blogs %}
                             <div class="col-6">
                                 <div class="myblog-item">
                                     <div class="image">
-                                        <a href="single.html">
-                                            <img src="img/08_image.jpg" alt="">
+                                        <a href="/blog/detail/{{blog.id}}">
+                                            <img src="/admin/static/uploads/{{blog.blog_img}}" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="desc">
                                     <div class="blog-date">
-                                        <a href="#">June 17, 2020</a>
+                                        <a href="#">{{blog.blog_date}}</a>
                                     </div>
-                                    <a href="#" class="myblog-name">Inspiring design trends this fall 2019</a>
+                                    <a href="#" class="myblog-name">{{blog.blog_title}}</a>
                                     <div class="myblog-text">
-                                        <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to…</p>
+                                        <p>{{blog.short_info}}</p>
                                     </div>
                                     <div class="myblog-button">
-                                        <a href="#" class="myblog-btn">Read More</a>
+                                        <a href="{{blog.blog_url}}" class="myblog-btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="myblog-item">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="img/12_image.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="desc">
-                                    <div class="blog-date">
-                                        <a href="#">June 17, 2020</a>
-                                    </div>
-                                    <a href="#" class="myblog-name">Modern street art as a source of inspiration</a>
-                                    <div class="myblog-text">
-                                        <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to…</p>
-                                    </div>
-                                    <div class="myblog-button">
-                                        <a href="#" class="myblog-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="myblog-item">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="img/image_news_03.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="desc">
-                                    <div class="blog-date">
-                                        <a href="#">June 17, 2020</a>
-                                    </div>
-                                    <a href="#" class="myblog-name">The main thing for the designer</a>
-                                    <div class="myblog-text">
-                                        <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to…</p>
-                                    </div>
-                                    <div class="myblog-button">
-                                        <a href="#" class="myblog-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="myblog-item">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="img/image_news_01.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="desc">
-                                    <div class="blog-date">
-                                        <a href="#">June 17, 2020</a>
-                                    </div>
-                                    <a href="#" class="myblog-name">Minimalism has reached a certain point</a>
-                                    <div class="myblog-text">
-                                        <p>I love the feel and sophistication of its superiority. I like people with a keen mind and at the same time easy to talk to. These qualities can be combined perfectly natural. However, things like people look miserable, if these properties are connected to…</p>
-                                    </div>
-                                    <div class="myblog-button">
-                                        <a href="#" class="myblog-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
